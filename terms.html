@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="nav_terms">Obchodní podmínky — BYELMARIE®</title>
+  <meta name="description" content="Všeobecné obchodní podmínky internetového obchodu BYELMARIE® provozovaného společností Be Beauty & Fashion s.r.o.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header id="site-header">
+    <div class="container">
+      <div class="header__inner">
+
+        <!-- Left Nav -->
+        <nav class="header__nav" aria-label="Hlavní menu">
+          <div class="nav-item">
+            <a href="about.html" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
+          </div>
+          <div class="nav-item has-dropdown">
+            <a href="shop.html" class="nav-link" data-i18n="nav_products">Produkty</a>
+            <div class="nav-dropdown">
+              <a href="product.html?slug=banka-fuffu">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763285208-6ab673f9-0060-4a1a-bcb0-dccf09169155.png" alt="">
+                <span data-i18n="nav_products_fuffu">Baňky FUFFU</span>
+              </a>
+              <a href="product.html?slug=oblicejove-banky">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763283684-00b55450-be92-42d4-910e-98a6833bf1ef.png" alt="">
+                <span data-i18n="nav_products_face">Obličejové baňky</span>
+              </a>
+              <a href="product.html?slug=serum-na-rasy">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763282436-1f9d7469-5ea7-40cf-843e-9cef02e797bc.png" alt="">
+                <span data-i18n="nav_products_serum">Sérum na řasy</span>
+              </a>
+              <a href="product.html?slug=valecky-celslimroll">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/shop/big/57-1_valecky-set.png?69725139" alt="">
+                <span>Válečky CELSLIMROLL</span>
+              </a>
+            </div>
+          </div>
+          <div class="nav-item has-dropdown">
+            <a href="shop.html?category=professional" class="nav-link" data-i18n="nav_training">Školení</a>
+            <div class="nav-dropdown">
+              <a href="product.html?slug=skoleni-rollcupping">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763286602-55730e0e-7341-4c97-af41-b30ea2e9d2b3.png" alt="">
+                <span data-i18n="nav_training_rollcupping">ROLLCUPPING</span>
+              </a>
+              <a href="product.html?slug=skoleni-rollcupping-online">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763286602-55730e0e-7341-4c97-af41-b30ea2e9d2b3.png" alt="">
+                <span>ROLLCUPPING Online</span>
+              </a>
+              <a href="product.html?slug=skoleni-vibroslimfit">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763290399-f5f61af5-0984-4ac0-a1a9-9c8aae1d0983.png" alt="">
+                <span data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</span>
+              </a>
+              <a href="product.html?slug=ems-prosuit">
+                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/img_7424.jpeg" alt="">
+                <span data-i18n="nav_training_ems">EMS PROSuit</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Logo (center) -->
+        <div class="header__logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="BYELMARIE®" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <span style="display:none; font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; font-family:'Cormorant Garamond',serif;">BYELMARIE®</span>
+          </a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="header__actions">
+          <!-- Currency Selector -->
+          <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
+            <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
+              <span id="currency-label">CZK</span>
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor"><path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="currency-dropdown" id="currency-dropdown">
+              <button class="currency-opt" data-currency="CZK" id="opt-czk">CZK</button>
+              <button class="currency-opt" data-currency="EUR" id="opt-eur">EUR</button>
+            </div>
+          </div>
+
+          <a href="contact.html" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
+
+          <!-- Search -->
+          <button id="search-toggle" aria-label="Hledat">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7.5" cy="7.5" r="5.5"/><line x1="11.5" y1="11.5" x2="16" y2="16"/></svg>
+          </button>
+
+          <!-- Cart -->
+          <a href="cart.html" class="cart-icon-wrap" aria-label="Košík">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h2.5l1.8 9h9.4l1.8-6H5"/><circle cx="7" cy="15.5" r="1"/><circle cx="13" cy="15.5" r="1"/></svg>
+            <span class="cart-count-badge" style="display:none;">0</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <button id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay"></div>
+  <nav id="mobile-menu" aria-label="Mobilní menu">
+    <button class="mobile-menu__close" id="mobile-close">×</button>
+    <div class="mobile-menu-item"><a href="about.html"><span data-i18n="nav_about">O Byelmarie</span></a></div>
+    <div class="mobile-menu-item"><a href="shop.html"><span data-i18n="nav_shop">E-shop</span></a></div>
+    <div class="mobile-menu-item"><a href="contact.html"><span data-i18n="nav_contact">Kontakt</span></a></div>
+    <div class="mobile-menu__toggles">
+      <button class="currency-option" data-currency="CZK">CZK — Kč</button>
+      <span class="toggle-divider">/</span>
+      <button class="currency-option" data-currency="EUR">EUR — €</button>
+    </div>
+  </nav>
+
+  <div id="search-bar" role="search">
+    <div class="search-bar__inner">
+      <form id="search-form"><input type="search" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Napište, co hledáte..." autocomplete="off"></form>
+      <button id="search-close" aria-label="Zavřít">×</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="nav_home">Domů</a>
+          <span class="breadcrumb__sep">/</span>
+          <span data-i18n="nav_terms">Obchodní podmínky</span>
+        </div>
+        <h1 class="page-hero__title" data-i18n="nav_terms">Obchodní podmínky</h1>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="section">
+      <div class="container" style="max-width: 900px; line-height: 1.8;">
+        
+        <div class="animate-on-scroll" style="color: var(--color-text-light); font-size: var(--font-size-md);">
+          
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 400; margin-bottom: var(--space-4); color: var(--color-text);">1. Úvodní ustanovení</h2>
+          <p style="margin-bottom: var(--space-6);">
+            Tyto obchodní podmínky platí pro nákup v internetovém obchodě <strong>www.byelmarie.com</strong>, který provozuje obchodní společnost <strong>Be Beauty & Fashion s.r.o.</strong>, se sídlem Zaječí hora 130/6, Sadová, 612 00 Brno, IČ: 09496360, zapsaná v obchodním rejstříku. Podmínky blíže vymezují a upřesňují práva a povinnosti prodávajícího a kupujícího.
+          </p>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 400; margin-bottom: var(--space-4); color: var(--color-text);">2. Informace o zboží a cenách</h2>
+          <p style="margin-bottom: var(--space-6);">
+            Ceny zboží jsou uvedeny včetně všech daní (nejsme plátci DPH). Cena zboží zůstává v platnosti po dobu, po kterou je zobrazována v internetovém obchodě. Tyto ceny nezahrnují náklady na doručení zboží, které jsou vyčísleny v košíku před dokončením objednávky.
+          </p>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 400; margin-bottom: var(--space-4); color: var(--color-text);">3. Uzavření kupní smlouvy</h2>
+          <p style="margin-bottom: var(--space-6);">
+            Veškerá prezentace zboží v e-shopu je informativního charakteru a prodávající není povinen uzavřít kupní smlouvu ohledně tohoto zboží. Kupní smlouva vzniká v okamžiku, kdy prodávající potvrdí přijetí objednávky (nikoli pouze automatickým potvrzením o doručení objednávky do systému).
+          </p>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 400; margin-bottom: var(--space-4); color: var(--color-text);">4. Platební podmínky a dodání</h2>
+          <p style="margin-bottom: var(--space-2);">
+            Cenu zboží a případné náklady spojené s dodáním zboží může kupující uhradit následujícími způsoby:
+          </p>
+          <ul style="margin-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li>Bezhotovostním převodem na účet prodávajícího vedený u Raiffeisenbank: <strong>2717061002 / 5500</strong>. Platba je splatná do 3 dnů od uzavření kupní smlouvy.</li>
+            <li>Online platební kartou prostřednictvím platební brány Shoptet Pay.</li>
+          </ul>
+          <p style="margin-bottom: var(--space-6);">
+            Vlastnické právo ke zboží přechází na kupujícího až úplným zaplacením kupní ceny a převzetím zboží.
+          </p>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 400; margin-bottom: var(--space-4); color: var(--color-text);">5. Odstoupení od smlouvy spotřebitelem</h2>
+          <p style="margin-bottom: var(--space-6);">
+            Kupující spotřebitel má právo odstoupit od kupní smlouvy bez udání důvodu ve lhůtě <strong>14 dnů</strong> od převzetí zboží. Zboží musí být vráceno nepoškozené, čisté, nenošené a pokud možno v originálním obalu na adresu provozovatele. Náklady na vrácení zboží nese plně kupující.
+          </p>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 400; margin-bottom: var(--space-4); color: var(--color-text);">6. Práva z vadného plnění (Reklamace)</h2>
+          <p style="margin-bottom: var(--space-6);">
+            Prodávající odpovídá kupujícímu, že zboží při převzetí nemá vady. Záruční doba pro spotřebitele činí <strong>24 měsíců</strong> od převzetí zboží. V případě vady má kupující právo na opravu, výměnu zboží, přiměřenou slevu nebo odstoupení od smlouvy. Reklamace jsou vyřizovány bez zbytečného odkladu, nejpozději do 30 dnů.
+          </p>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 400; margin-bottom: var(--space-4); color: var(--color-text);">7. Mimosoudní řešení sporů</h2>
+          <p style="margin-bottom: var(--space-6);">
+            K mimosoudnímu řešení spotřebitelských sporů z kupní smlouvy je příslušná Česká obchodní inspekce (Štěpánská 567/15, 120 00 Praha 2, internetová adresa: <a href="https://adr.coi.cz/cs" target="_blank" rel="noopener">https://adr.coi.cz/cs</a>). Spotřebitel může využít rovněž platformu pro řešení sporů online na adrese <a href="http://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">http://ec.europa.eu/consumers/odr</a>.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__logo-col">
+          <div class="footer__logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="BYELMARIE®" onerror="this.style.display='none'">
+            </a>
+          </div>
+          <p class="footer__desc" data-i18n="about_text">BYELMARIE® — inovativní masážní pomůcky a přístroje.</p>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/byelmarie/" target="_blank" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61565788686393" target="_blank" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Navigace</h4>
+          <ul class="footer__links">
+            <li><a href="index.html" data-i18n="nav_home">Domů</a></li>
+            <li><a href="shop.html" data-i18n="nav_shop">E-shop</a></li>
+            <li><a href="about.html" data-i18n="nav_about">O Byelmarie</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_info">Informace</h4>
+          <ul class="footer__links">
+            <li><a href="shipping.html" data-i18n="footer_shipping">Doprava a platba</a></li>
+            <li><a href="terms.html" data-i18n="footer_terms">Obchodní podmínky</a></li>
+            <li><a href="privacy.html" data-i18n="footer_privacy">Ochrana os. údajů</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading" data-i18n="footer_contact">Kontakt</h4>
+          <div class="footer__contact-item"><a href="mailto:sale@byelmarie.com">sale@byelmarie.com</a></div>
+          <div class="footer__contact-item"><a href="tel:+420731589433">+420 731 589 433</a></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span data-i18n="footer_copyright">Copyright 2026 BYELMARIE®. Všechna práva vyhrazena.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('mobile-close')?.addEventListener('click', () => {
+        document.getElementById('mobile-menu')?.classList.remove('open');
+        document.getElementById('mobile-menu-toggle')?.classList.remove('active');
+        document.getElementById('mobile-menu-overlay')?.classList.remove('show');
+        document.body.style.overflow = '';
+      });
+      // Trigger animation on scroll
+      document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.05 });
+        obs.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
