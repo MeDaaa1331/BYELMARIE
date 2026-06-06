@@ -1,6 +1,4 @@
-// Main JS — Navigation, Animations, Search, Mobile Menu
 
-// ── Lenis Smooth Scroll ────────────────────────────────────────
 let lenisInstance = null;
 
 (function initLenis() {
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCurrencyDropdown();
 });
 
-// ── Sticky Header ──────────────────────────────────────────────
 function initStickyHeader() {
   const header = document.getElementById('site-header');
   if (!header) return;
@@ -53,7 +50,6 @@ function initStickyHeader() {
     lastScroll = scrollY <= 0 ? 0 : scrollY;
   }
 
-  // Use Lenis scroll event if available, otherwise fall back to window scroll
   if (lenisInstance) {
     lenisInstance.on('scroll', ({ scroll }) => onScroll(scroll));
   } else {
@@ -61,9 +57,8 @@ function initStickyHeader() {
   }
 }
 
-// ── Header Setup ───────────────────────────────────────────────
 function initHeader() {
-  // Lang switcher
+
   document.querySelectorAll('.lang-option').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -71,7 +66,6 @@ function initHeader() {
     });
   });
 
-  // Currency switcher
   document.querySelectorAll('.currency-option').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -80,7 +74,6 @@ function initHeader() {
   });
 }
 
-// ── Mobile Menu ────────────────────────────────────────────────
 function initMobileMenu() {
   const toggle = document.getElementById('mobile-menu-toggle');
   const menu = document.getElementById('mobile-menu');
@@ -113,12 +106,10 @@ function initMobileMenu() {
     document.body.style.overflow = '';
   }
 
-  // Close on nav link click
   menu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', closeMenu);
   });
 
-  // Mobile submenu toggle
   menu.querySelectorAll('.mobile-submenu-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       const parent = btn.closest('.mobile-menu-item');
@@ -127,7 +118,6 @@ function initMobileMenu() {
   });
 }
 
-// ── Search ─────────────────────────────────────────────────────
 function initSearch() {
   const searchToggle = document.getElementById('search-toggle');
   const searchBar = document.getElementById('search-bar');
@@ -145,14 +135,12 @@ function initSearch() {
     searchBar.classList.remove('open');
   });
 
-  // ESC to close
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && searchBar.classList.contains('open')) {
       searchBar.classList.remove('open');
     }
   });
 
-  // Search submit
   searchBar?.querySelector('form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const q = searchInput.value.trim();
@@ -162,7 +150,6 @@ function initSearch() {
   });
 }
 
-// ── Dropdown Menus ─────────────────────────────────────────────
 function initDropdowns() {
   document.querySelectorAll('.nav-item.has-dropdown').forEach(item => {
     const dropdown = item.querySelector('.nav-dropdown');
@@ -190,7 +177,6 @@ function initDropdowns() {
   });
 }
 
-// ── Scroll Animations ──────────────────────────────────────────
 function initScrollAnimations() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -215,7 +201,6 @@ function initScrollAnimations() {
   });
 }
 
-// ── Announcement Bar Close ─────────────────────────────────────
 function initAnnouncementClose() {
   const btn = document.getElementById('announcement-close');
   const bar = document.getElementById('announcement-bar');
@@ -232,7 +217,6 @@ function initAnnouncementClose() {
   });
 }
 
-// ── Utility: Active nav link ───────────────────────────────────
 (function markActiveNavLink() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const currentParams = new URLSearchParams(window.location.search);
@@ -240,7 +224,7 @@ function initAnnouncementClose() {
 
   document.querySelectorAll('.nav-link[href]').forEach(link => {
     const hrefAttr = link.getAttribute('href');
-    // Parse href relative to current page
+
     const linkUrl = new URL(hrefAttr, window.location.origin);
     const linkPath = linkUrl.pathname.split('/').pop() || 'index.html';
     const linkParams = new URLSearchParams(linkUrl.search);
@@ -252,7 +236,7 @@ function initAnnouncementClose() {
         if (linkCategory === 'professional') {
           isActive = (currentCategory === 'professional');
         } else {
-          // This represents body care products or general shop (default view)
+
           isActive = (currentCategory !== 'professional');
         }
       } else {
@@ -264,9 +248,6 @@ function initAnnouncementClose() {
   });
 })();
 
-// heroParallax removed — caused scroll jank with full-height hero
-
-// ── Localization Dropdown ──────────────────────────────────────
 function initLocDropdown() {
   const wrap = document.querySelector('.loc-dropdown-wrap');
   const toggle = document.getElementById('loc-toggle');
@@ -283,7 +264,6 @@ function initLocDropdown() {
     }
   });
 
-  // Also close on ESC
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       wrap.classList.remove('open');
@@ -291,7 +271,6 @@ function initLocDropdown() {
   });
 }
 
-// ── Currency Dropdown ──────────────────────────────────────────
 function initCurrencyDropdown() {
   const wrap = document.getElementById('currency-wrap');
   const toggle = document.getElementById('currency-toggle');
@@ -318,7 +297,6 @@ function initCurrencyDropdown() {
     });
   });
 
-  // Mobile currency buttons
   document.querySelectorAll('.currency-option').forEach(btn => {
     btn.addEventListener('click', () => {
       if (typeof setCurrency === 'function') setCurrency(btn.dataset.currency);
@@ -338,6 +316,5 @@ function initCurrencyDropdown() {
     });
   }
 
-  // Initial state
   setTimeout(refreshCurrencyToggle, 50);
 }

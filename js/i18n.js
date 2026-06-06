@@ -1,6 +1,6 @@
 const translations = {
   cs: {
-    // Nav
+
     nav_about: 'O Byelmarie',
     nav_online_courses: 'Onlinekurzy',
     nav_products: 'Produkty',
@@ -14,17 +14,17 @@ const translations = {
     nav_slimming_brno: 'Zeštíhlení Brno',
     nav_contact: 'Kontakt',
     nav_shop: 'E-shop',
-    // Announcement
+
     announcement: 'STUDIO V BRNĚ · PO - PÁ DLE DOHODY',
     loc_lang: 'Jazyk',
     loc_currency: 'Měna',
-    // Hero
+
     hero_subtitle: 'Inovace v péči o tělo',
     hero_title: 'Formujte svou\npostavu přirozeně',
     hero_text: 'Profesionální masážní pomůcky a přístroje pro salon i domácí použití. Vyvinuté odborníkem Šárkou Kloudovou.',
     hero_cta: 'Nakupovat',
     hero_cta2: 'O značce',
-    // Categories
+
     cat_heading: 'Naše kategorie',
     cat_body_care: 'Produkty pro tělo',
     cat_body_care_desc: 'Baňky, válečky a séra pro péči o tělo',
@@ -32,7 +32,7 @@ const translations = {
     cat_professional_desc: 'Školení, pomůcky a přístroje pro salony',
     cat_slimming: 'Zeštíhlení Brno',
     cat_slimming_desc: 'Navštivte nás osobně v Brně, Královo Pole',
-    // Products
+
     products_heading: 'Nejprodávanější produkty',
     products_all: 'Zobrazit vše',
     add_to_cart: 'Do košíku',
@@ -42,19 +42,19 @@ const translations = {
     in_stock: 'Skladem',
     choose_variant: 'Zvolte variantu',
     size: 'Velikost',
-    // About section
+
     about_heading: 'Inovace a odbornost\nv péči o tělo',
     about_text: 'BYELMARIE® je inovativní značka masážních pomůcek a přístroje VIBROSLIMFIT. Za její vizí stojí Šárka Kloudová, specialistka na vysoce efektivní péči o tělo a formování postavy. Její autorské techniky, založené na dlouholetých zkušenostech a konstantním vzdělávání, můžete vyzkoušet v salonu v Brně, Králově Poli.',
     about_professional: 'Pro profesionály v oboru nabízí BYELMARIE® certifikovaná školení a prodej specializovaného masážního zařízení.',
     about_cta: 'Více o BYELMARIE®',
-    // Features
+
     feat1_title: 'Odbornost',
     feat1_text: 'Autorské techniky Šárky Kloudové, ověřené na stovkách klientek',
     feat2_title: 'Kvalita',
     feat2_text: 'Profesionální pomůcky vyvinuté pro maximální efektivitu',
     feat3_title: 'Výsledky',
     feat3_text: 'Skutečné výsledky formování postavy a neinvazivního zeštíhlení',
-    // Cart
+
     cart_title: 'Váš košík',
     cart_empty: 'Váš košík je prázdný',
     cart_empty_text: 'Přidejte produkty z našeho e-shopu',
@@ -63,22 +63,22 @@ const translations = {
     cart_checkout: 'Přejít k pokladně',
     cart_remove: 'Odebrat',
     cart_items: 'položek',
-    // Footer
+
     footer_contact: 'Kontakt',
     footer_info: 'Informace pro vás',
     footer_shipping: 'Doprava a platba',
     footer_terms: 'Obchodní podmínky',
     footer_privacy: 'Podmínky ochrany osobních údajů',
     footer_copyright: 'Copyright 2026 BYELMARIE®. Všechna práva vyhrazena.',
-    // Search
+
     search_placeholder: 'Napište, co hledáte...',
     search_btn: 'Hledat',
-    // Product detail
+
     prod_benefits: 'Benefity',
     prod_description: 'Popis',
     prod_shipping: 'Doprava a vrácení',
     prod_shipping_text: 'Doprava zdarma od 2 500 Kč. Vrácení do 14 dní.',
-    // Shop page
+
     shop_title: 'Všechny produkty',
     shop_filter_all: 'Vše',
     shop_filter_body: 'Péče o tělo',
@@ -87,7 +87,7 @@ const translations = {
     shop_sort_default: 'Výchozí',
     shop_sort_price_asc: 'Cena: od nejnižší',
     shop_sort_price_desc: 'Cena: od nejvyšší',
-    // Contact
+
     contact_title: 'Kontaktujte nás',
     contact_name: 'Jméno a příjmení',
     contact_email: 'E-mail',
@@ -96,7 +96,7 @@ const translations = {
     contact_send: 'Odeslat zprávu',
     contact_address: 'Adresa',
     contact_address_text: 'Brno, Královo Pole',
-    // About page
+
     about_page_title: 'O BYELMARIE®',
     about_who: 'Kdo za značkou stojí?',
     about_p1: 'Jmenuji se <strong>Šárka</strong> a stojím za vlastní značkou <strong>BYELMARIE®</strong>, která se specializuje na <strong>formování postavy</strong>.',
@@ -109,7 +109,7 @@ const translations = {
     about_founder: 'Zakladatelka',
     about_founder_desc: 'Specialistka na vysoce efektivní péči o tělo a formování postavy. Autorka unikátních technik pro neinvazivní zeštíhlení, které vycházejí z mnohaletých zkušeností a neustálého vzdělávání.',
     about_studio: 'Studio: Brno, Královo Pole',
-    // Contact page additions
+
     contact_form_heading: 'Napište nám',
     contact_info_heading: 'Kontaktní informace',
     contact_hours_heading: 'Otevírací doba',
@@ -118,7 +118,7 @@ const translations = {
     contact_hours_p3: 'Neděle: zavřeno',
     contact_social_heading: 'Sociální sítě',
     contact_success: '✓ Zpráva byla odeslána. Brzy se ozveme!',
-    // Product details additions
+
     prod_related_label: 'Mohlo by vás zajímat',
     prod_related_title: 'Další produkty',
     prod_not_found: 'Produkt nebyl nalezen.',
@@ -126,17 +126,17 @@ const translations = {
     shipping_option_post: 'Česká pošta — 1–3 pracovní dny',
     shipping_option_packeta: 'Zásilkovna — 1–2 pracovní dny',
     shipping_option_pickup: 'Osobní odběr — Brno, Královo Pole',
-    // Cart page additions
+
     cart_recommend_label: 'Doporučujeme',
     cart_recommend_title: 'Mohlo by vás zajímat',
-    // Nav home/shop/contact keys
+
     nav_home: 'Domů',
     nav_shipping: 'Doprava a platba',
     nav_terms: 'Obchodní podmínky',
     nav_privacy: 'Ochrana os. údajů',
   },
   en: {
-    // Nav
+
     nav_about: 'About',
     nav_online_courses: 'Online Courses',
     nav_products: 'Products',
@@ -150,17 +150,17 @@ const translations = {
     nav_slimming_brno: 'Slimming Brno',
     nav_contact: 'Contact',
     nav_shop: 'Shop',
-    // Announcement
+
     announcement: 'STUDIO IN BRNO · BY APPOINTMENT',
     loc_lang: 'Language',
     loc_currency: 'Currency',
-    // Hero
+
     hero_subtitle: 'Innovation in Body Care',
     hero_title: 'Shape your\nbody naturally',
     hero_text: 'Professional massage tools and devices for salon and home use. Developed by expert Šárka Kloudová.',
     hero_cta: 'Shop Now',
     hero_cta2: 'About Us',
-    // Categories
+
     cat_heading: 'Our Categories',
     cat_body_care: 'Body Products',
     cat_body_care_desc: 'Cups, rollers and serums for body care',
@@ -168,7 +168,7 @@ const translations = {
     cat_professional_desc: 'Training, tools and devices for salons',
     cat_slimming: 'Slimming Brno',
     cat_slimming_desc: 'Visit us personally in Brno, Královo Pole',
-    // Products
+
     products_heading: 'Best Sellers',
     products_all: 'View All',
     add_to_cart: 'Add to Cart',
@@ -178,19 +178,19 @@ const translations = {
     in_stock: 'In Stock',
     choose_variant: 'Choose variant',
     size: 'Size',
-    // About section
+
     about_heading: 'Innovation and expertise\nin body care',
     about_text: 'BYELMARIE® is an innovative brand of massage tools and the VIBROSLIMFIT device. Behind its vision is Šárka Kloudová, a specialist in highly effective body care and figure shaping. Her original techniques, based on years of experience and constant education, can be tried at her salon in Brno, Královo Pole.',
     about_professional: 'For industry professionals, BYELMARIE® offers certified training and the sale of specialized massage equipment.',
     about_cta: 'More about BYELMARIE®',
-    // Features
+
     feat1_title: 'Expertise',
     feat1_text: "Šárka Kloudová's original techniques, proven on hundreds of clients",
     feat2_title: 'Quality',
     feat2_text: 'Professional tools developed for maximum effectiveness',
     feat3_title: 'Results',
     feat3_text: 'Real results in body shaping and non-invasive slimming',
-    // Cart
+
     cart_title: 'Your Cart',
     cart_empty: 'Your cart is empty',
     cart_empty_text: 'Add products from our e-shop',
@@ -199,22 +199,22 @@ const translations = {
     cart_checkout: 'Proceed to Checkout',
     cart_remove: 'Remove',
     cart_items: 'items',
-    // Footer
+
     footer_contact: 'Contact',
     footer_info: 'Information',
     footer_shipping: 'Shipping & Payment',
     footer_terms: 'Terms & Conditions',
     footer_privacy: 'Privacy Policy',
     footer_copyright: 'Copyright 2026 BYELMARIE®. All rights reserved.',
-    // Search
+
     search_placeholder: 'Search...',
     search_btn: 'Search',
-    // Product detail
+
     prod_benefits: 'Benefits',
     prod_description: 'Description',
     prod_shipping: 'Shipping & Returns',
     prod_shipping_text: 'Free shipping from 100 €. Returns within 14 days.',
-    // Shop page
+
     shop_title: 'All Products',
     shop_filter_all: 'All',
     shop_filter_body: 'Body Care',
@@ -223,7 +223,7 @@ const translations = {
     shop_sort_default: 'Default',
     shop_sort_price_asc: 'Price: Low to High',
     shop_sort_price_desc: 'Price: High to Low',
-    // Contact
+
     contact_title: 'Contact Us',
     contact_name: 'Full Name',
     contact_email: 'Email',
@@ -232,7 +232,7 @@ const translations = {
     contact_send: 'Send Message',
     contact_address: 'Address',
     contact_address_text: 'Brno, Královo Pole',
-    // About page
+
     about_page_title: 'About BYELMARIE®',
     about_who: 'Who is behind the brand?',
     about_p1: 'My name is <strong>Šárka</strong> and I am behind my own brand <strong>BYELMARIE®</strong>, which specializes in <strong>body shaping</strong>.',
@@ -245,7 +245,7 @@ const translations = {
     about_founder: 'Founder',
     about_founder_desc: 'Specialist in highly effective body care and body shaping. Author of unique techniques for non-invasive slimming based on many years of experience and continuous education.',
     about_studio: 'Studio: Brno, Královo Pole',
-    // Contact page additions
+
     contact_form_heading: 'Write to us',
     contact_info_heading: 'Contact Information',
     contact_hours_heading: 'Opening Hours',
@@ -254,7 +254,7 @@ const translations = {
     contact_hours_p3: 'Sunday: closed',
     contact_social_heading: 'Social networks',
     contact_success: '✓ Message sent successfully. We will get back to you soon!',
-    // Product details additions
+
     prod_related_label: 'You might also like',
     prod_related_title: 'Other products',
     prod_not_found: 'Product not found.',
@@ -262,10 +262,10 @@ const translations = {
     shipping_option_post: 'Czech Post — 1–3 business days',
     shipping_option_packeta: 'Packeta — 1–2 business days',
     shipping_option_pickup: 'Store Pickup — Brno, Královo Pole',
-    // Cart page additions
+
     cart_recommend_label: 'Recommended',
     cart_recommend_title: 'You might also like',
-    // Nav home/shop/contact keys
+
     nav_home: 'Home',
     nav_shipping: 'Shipping & Payment',
     nav_terms: 'Terms & Conditions',
@@ -273,7 +273,6 @@ const translations = {
   }
 };
 
-// Currency conversion: 1 EUR = 25 CZK (approximate)
 const EUR_RATE = 25;
 
 let currentLang = localStorage.getItem('byelmarie_lang') || 'cs';
@@ -339,7 +338,7 @@ function applyTranslations() {
       el.placeholder = translations[currentLang][key];
     }
   });
-  // Update html lang attribute
+
   document.documentElement.lang = currentLang;
 }
 
@@ -385,7 +384,7 @@ function updateLocalizationSelector() {
 
 function initLocOptions() {
   document.querySelectorAll('.loc-opt').forEach(btn => {
-    // Fill flags dynamically if empty
+
     const flagEl = btn.querySelector('.loc-opt__flag');
     const lang = btn.dataset.lang;
     if (flagEl && !flagEl.innerHTML && flags[lang]) {
@@ -399,7 +398,6 @@ function initLocOptions() {
       setLang(lang);
       setCurrency(currency);
 
-      // Smooth feedback: close the dropdown wrap after a tiny delay
       setTimeout(() => {
         document.querySelector('.loc-dropdown-wrap')?.classList.remove('open');
       }, 250);

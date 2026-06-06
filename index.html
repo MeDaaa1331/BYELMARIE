@@ -22,14 +22,10 @@
 
 <body class="page-home">
 
-
-
-  <!-- ── Header ── -->
   <header id="site-header">
     <div class="container">
       <div class="header__inner">
 
-        <!-- Left Nav -->
         <nav class="header__nav" aria-label="Hlavní menu">
           <div class="nav-item">
             <a href="about.html" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
@@ -70,7 +66,6 @@
           </div>
         </nav>
 
-        <!-- Logo (center) -->
         <div class="header__logo">
           <a href="index.html">
             <img src="images/logo.png" alt="BYELMARIE®"
@@ -80,9 +75,8 @@
           </a>
         </div>
 
-        <!-- Right Actions -->
         <div class="header__actions">
-          <!-- Currency Selector -->
+
           <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
             <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
               <span id="currency-label">CZK</span>
@@ -98,7 +92,6 @@
 
           <a href="contact.html" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
 
-          <!-- Search -->
           <button id="search-toggle" aria-label="Hledat">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="7.5" cy="7.5" r="5.5" />
@@ -106,7 +99,6 @@
             </svg>
           </button>
 
-          <!-- Cart -->
           <a href="cart.html" class="cart-icon-wrap" aria-label="Košík">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M1 1h2.5l1.8 9h9.4l1.8-6H5" />
@@ -116,7 +108,6 @@
             <span class="cart-count-badge" style="display:none;">0</span>
           </a>
 
-          <!-- Mobile Menu Toggle -->
           <button id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -128,10 +119,8 @@
     </div>
   </header>
 
-  <!-- ── Mobile Menu Overlay ── -->
   <div id="mobile-menu-overlay"></div>
 
-  <!-- ── Mobile Menu ── -->
   <nav id="mobile-menu" aria-label="Mobilní menu">
     <button class="mobile-menu__close" id="mobile-close" aria-label="Zavřít">×</button>
 
@@ -174,7 +163,6 @@
     </div>
   </nav>
 
-  <!-- ── Search Bar ── -->
   <div id="search-bar" role="search">
     <div class="search-bar__inner">
       <form id="search-form">
@@ -187,13 +175,9 @@
 
   <main id="main-content">
 
-    <!-- ══════════════════════════════════════════════════════
-         HERO SECTION
-    ══════════════════════════════════════════════════════ -->
     <section class="hero">
       <div class="hero__bg"></div>
 
-      <!-- Hero image from byelmarie about page -->
       <div class="hero__image-wrap">
         <img src="images/o_byelmarie.png" alt="BYELMARIE® — Šárka Kloudová" onerror="this.style.opacity='0'">
       </div>
@@ -216,9 +200,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         MARQUEE / TICKER
-    ══════════════════════════════════════════════════════ -->
     <div class="marquee-section" aria-hidden="true">
       <div class="marquee-track" id="marquee-track">
         <span class="marquee-item">BYELMARIE®</span>
@@ -230,7 +211,7 @@
         <span class="marquee-item">ROLLCUPPING</span>
         <span class="marquee-item">Sérum na řasy</span>
         <span class="marquee-item">Brno · Královo Pole</span>
-        <!-- Duplicated for seamless loop -->
+
         <span class="marquee-item">BYELMARIE®</span>
         <span class="marquee-item">Formování postavy</span>
         <span class="marquee-item">Baňky FUFFU</span>
@@ -243,9 +224,6 @@
       </div>
     </div>
 
-    <!-- ══════════════════════════════════════════════════════
-         CATEGORIES
-    ══════════════════════════════════════════════════════ -->
     <section class="section">
       <div class="container">
         <div class="section-header animate-on-scroll">
@@ -254,7 +232,7 @@
         </div>
 
         <div class="category-grid">
-          <!-- Body Care -->
+
           <a href="shop.html?category=body" class="category-card animate-on-scroll animate-delay-1">
             <img class="category-card__image" src="images/banka-fuffu.png" alt="Produkty pro péči o tělo" loading="lazy"
               onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'400\' height=\'500\' fill=\'%23EDE8E2\'/></svg>'">
@@ -268,7 +246,6 @@
             </div>
           </a>
 
-          <!-- Professional -->
           <a href="shop.html?category=professional" class="category-card animate-on-scroll animate-delay-2">
             <img class="category-card__image" src="images/skoleni-rollcupping.png" alt="Pro profesionály" loading="lazy"
               onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'400\' height=\'500\' fill=\'%23CDC1B3\'/></svg>'">
@@ -281,7 +258,6 @@
             </div>
           </a>
 
-          <!-- Slimming Brno -->
           <a href="contact.html" class="category-card animate-on-scroll animate-delay-3">
             <img class="category-card__image" src="images/sarka_fuffu.jpg" alt="Zeštíhlení Brno" loading="lazy"
               onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'400\' height=\'500\' fill=\'%23B8A89A\'/></svg>'">
@@ -296,9 +272,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         FEATURED PRODUCTS
-    ══════════════════════════════════════════════════════ -->
     <section class="section" style="background: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
       <div class="container">
         <div class="section-header animate-on-scroll">
@@ -314,9 +287,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         ABOUT SPLIT SECTION
-    ══════════════════════════════════════════════════════ -->
     <section class="section section--lg">
       <div class="container">
         <div class="about-split">
@@ -338,9 +308,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         FEATURES / USPs
-    ══════════════════════════════════════════════════════ -->
     <section class="features-section">
       <div class="container">
         <div class="features-grid">
@@ -380,9 +347,6 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════════════════
-         PROFESSIONAL PRODUCTS
-    ══════════════════════════════════════════════════════ -->
     <section class="section" style="border-top: 1px solid var(--color-border);">
       <div class="container">
         <div class="section-header animate-on-scroll">
@@ -398,14 +362,10 @@
 
   </main>
 
-  <!-- ══════════════════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer__grid">
 
-        <!-- Logo + desc -->
         <div class="footer__logo-col">
           <div class="footer__logo">
             <a href="index.html">
@@ -434,7 +394,6 @@
           </div>
         </div>
 
-        <!-- Navigation -->
         <div>
           <h4 class="footer__heading">Navigace</h4>
           <ul class="footer__links">
@@ -445,7 +404,6 @@
           </ul>
         </div>
 
-        <!-- Info -->
         <div>
           <h4 class="footer__heading" data-i18n="footer_info">Informace pro vás</h4>
           <ul class="footer__links">
@@ -455,7 +413,6 @@
           </ul>
         </div>
 
-        <!-- Contact -->
         <div>
           <h4 class="footer__heading" data-i18n="footer_contact">Kontakt</h4>
           <div class="footer__contact-item">
@@ -489,7 +446,6 @@
     </div>
   </footer>
 
-  <!-- ── Scripts ── -->
   <script src="js/i18n.js"></script>
   <script src="js/products.js"></script>
   <script src="js/cart.js"></script>
@@ -497,7 +453,7 @@
   <script src="js/main.js"></script>
 
   <script>
-    // Render featured products (body care only)
+
     document.addEventListener('DOMContentLoaded', () => {
       const featGrid = document.getElementById('featured-products');
       const proGrid = document.getElementById('pro-products');
@@ -506,7 +462,7 @@
 
       if (featGrid) {
         featGrid.innerHTML = bodyProducts.map(p => renderProductCard(p)).join('');
-        // Animate cards
+
         featGrid.querySelectorAll('.product-card').forEach((card, i) => {
           card.classList.add('animate-on-scroll');
           card.style.transitionDelay = `${i * 0.1}s`;
@@ -523,7 +479,6 @@
         proGrid.innerHTML = proProducts.map(p => renderProductCard(p)).join('');
       }
 
-      // Mobile close button
       document.getElementById('mobile-close')?.addEventListener('click', () => {
         document.getElementById('mobile-menu')?.classList.remove('open');
         document.getElementById('mobile-menu-toggle')?.classList.remove('active');

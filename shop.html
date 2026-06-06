@@ -12,14 +12,10 @@
 </head>
 <body>
 
-
-
-  <!-- ── Header ── -->
   <header id="site-header">
     <div class="container">
       <div class="header__inner">
 
-        <!-- Left Nav -->
         <nav class="header__nav" aria-label="Hlavní menu">
           <div class="nav-item">
             <a href="about.html" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
@@ -68,7 +64,6 @@
           </div>
         </nav>
 
-        <!-- Logo (center) -->
         <div class="header__logo">
           <a href="index.html">
             <img src="images/logo.png" alt="BYELMARIE®" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
@@ -76,9 +71,8 @@
           </a>
         </div>
 
-        <!-- Right Actions -->
         <div class="header__actions">
-          <!-- Currency Selector -->
+
           <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
             <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
               <span id="currency-label">CZK</span>
@@ -92,18 +86,15 @@
 
           <a href="contact.html" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
 
-          <!-- Search -->
           <button id="search-toggle" aria-label="Hledat">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7.5" cy="7.5" r="5.5"/><line x1="11.5" y1="11.5" x2="16" y2="16"/></svg>
           </button>
 
-          <!-- Cart -->
           <a href="cart.html" class="cart-icon-wrap" aria-label="Košík">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h2.5l1.8 9h9.4l1.8-6H5"/><circle cx="7" cy="15.5" r="1"/><circle cx="13" cy="15.5" r="1"/></svg>
             <span class="cart-count-badge" style="display:none;">0</span>
           </a>
 
-          <!-- Mobile Menu Toggle -->
           <button id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -143,7 +134,6 @@
 
   <main id="main-content">
 
-    <!-- Shop Header -->
     <div class="shop-header">
       <div class="container">
         <div class="breadcrumb">
@@ -158,7 +148,6 @@
     <div class="section section--sm">
       <div class="container">
 
-        <!-- Filters -->
         <div class="shop-filters">
           <div class="filter-tabs">
             <button class="filter-tab active" data-filter="all" data-i18n="shop_filter_all">Vše</button>
@@ -172,7 +161,6 @@
           </select>
         </div>
 
-        <!-- Products Grid -->
         <div class="product-grid product-grid--3" id="shop-products"></div>
 
       </div>
@@ -180,7 +168,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer__grid">
@@ -237,17 +224,15 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Read URL params
+
       const params = new URLSearchParams(window.location.search);
       let currentFilter = params.get('category') || 'all';
       let currentSort = 'default';
       let searchQuery = params.get('search') || '';
 
-      // Update breadcrumb and title based on filter
       const breadcrumbMap = { body: 'Péče o tělo', professional: 'Pro profesionály', all: 'E-shop' };
       document.getElementById('breadcrumb-current').textContent = breadcrumbMap[currentFilter] || 'E-shop';
 
-      // Set active filter tab
       document.querySelectorAll('.filter-tab').forEach(tab => {
         tab.classList.toggle('active', tab.dataset.filter === currentFilter);
       });
@@ -255,7 +240,6 @@
       function renderProducts() {
         let products = getProductsByCategory(currentFilter === 'all' ? null : currentFilter);
 
-        // Search filter
         if (searchQuery) {
           products = products.filter(p =>
             getProductName(p).toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -263,7 +247,6 @@
           );
         }
 
-        // Sort
         if (currentSort === 'price-asc') {
           products = [...products].sort((a, b) => a.priceCZK - b.priceCZK);
         } else if (currentSort === 'price-desc') {
@@ -275,7 +258,6 @@
 
         grid.innerHTML = products.map((p, i) => renderProductCard(p)).join('');
 
-        // Animate
         grid.querySelectorAll('.product-card').forEach((card, i) => {
           card.classList.add('animate-on-scroll');
           card.style.transitionDelay = `${i * 0.08}s`;
@@ -286,7 +268,6 @@
         });
       }
 
-      // Filter tabs
       document.querySelectorAll('.filter-tab').forEach(tab => {
         tab.addEventListener('click', () => {
           currentFilter = tab.dataset.filter;
@@ -296,13 +277,11 @@
         });
       });
 
-      // Sort
       document.getElementById('sort-select')?.addEventListener('change', (e) => {
         currentSort = e.target.value;
         renderProducts();
       });
 
-      // Mobile close
       document.getElementById('mobile-close')?.addEventListener('click', () => {
         document.getElementById('mobile-menu')?.classList.remove('open');
         document.getElementById('mobile-menu-toggle')?.classList.remove('active');

@@ -12,14 +12,10 @@
 </head>
 <body>
 
-
-
-  <!-- ── Header ── -->
   <header id="site-header">
     <div class="container">
       <div class="header__inner">
 
-        <!-- Left Nav -->
         <nav class="header__nav" aria-label="Hlavní menu">
           <div class="nav-item">
             <a href="about.html" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
@@ -68,7 +64,6 @@
           </div>
         </nav>
 
-        <!-- Logo (center) -->
         <div class="header__logo">
           <a href="index.html">
             <img src="images/logo.png" alt="BYELMARIE®" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
@@ -76,9 +71,8 @@
           </a>
         </div>
 
-        <!-- Right Actions -->
         <div class="header__actions">
-          <!-- Currency Selector -->
+
           <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
             <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
               <span id="currency-label">CZK</span>
@@ -92,18 +86,15 @@
 
           <a href="contact.html" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
 
-          <!-- Search -->
           <button id="search-toggle" aria-label="Hledat">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7.5" cy="7.5" r="5.5"/><line x1="11.5" y1="11.5" x2="16" y2="16"/></svg>
           </button>
 
-          <!-- Cart -->
           <a href="cart.html" class="cart-icon-wrap" aria-label="Košík">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h2.5l1.8 9h9.4l1.8-6H5"/><circle cx="7" cy="15.5" r="1"/><circle cx="13" cy="15.5" r="1"/></svg>
             <span class="cart-count-badge" style="display:none;">0</span>
           </a>
 
-          <!-- Mobile Menu Toggle -->
           <button id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
             <span class="hamburger-line"></span>
             <span class="hamburger-line"></span>
@@ -137,7 +128,6 @@
   <main id="main-content">
     <div class="container">
 
-      <!-- Breadcrumb -->
       <div class="breadcrumb" id="product-breadcrumb">
         <a href="index.html" data-i18n="nav_home">Domů</a>
         <span class="breadcrumb__sep">/</span>
@@ -146,15 +136,13 @@
         <span id="breadcrumb-product">Produkt</span>
       </div>
 
-      <!-- Product Detail -->
       <div class="product-detail" id="product-detail">
-        <!-- Rendered by JS -->
+
         <div style="grid-column: 1/-1; text-align: center; padding: 4rem 0; color: var(--color-text-muted);">
           Načítání produktu...
         </div>
       </div>
 
-      <!-- Related Products -->
       <section class="section section--sm" style="border-top: 1px solid var(--color-border); margin-top: var(--space-12);">
         <div class="section-header">
           <span class="section-header__label" data-i18n="prod_related_label">Mohlo by vás zajímat</span>
@@ -166,7 +154,6 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer__grid">
@@ -238,12 +225,10 @@
         return;
       }
 
-      // Update page title
       const name = getProductName(product);
       document.getElementById('page-title').textContent = `${name} — BYELMARIE®`;
       document.getElementById('breadcrumb-product').textContent = name;
 
-      // Selected variant
       let selectedVariant = product.hasVariants ? null : null;
       let currentPrice = product.priceCZK;
 
@@ -270,12 +255,10 @@
         }
       }
 
-      // Build short desc
       const shortDescItems = getProductShortDesc(product).map(item =>
         `<li>${item}</li>`
       ).join('');
 
-      // Build variants
       let variantHTML = '';
       if (product.hasVariants && product.variants.length > 0) {
         const varBtns = product.variants.map(v => `
@@ -289,7 +272,6 @@
         `;
       }
 
-      // CTA Button
       let ctaHTML = '';
       if (product.soldOut) {
         ctaHTML = `<button class="btn btn-primary" disabled style="opacity:0.5;cursor:not-allowed;" data-i18n="sold_out">${t('sold_out')}</button>`;
@@ -299,7 +281,6 @@
         ctaHTML = `<button class="btn btn-primary" onclick="handleAddToCart()" id="add-to-cart-btn" data-i18n="add_to_cart">${t('add_to_cart')}</button>`;
       }
 
-      // Gallery
       let currentImageIndex = 0;
       const mainImg = product.images[0] || product.image;
       const thumbsHTML = product.images.length > 1
@@ -310,7 +291,6 @@
           `).join('')
         : '';
 
-      // Render
       document.getElementById('product-detail').innerHTML = `
         <!-- Gallery -->
         <div class="product-gallery animate-on-scroll">
@@ -377,7 +357,6 @@
         </div>
       `;
 
-      // Animate
       document.querySelectorAll('.animate-on-scroll').forEach(el => {
         const obs = new IntersectionObserver(entries => {
           entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
@@ -385,7 +364,6 @@
         obs.observe(el);
       });
 
-      // Related products
       const related = PRODUCTS.filter(p => p.id !== product.id && p.category === product.category).slice(0, 4);
       const relatedGrid = document.getElementById('related-products');
       if (relatedGrid && related.length > 0) {
@@ -395,7 +373,6 @@
         relatedGrid.innerHTML = otherProds.map(p => renderProductCard(p)).join('');
       }
 
-      // Mobile close
       document.getElementById('mobile-close')?.addEventListener('click', () => {
         document.getElementById('mobile-menu')?.classList.remove('open');
         document.getElementById('mobile-menu-toggle')?.classList.remove('active');
@@ -413,7 +390,7 @@
 
       window.handleAddToCart = function() {
         if (product.hasVariants && !selectedVariant) {
-          // Highlight variants
+
           const btns = document.getElementById('variant-buttons');
           if (btns) {
             btns.style.animation = 'none';
@@ -466,11 +443,10 @@
       };
     });
 
-    // Accordion
     window.toggleAccordion = function(trigger) {
       const item = trigger.closest('.accordion-item');
       const isOpen = item.classList.contains('open');
-      // Close all
+
       document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     };

@@ -1,5 +1,5 @@
 const PRODUCTS = [
-  // ===== BODY CARE =====
+
   {
     id: 1,
     slug: 'banka-fuffu',
@@ -258,7 +258,7 @@ const PRODUCTS = [
 </ul>
 <p><strong>Synergy Duo: FUFFU & CELSLIMROLL</strong><br>Combine the rollers with the <strong>FUFFU vacuum cup</strong> for a powerful combination to sculpt the body and detoxify.</p>`,
   },
-  // ===== PROFESSIONAL =====
+
   {
     id: 5,
     slug: 'skoleni-rollcupping',
@@ -606,13 +606,12 @@ function renderProductCard(product, minimal = false) {
   `;
 }
 
-// Quick add to cart (for products without variants)
 function quickAddToCart(productId) {
   const product = PRODUCTS.find(p => p.id === productId);
   if (!product || product.soldOut || product.onRequest) return;
 
   if (product.hasVariants) {
-    // Redirect to product page
+
     window.location.href = `product.html?slug=${product.slug}`;
     return;
   }

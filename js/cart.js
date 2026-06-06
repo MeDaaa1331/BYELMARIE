@@ -1,4 +1,3 @@
-// Cart management using localStorage
 
 const CART_KEY = 'byelmarie_cart';
 
@@ -17,7 +16,7 @@ function saveCart(cart) {
 
 function addToCart(item) {
   const cart = getCart();
-  // Create unique key for product+variant
+
   const key = item.variant ? `${item.id}_${item.variant}` : `${item.id}`;
   const existing = cart.find(c => c.key === key);
   if (existing) {
@@ -79,7 +78,6 @@ function updateCartCount() {
   });
 }
 
-// Render cart page
 function renderCartPage() {
   const cart = getCart();
   const container = document.getElementById('cart-items');
