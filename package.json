@@ -1,0 +1,14 @@
+{
+  "name": "byelmarie",
+  "version": "1.0.0",
+  "description": "BYELMARIE® E-Shop - Inovativní značka masážních pomůcek",
+  "private": true,
+  "scripts": {
+    "build": "echo 'No build step required for static site'",
+    "test": "echo 'No tests configured'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  },
+  "devDependencies": {}
+}
