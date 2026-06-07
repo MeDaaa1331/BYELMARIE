@@ -10,8 +10,7 @@
   <meta property="og:title" content="BYELMARIE® — Inovace v péči o tělo">
   <meta property="og:description" content="Profesionální masážní pomůcky a přístroje pro formování postavy.">
   <meta property="og:image" content="images/logo.png">
-  <link rel="icon" type="image/x-icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F5F0EB'/><text x='50%' y='62%' text-anchor='middle' font-size='10' fill='%23222'>BYE</text></svg>">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -30,39 +29,47 @@
           <div class="nav-item">
             <a href="about.html" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
           </div>
-          <div class="nav-item has-dropdown">
-            <a href="shop.html" class="nav-link" data-i18n="nav_products">Produkty</a>
-            <div class="nav-dropdown">
-              <a href="shop.html?category=body">
-                <img src="images/valecky-celslimroll.png" alt="">
-                <span data-i18n="nav_products_fuffu">Baňky FUFFU</span>
-              </a>
-              <a href="product.html?slug=oblicejove-banky">
-                <img src="images/oblicejove-banky.png" alt="">
-                <span data-i18n="nav_products_face">Obličejové baňky</span>
-              </a>
-              <a href="product.html?slug=serum-na-rasy">
-                <img src="images/serum-na-rasy.png" alt="">
-                <span data-i18n="nav_products_serum">Sérum na řasy</span>
-              </a>
+          <div class="nav-item has-dropdown mega-dropdown-wrap">
+            <a href="shop.html" class="nav-link" data-i18n="nav_offer">Nabídka</a>
+            <div class="nav-dropdown mega-dropdown">
+              <div class="mega-dropdown__inner">
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="cat_body_care">Produkty pro tělo</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="product.html?slug=banka-fuffu" data-i18n="nav_products_fuffu">Baňky FUFFU</a></li>
+                    <li><a href="product.html?slug=oblicejove-banky" data-i18n="nav_products_face">Obličejové baňky</a>
+                    </li>
+                    <li><a href="product.html?slug=serum-na-rasy" data-i18n="nav_products_serum">Sérum na řasy</a></li>
+                    <li><a href="product.html?slug=valecky-celslimroll">Válečky CELSLIMROLL</a></li>
+                    <li><a href="shop.html?category=body" class="mega-dropdown__all" data-i18n="products_all">Zobrazit
+                        vše →</a></li>
+                  </ul>
+                </div>
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="cat_professional">Pro profesionály</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="product.html?slug=skoleni-rollcupping"
+                        data-i18n="nav_training_rollcupping">ROLLCUPPING</a></li>
+                    <li><a href="product.html?slug=skoleni-rollcupping-online">ROLLCUPPING Online</a></li>
+                    <li><a href="product.html?slug=skoleni-vibroslimfit"
+                        data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a></li>
+                    <li><a href="product.html?slug=ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a></li>
+                    <li><a href="shop.html?category=professional" class="mega-dropdown__all"
+                        data-i18n="products_all">Zobrazit vše →</a></li>
+                  </ul>
+                </div>
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="nav_slimming_brno">Zeštíhlení Brno</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="contact.html">Studio Brno</a></li>
+                    <li><a href="contact.html#contact-form">Rezervovat ošetření</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="nav-item has-dropdown">
-            <a href="shop.html?category=professional" class="nav-link" data-i18n="nav_training">Školení</a>
-            <div class="nav-dropdown">
-              <a href="product.html?slug=skoleni-rollcupping">
-                <img src="images/skoleni-rollcupping.png" alt="">
-                <span data-i18n="nav_training_rollcupping">ROLLCUPPING</span>
-              </a>
-              <a href="product.html?slug=skoleni-vibroslimfit">
-                <img src="images/skoleni-vibroslimfit.png" alt="">
-                <span data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</span>
-              </a>
-              <a href="product.html?slug=ems-prosuit">
-                <img src="images/ems-prosuit.jpg" alt="">
-                <span data-i18n="nav_training_ems">EMS PROSuit</span>
-              </a>
-            </div>
+          <div class="nav-item">
+            <a href="map.html" class="nav-link" data-i18n="nav_find_us">Kde nás najdete</a>
           </div>
         </nav>
 
@@ -148,6 +155,9 @@
         <a href="product.html?slug=skoleni-vibroslimfit" data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a>
         <a href="product.html?slug=ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a>
       </div>
+    </div>
+    <div class="mobile-menu-item">
+      <a href="map.html"><span data-i18n="nav_find_us">Kde nás najdete</span></a>
     </div>
     <div class="mobile-menu-item">
       <a href="contact.html"><span data-i18n="nav_contact">Kontakt</span></a>

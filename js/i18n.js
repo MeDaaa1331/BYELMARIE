@@ -14,14 +14,17 @@ const translations = {
     nav_slimming_brno: 'Zeštíhlení Brno',
     nav_contact: 'Kontakt',
     nav_shop: 'E-shop',
+    nav_offer: 'Nabídka',
+    nav_find_us: 'Kde nás najdete',
+    map_page_title: 'Mapa salónů v Česku a na Slovensku',
 
     announcement: 'STUDIO V BRNĚ · PO - PÁ DLE DOHODY',
     loc_lang: 'Jazyk',
     loc_currency: 'Měna',
 
     hero_subtitle: 'Inovace v péči o tělo',
-    hero_title: 'Formujte svou\npostavu přirozeně',
-    hero_text: 'Profesionální masážní pomůcky a přístroje pro salon i domácí použití. Vyvinuté odborníkem Šárkou Kloudovou.',
+    hero_title: 'Profesionální péče pro každý den',
+    hero_text: 'Profesionální pomůcky a přístroje pro salónní i domácí péči, vybrané s důrazem na kvalitu, funkčnost a výsledky.',
     hero_cta: 'Nakupovat',
     hero_cta2: 'O značce',
 
@@ -150,6 +153,9 @@ const translations = {
     nav_slimming_brno: 'Slimming Brno',
     nav_contact: 'Contact',
     nav_shop: 'Shop',
+    nav_offer: 'Offer',
+    nav_find_us: 'Where to find us',
+    map_page_title: 'Map of Salons in Czechia and Slovakia',
 
     announcement: 'STUDIO IN BRNO · BY APPOINTMENT',
     loc_lang: 'Language',

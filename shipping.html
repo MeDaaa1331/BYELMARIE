@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="nav_shipping">Doprava a platba — BYELMARIE®</title>
   <meta name="description" content="Informace o možnostech dopravy a platby v internetovém obchodě BYELMARIE®.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header id="site-header">
@@ -20,54 +25,56 @@
           <div class="nav-item">
             <a href="about.html" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
           </div>
-          <div class="nav-item has-dropdown">
-            <a href="shop.html" class="nav-link" data-i18n="nav_products">Produkty</a>
-            <div class="nav-dropdown">
-              <a href="product.html?slug=banka-fuffu">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763285208-6ab673f9-0060-4a1a-bcb0-dccf09169155.png" alt="">
-                <span data-i18n="nav_products_fuffu">Baňky FUFFU</span>
-              </a>
-              <a href="product.html?slug=oblicejove-banky">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763283684-00b55450-be92-42d4-910e-98a6833bf1ef.png" alt="">
-                <span data-i18n="nav_products_face">Obličejové baňky</span>
-              </a>
-              <a href="product.html?slug=serum-na-rasy">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763282436-1f9d7469-5ea7-40cf-843e-9cef02e797bc.png" alt="">
-                <span data-i18n="nav_products_serum">Sérum na řasy</span>
-              </a>
-              <a href="product.html?slug=valecky-celslimroll">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/shop/big/57-1_valecky-set.png?69725139" alt="">
-                <span>Válečky CELSLIMROLL</span>
-              </a>
+          <div class="nav-item has-dropdown mega-dropdown-wrap">
+            <a href="shop.html" class="nav-link" data-i18n="nav_offer">Nabídka</a>
+            <div class="nav-dropdown mega-dropdown">
+              <div class="mega-dropdown__inner">
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="cat_body_care">Produkty pro tělo</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="product.html?slug=banka-fuffu" data-i18n="nav_products_fuffu">Baňky FUFFU</a></li>
+                    <li><a href="product.html?slug=oblicejove-banky" data-i18n="nav_products_face">Obličejové baňky</a>
+                    </li>
+                    <li><a href="product.html?slug=serum-na-rasy" data-i18n="nav_products_serum">Sérum na řasy</a></li>
+                    <li><a href="product.html?slug=valecky-celslimroll">Válečky CELSLIMROLL</a></li>
+                    <li><a href="shop.html?category=body" class="mega-dropdown__all" data-i18n="products_all">Zobrazit
+                        vše →</a></li>
+                  </ul>
+                </div>
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="cat_professional">Pro profesionály</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="product.html?slug=skoleni-rollcupping"
+                        data-i18n="nav_training_rollcupping">ROLLCUPPING</a></li>
+                    <li><a href="product.html?slug=skoleni-rollcupping-online">ROLLCUPPING Online</a></li>
+                    <li><a href="product.html?slug=skoleni-vibroslimfit"
+                        data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a></li>
+                    <li><a href="product.html?slug=ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a></li>
+                    <li><a href="shop.html?category=professional" class="mega-dropdown__all"
+                        data-i18n="products_all">Zobrazit vše →</a></li>
+                  </ul>
+                </div>
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="nav_slimming_brno">Zeštíhlení Brno</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="contact.html">Studio Brno</a></li>
+                    <li><a href="contact.html#contact-form">Rezervovat ošetření</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="nav-item has-dropdown">
-            <a href="shop.html?category=professional" class="nav-link" data-i18n="nav_training">Školení</a>
-            <div class="nav-dropdown">
-              <a href="product.html?slug=skoleni-rollcupping">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763286602-55730e0e-7341-4c97-af41-b30ea2e9d2b3.png" alt="">
-                <span data-i18n="nav_training_rollcupping">ROLLCUPPING</span>
-              </a>
-              <a href="product.html?slug=skoleni-rollcupping-online">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763286602-55730e0e-7341-4c97-af41-b30ea2e9d2b3.png" alt="">
-                <span>ROLLCUPPING Online</span>
-              </a>
-              <a href="product.html?slug=skoleni-vibroslimfit">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/1763290399-f5f61af5-0984-4ac0-a1a9-9c8aae1d0983.png" alt="">
-                <span data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</span>
-              </a>
-              <a href="product.html?slug=ems-prosuit">
-                <img src="https://cdn.myshoptet.com/usr/www.byelmarie.com/user/categories/thumb/img_7424.jpeg" alt="">
-                <span data-i18n="nav_training_ems">EMS PROSuit</span>
-              </a>
-            </div>
+          <div class="nav-item">
+            <a href="map.html" class="nav-link" data-i18n="nav_find_us">Kde nás najdete</a>
           </div>
         </nav>
 
         <div class="header__logo">
           <a href="index.html">
-            <img src="images/logo.png" alt="BYELMARIE®" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-            <span style="display:none; font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; font-family:'Cormorant Garamond',serif;">BYELMARIE®</span>
+            <img src="images/logo.png" alt="BYELMARIE®"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <span
+              style="display:none; font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; font-family:'Cormorant Garamond',serif;">BYELMARIE®</span>
           </a>
         </div>
 
@@ -76,7 +83,9 @@
           <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
             <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
               <span id="currency-label">CZK</span>
-              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor"><path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor">
+                <path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </button>
             <div class="currency-dropdown" id="currency-dropdown">
               <button class="currency-opt" data-currency="CZK" id="opt-czk">CZK</button>
@@ -87,11 +96,18 @@
           <a href="contact.html" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
 
           <button id="search-toggle" aria-label="Hledat">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7.5" cy="7.5" r="5.5"/><line x1="11.5" y1="11.5" x2="16" y2="16"/></svg>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="7.5" cy="7.5" r="5.5" />
+              <line x1="11.5" y1="11.5" x2="16" y2="16" />
+            </svg>
           </button>
 
           <a href="cart.html" class="cart-icon-wrap" aria-label="Košík">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1h2.5l1.8 9h9.4l1.8-6H5"/><circle cx="7" cy="15.5" r="1"/><circle cx="13" cy="15.5" r="1"/></svg>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M1 1h2.5l1.8 9h9.4l1.8-6H5" />
+              <circle cx="7" cy="15.5" r="1" />
+              <circle cx="13" cy="15.5" r="1" />
+            </svg>
             <span class="cart-count-badge" style="display:none;">0</span>
           </a>
 
@@ -110,6 +126,7 @@
     <button class="mobile-menu__close" id="mobile-close">×</button>
     <div class="mobile-menu-item"><a href="about.html"><span data-i18n="nav_about">O Byelmarie</span></a></div>
     <div class="mobile-menu-item"><a href="shop.html"><span data-i18n="nav_shop">E-shop</span></a></div>
+    <div class="mobile-menu-item"><a href="map.html"><span data-i18n="nav_find_us">Kde nás najdete</span></a></div>
     <div class="mobile-menu-item"><a href="contact.html"><span data-i18n="nav_contact">Kontakt</span></a></div>
     <div class="mobile-menu__toggles">
       <button class="currency-option" data-currency="CZK">CZK — Kč</button>
@@ -120,7 +137,8 @@
 
   <div id="search-bar" role="search">
     <div class="search-bar__inner">
-      <form id="search-form"><input type="search" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Napište, co hledáte..." autocomplete="off"></form>
+      <form id="search-form"><input type="search" id="search-input" data-i18n-placeholder="search_placeholder"
+          placeholder="Napište, co hledáte..." autocomplete="off"></form>
       <button id="search-close" aria-label="Zavřít">×</button>
     </div>
   </div>
@@ -142,34 +160,50 @@
       <div class="container" style="max-width: 800px;">
 
         <div class="animate-on-scroll">
-          <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 400; margin-bottom: var(--space-6); color: var(--color-text);">Doprava zboží</h2>
+          <h2
+            style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 400; margin-bottom: var(--space-6); color: var(--color-text);">
+            Doprava zboží</h2>
           <p style="margin-bottom: var(--space-8); color: var(--color-text-light);">
-            Objednávky expedujeme obvykle do 1–3 pracovních dnů. Zásilky balíme s maximální péčí, aby k vám masážní baňky a válečky dorazily v bezvadném stavu.
+            Objednávky expedujeme obvykle do 1–3 pracovních dnů. Zásilky balíme s maximální péčí, aby k vám masážní
+            baňky a válečky dorazily v bezvadném stavu.
           </p>
 
           <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-6); margin-bottom: var(--space-12);">
 
-            <div style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
-              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Zásilkovna — Výdejní místa & Z-boxy</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Vyzvednutí na tisících výdejních místech a samoobslužných Z-boxech po celé České republice.</p>
+            <div
+              style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
+              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Zásilkovna —
+                Výdejní místa & Z-boxy</h3>
+              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Vyzvednutí na tisících výdejních
+                místech a samoobslužných Z-boxech po celé České republice.</p>
               <strong style="color: var(--color-text);">Cena: 79 Kč</strong>
             </div>
 
-            <div style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
-              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Zásilkovna — Doručení na adresu</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Pohodlné doručení kurýrem přímo k vám domů nebo do zaměstnání.</p>
+            <div
+              style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
+              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Zásilkovna —
+                Doručení na adresu</h3>
+              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Pohodlné doručení kurýrem přímo
+                k vám domů nebo do zaměstnání.</p>
               <strong style="color: var(--color-text);">Cena: 99 Kč</strong>
             </div>
 
-            <div style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark); background-color: #fcfbfa;">
-              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500; color: var(--color-success);">Doprava zdarma</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Při nákupu produktů nad stanovenou hodnotu neplatíte žádné poštovné.</p>
+            <div
+              style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark); background-color: #fcfbfa;">
+              <h3
+                style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500; color: var(--color-success);">
+                Doprava zdarma</h3>
+              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Při nákupu produktů nad
+                stanovenou hodnotu neplatíte žádné poštovné.</p>
               <strong style="color: var(--color-success);">ZDARMA pro objednávky nad 2 500 Kč (100 €)</strong>
             </div>
 
-            <div style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
-              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Osobní odběr</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Možné po předchozí individuální domluvě v našem salonu.</p>
+            <div
+              style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
+              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Osobní odběr
+              </h3>
+              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Možné po předchozí individuální
+                domluvě v našem salonu.</p>
               <strong style="color: var(--color-text);">Adresa: Zaječí hora 130/6, Brno (ZDARMA)</strong>
             </div>
 
@@ -177,21 +211,28 @@
         </div>
 
         <div class="animate-on-scroll" style="margin-top: var(--space-12);">
-          <h2 style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 400; margin-bottom: var(--space-6); color: var(--color-text);">Způsoby platby</h2>
+          <h2
+            style="font-family: var(--font-heading); font-size: 2.25rem; font-weight: 400; margin-bottom: var(--space-6); color: var(--color-text);">
+            Způsoby platby</h2>
           <p style="margin-bottom: var(--space-8); color: var(--color-text-light);">
             Vyberte si platbu, která vám nejvíce vyhovuje. Všechny naše transakce jsou bezpečně šifrovány.
           </p>
 
           <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-6);">
 
-            <div style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
-              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Online platba kartou (Shoptet Pay)</h3>
-              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Okamžitá platba přes zabezpečenou platební bránu. Vaše objednávka bude zpracována ihned.</p>
+            <div
+              style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
+              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Online platba
+                kartou (Shoptet Pay)</h3>
+              <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">Okamžitá platba přes
+                zabezpečenou platební bránu. Vaše objednávka bude zpracována ihned.</p>
               <strong style="color: var(--color-text);">Cena: ZDARMA</strong>
             </div>
 
-            <div style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
-              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Bankovní převod</h3>
+            <div
+              style="background: var(--color-bg-alt); padding: var(--space-6); border-radius: var(--radius-md); border-left: 2px solid var(--color-accent-dark);">
+              <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-2); font-weight: 500;">Bankovní
+                převod</h3>
               <p style="color: var(--color-text-light); margin-bottom: var(--space-2);">
                 Po potvrzení objednávky obdržíte pokyny k platbě. Zboží expedujeme po připsání platby na náš účet.
               </p>
@@ -222,10 +263,16 @@
           <p class="footer__desc" data-i18n="about_text">BYELMARIE® — inovativní masážní pomůcky a přístroje.</p>
           <div class="footer__social">
             <a href="https://www.instagram.com/byelmarie/" target="_blank" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61565788686393" target="_blank" aria-label="Facebook">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
             </a>
           </div>
         </div>
@@ -275,7 +322,7 @@
 
       document.querySelectorAll('.animate-on-scroll').forEach(el => {
         const obs = new IntersectionObserver((entries) => {
-          entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
         }, { threshold: 0.05 });
         obs.observe(el);
       });
@@ -283,4 +330,5 @@
   </script>
 
 </body>
+
 </html>

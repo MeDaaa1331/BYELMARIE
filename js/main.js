@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initAnnouncementClose();
   initCurrencyDropdown();
+  initMapPin();
 });
 
 function initStickyHeader() {
@@ -317,4 +318,21 @@ function initCurrencyDropdown() {
   }
 
   setTimeout(refreshCurrencyToggle, 50);
+}
+
+function initMapPin() {
+  const pinBrno = document.getElementById('pin-brno');
+  const popupBrno = document.getElementById('popup-brno');
+  if (!pinBrno || !popupBrno) return;
+
+  pinBrno.addEventListener('click', (e) => {
+    e.stopPropagation();
+    popupBrno.classList.toggle('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (popupBrno && !popupBrno.contains(e.target) && e.target !== pinBrno) {
+      popupBrno.classList.remove('active');
+    }
+  });
 }

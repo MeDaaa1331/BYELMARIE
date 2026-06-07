@@ -462,9 +462,9 @@ const PRODUCTS = [
       { id: 'DOUBLE', nameCs: 'DOUBLE Set (volba velikostí, 12ks prádla)', nameEn: 'DOUBLE Set (custom sizes, 12pcs wear)', priceCZK: 0 },
       { id: 'PROFI', nameCs: 'PROFI Set (XS/M/XL, 20ks prádla)', nameEn: 'PROFI Set (XS/M/XL, 20pcs wear)', priceCZK: 0 }
     ],
-    image: 'https://cdn.myshoptet.com/usr/www.byelmarie.com/user/shop/big/72-1_ziskejte-naskok-s-novinkou-ems-prosuit.png?69ce38c6',
+    image: 'images/suit.jpg',
     images: [
-      'https://cdn.myshoptet.com/usr/www.byelmarie.com/user/shop/big/72-1_ziskejte-naskok-s-novinkou-ems-prosuit.png?69ce38c6',
+      'images/suit.jpg',
       'https://cdn.myshoptet.com/usr/www.byelmarie.com/user/shop/big/72_ems-prosuit.jpg?69ce38f6'
     ],
     inStock: true,
