@@ -48,9 +48,9 @@
         <span class="price on-request" data-i18n="on_request">Na dotaz</span>
       {%- else -%}
         {%- if product.price_varies -%}
-          <span class="price"><span data-i18n="from">od</span> {{ product.price_min | money_without_trailing_zeros }}</span>
+          <span class="price" data-price-from="{{ product.price_min | divided_by: 100 }}"><span data-i18n="from">od</span> {{ product.price_min | money_without_trailing_zeros }}</span>
         {%- else -%}
-          <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
+          <span class="price" data-price="{{ product.price | divided_by: 100 }}">{{ product.price | money_without_trailing_zeros }}</span>
         {%- endif -%}
       {%- endif -%}
 

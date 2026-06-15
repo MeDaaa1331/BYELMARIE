@@ -55,14 +55,14 @@
                     {%- unless item.product.has_only_default_variant -%}
                       <div class="cart-item__variant">({{ item.variant.title }})</div>
                     {%- endunless -%}
-                    <div class="cart-item__price-unit">{{ item.final_price | money_without_trailing_zeros }}</div>
+                    <div class="cart-item__price-unit" data-price="{{ item.final_price | divided_by: 100 }}">{{ item.final_price | money_without_trailing_zeros }}</div>
                   </div>
                   <div class="cart-item__qty">
                     <a class="qty-btn" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}">−</a >
                     <span class="qty-value">{{ item.quantity }}</span>
                     <a class="qty-btn" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}">+</a>
                   </div>
-                  <div class="cart-item__total">{{ item.final_line_price | money_without_trailing_zeros }}</div>
+                  <div class="cart-item__total" data-price="{{ item.final_line_price | divided_by: 100 }}">{{ item.final_line_price | money_without_trailing_zeros }}</div>
                   <a href="{{ item.url_to_remove }}" class="cart-item__remove" aria-label="Odstranit">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <line x1="1" y1="1" x2="15" y2="15" stroke="currentColor" stroke-width="1.5"/>
@@ -79,7 +79,7 @@
 
             <div class="cart-summary-row">
               <span style="color:var(--color-text-muted); font-size:var(--font-size-sm);">Mezisoučet</span>
-              <span id="cart-subtotal">{{ cart.items_subtotal_price | money_without_trailing_zeros }}</span>
+              <span id="cart-subtotal" data-price="{{ cart.items_subtotal_price | divided_by: 100 }}">{{ cart.items_subtotal_price | money_without_trailing_zeros }}</span>
             </div>
             <div class="cart-summary-row">
               <span style="color:var(--color-text-muted); font-size:var(--font-size-sm);">Doprava</span>
@@ -87,7 +87,7 @@
             </div>
             <div class="cart-summary-row total">
               <span data-i18n="cart_total">Celkem</span>
-              <span id="cart-total-price">{{ cart.total_price | money_without_trailing_zeros }}</span>
+              <span id="cart-total-price" data-price="{{ cart.total_price | divided_by: 100 }}">{{ cart.total_price | money_without_trailing_zeros }}</span>
             </div>
 
             <button type="submit" name="checkout" class="btn btn-primary" style="width:100%;margin-top:var(--space-6);padding:var(--space-5);justify-content:center;">

@@ -64,7 +64,8 @@
 
       <h1 class="product-info__name">{{ product.title }}</h1>
 
-      <div class="product-info__price" id="detail-price">
+      <div class="product-info__price" id="detail-price" 
+           {% unless is_sold_out or is_on_request %}data-price="{{ product.selected_or_first_available_variant.price | divided_by: 100 }}"{% endunless %}>
         {%- if is_sold_out -%}
           <span data-i18n="sold_out">Vyprodáno</span>
         {%- elsif is_on_request -%}
@@ -90,7 +91,7 @@
           {% for variant in product.variants %}
             <button class="variant-btn {% if variant.id == product.selected_or_first_available_variant.id %}active{% endif %} {% unless variant.available %}disabled{% endunless %}" 
                     data-variant-id="{{ variant.id }}" 
-                    data-price="{{ variant.price | money_without_trailing_zeros }}" 
+                    data-variant-price="{{ variant.price | divided_by: 100 }}" 
                     type="button">
               {{ variant.title }}
             </button>
@@ -219,7 +220,7 @@
         btn.classList.add('active');
         
         const variantId = btn.getAttribute('data-variant-id');
-        const price = btn.getAttribute('data-price');
+        const price = btn.getAttribute('data-variant-price');
         
         // Update hidden input
         const input = document.getElementById('selected-variant-id');
@@ -227,7 +228,14 @@
         
         // Update price display
         const priceEl = document.getElementById('detail-price');
-        if (priceEl) priceEl.textContent = price;
+        if (priceEl) {
+          priceEl.setAttribute('data-price', price);
+          if (typeof formatPrice === 'function') {
+            priceEl.textContent = formatPrice(parseInt(price));
+          } else {
+            priceEl.textContent = price + ' Kč';
+          }
+        }
       });
     });
   });
