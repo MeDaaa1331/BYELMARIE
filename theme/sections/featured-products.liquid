@@ -1,0 +1,92 @@
+<section class="section" style="background: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="section-header__label">{{ section.settings.label }}</span>
+      <h2 class="section-header__title">{{ section.settings.title }}</h2>
+    </div>
+
+    {%- assign collection = collections[section.settings.collection] -%}
+    {%- assign limit = section.settings.limit -%}
+
+    <div class="product-grid">
+      {%- if collection != blank and collection.products_count > 0 -%}
+        {%- for product in collection.products limit: limit -%}
+          {%- render 'product-card', product: product -%}
+        {%- endfor -%}
+      {%- else -%}
+        {% comment %} Fallback v editaci, pokud není vybrána kolekce {% endcomment %}
+        {%- for i in (1..limit) -%}
+          <article class="product-card">
+            <div class="product-card__image-wrap">
+              <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='400' height='400' fill='%23f0ede8'/><text x='50%25' y='50%25' text-anchor='middle' fill='%23cdc1b3' font-size='18' dy='.3em'>Demo Produkt {{ i }}</text></svg>" class="product-card__image">
+            </div>
+            <div class="product-card__info">
+              <a href="#" class="product-card__name">Demo Produkt {{ i }}</a>
+              <div class="product-card__price-row">
+                <span class="price">990 Kč</span>
+                <span class="btn-add-to-cart">Do košíku</span>
+              </div>
+            </div>
+          </article>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+
+    {%- if section.settings.show_view_all and collection != blank -%}
+      <div class="section-footer animate-on-scroll">
+        <a href="{{ collection.url }}" class="btn btn-outline" data-i18n="products_all">{{ section.settings.view_all_label }}</a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Doporučené produkty",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Označení sekce",
+      "default": "E-shop"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Nadpis sekce",
+      "default": "Nejprodávanější produkty"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Vybrat kolekci"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4,
+      "label": "Limit produktů k zobrazení"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": "Zobrazit tlačítko 'Zobrazit vše'",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "view_all_label",
+      "label": "Text tlačítka",
+      "default": "Zobrazit vše"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Doporučené produkty"
+    }
+  ]
+}
+{% endschema %}

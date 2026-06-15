@@ -1,0 +1,70 @@
+<section class="section section--lg">
+  <div class="container">
+    <div class="about-split">
+      <div class="about-split__image animate-from-left">
+        {% if section.settings.image != blank %}
+          <img src="{{ section.settings.image | image_url: width: 600 }}" alt="{{ section.settings.title | escape }}" loading="lazy">
+        {% else %}
+          <img src="{{ 'sarka_fuffu.jpg' | asset_url }}" alt="{{ section.settings.title | escape }}" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'500\'><rect width=\'400\' height=\'500\' fill=\'%23EDE8E2\'/><text x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' fill=\'%23cdc1b3\' font-size=\'16\'>BYELMARIE®</text></svg>'">
+        {% endif %}
+      </div>
+      <div class="about-split__content animate-from-right">
+        <span class="about-split__label">{{ section.settings.label }}</span>
+        <h2 class="about-split__title" data-i18n="about_heading">{{ section.settings.title | replace: '\n', '<br>' | replace: '\N', '<br>' }}</h2>
+        <div class="about-split__text-content">
+          {{ section.settings.text }}
+        </div>
+        {% if section.settings.btn_label != blank and section.settings.btn_url != blank %}
+          <a href="{{ section.settings.btn_url }}" class="btn btn-primary" data-i18n="about_cta">{{ section.settings.btn_label }}</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "O značce (Split)",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Obrázek (vlevo)"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Označení sekce",
+      "default": "BYELMARIE®"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Nadpis sekce (zadejte \\n pro nový řádek)",
+      "default": "Inovace a odbornost v péči o tělo"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Obsah (odstavce)",
+      "default": "<p>BYELMARIE® je inovativní značka masážních pomůcek a přístroje VIBROSLIMFIT. Za její vizí stojí Šárka Kloudová, specialistka na vysoce efektivní péči o tělo a formování postavy.</p><p>Pro profesionály v oboru nabízí BYELMARIE® certifikovaná školení a prodej specializovaného masážního zařízení.</p>"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Text tlačítka",
+      "default": "Více o BYELMARIE®"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Odkaz tlačítka"
+    }
+  ],
+  "presets": [
+    {
+      "name": "O značce (Split)"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,75 @@
+<div class="shop-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="{{ routes.root_url }}" data-i18n="nav_home">Domů</a>
+      <span class="breadcrumb__sep">/</span>
+      <span id="breadcrumb-current">
+        {%- if collection.handle == 'all' -%}
+          E-shop
+        {%- else -%}
+          {{ collection.title }}
+        {%- endif -%}
+      </span>
+    </div>
+    <h1>{{ collection.title }}</h1>
+  </div>
+</div>
+
+<div class="section section--sm">
+  <div class="container">
+
+    <div class="shop-filters">
+      <div class="filter-tabs">
+        <a href="/collections/all" class="filter-tab {% if collection.handle == 'all' or collection.handle == 'frontpage' %}active{% endif %}" data-i18n="shop_filter_all">Vše</a>
+        <a href="/collections/body-care" class="filter-tab {% if collection.handle == 'body-care' %}active{% endif %}" data-i18n="shop_filter_body">Péče o tělo</a>
+        <a href="/collections/professional" class="filter-tab {% if collection.handle == 'professional' %}active{% endif %}" data-i18n="shop_filter_pro">Pro profesionály</a>
+      </div>
+      
+      {%- assign current_sort = collection.sort_by | default: collection.default_sort_by -%}
+      <select class="sort-select" id="sort-select" aria-label="Seřadit">
+        <option value="manual" {% if current_sort == 'manual' %}selected{% endif %} data-i18n="shop_sort_default">Výchozí</option>
+        <option value="price-ascending" {% if current_sort == 'price-ascending' %}selected{% endif %} data-i18n="shop_sort_price_asc">Cena: od nejnižší</option>
+        <option value="price-descending" {% if current_sort == 'price-descending' %}selected{% endif %} data-i18n="shop_sort_price_desc">Cena: od nejvyšší</option>
+      </select>
+    </div>
+
+    {%- paginate collection.products by 24 -%}
+      <div class="product-grid product-grid--3" id="shop-products">
+        {%- if collection.products_count > 0 -%}
+          {%- for product in collection.products -%}
+            {%- render 'product-card', product: product -%}
+          {%- endfor -%}
+        {%- else -%}
+          <div style="grid-column: 1/-1; text-align: center; padding: 4rem 0; color: var(--color-text-muted);">
+            V této kolekci nejsou žádné produkty.
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        <div style="margin-top: var(--space-8); display: flex; justify-content: center;">
+          {{ paginate | default_pagination }}
+        </div>
+      {%- endif -%}
+    {%- endpaginate -%}
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('sort-select')?.addEventListener('change', (e) => {
+      const value = e.target.value;
+      const url = new URL(window.location.href);
+      url.searchParams.set('sort_by', value);
+      window.location.href = url.toString();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Kolekce BYELMARIE",
+  "settings": []
+}
+{% endschema %}

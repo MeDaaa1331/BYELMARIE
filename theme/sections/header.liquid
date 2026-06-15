@@ -1,0 +1,312 @@
+<header id="site-header">
+  <div class="container">
+    <div class="header__inner">
+
+      <nav class="header__nav" aria-label="Hlavní menu">
+        {% if section.settings.menu.links != blank and section.settings.menu.links.size > 2 %}
+          {% for link in section.settings.menu.links %}
+            {% assign link_title_dc = link.title | downcase %}
+            {% if link.links != blank or link_title_dc == 'nabídka' or link_title_dc == 'nabidka' or link_title_dc == 'offer' or link_title_dc == 'catalog' or link_title_dc == 'katalog' %}
+              <div class="nav-item has-dropdown mega-dropdown-wrap">
+                <a href="{{ link.url }}" class="nav-link" {% if link_title_dc == 'nabídka' or link_title_dc == 'nabidka' or link_title_dc == 'offer' or link_title_dc == 'catalog' or link_title_dc == 'katalog' %}data-i18n="nav_offer"{% endif %}>{{ link.title }}</a>
+                <div class="nav-dropdown mega-dropdown">
+                  <div class="mega-dropdown__inner">
+                    {% if link.links != blank %}
+                      {% for childlink in link.links %}
+                        <div class="mega-dropdown__col">
+                          <h4 class="mega-dropdown__title">{{ childlink.title }}</h4>
+                          <ul class="mega-dropdown__links">
+                            {% for grandchildlink in childlink.links %}
+                              <li><a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a></li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      {% endfor %}
+                    {% else %}
+                      <!-- Fallback default structure from original website -->
+                      <div class="mega-dropdown__col">
+                        <h4 class="mega-dropdown__title" data-i18n="cat_body_care">Produkty pro tělo</h4>
+                        <ul class="mega-dropdown__links">
+                          <li><a href="/products/banka-fuffu" data-i18n="nav_products_fuffu">Baňky FUFFU</a></li>
+                          <li><a href="/products/oblicejove-banky" data-i18n="nav_products_face">Obličejové baňky</a></li>
+                          <li><a href="/products/serum-na-rasy" data-i18n="nav_products_serum">Sérum na řasy</a></li>
+                          <li><a href="/products/valecky-celslimroll">Válečky CELSLIMROLL</a></li>
+                          <li><a href="/collections/body" class="mega-dropdown__all" data-i18n="products_all">Zobrazit vše →</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown__col">
+                        <h4 class="mega-dropdown__title" data-i18n="cat_professional">Pro profesionály</h4>
+                        <ul class="mega-dropdown__links">
+                          <li><a href="/products/skoleni-rollcupping" data-i18n="nav_training_rollcupping">ROLLCUPPING</a></li>
+                          <li><a href="/products/skoleni-rollcupping-online">ROLLCUPPING Online</a></li>
+                          <li><a href="/products/skoleni-vibroslimfit" data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a></li>
+                          <li><a href="/products/ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a></li>
+                          <li><a href="/collections/professional" class="mega-dropdown__all" data-i18n="products_all">Zobrazit vše →</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown__col">
+                        <h4 class="mega-dropdown__title" data-i18n="nav_slimming_brno">Zeštíhlení Brno</h4>
+                        <ul class="mega-dropdown__links">
+                          <li><a href="/pages/contact">Studio Brno</a></li>
+                          <li><a href="/pages/contact#contact-form">Rezervovat ošetření</a></li>
+                        </ul>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% else %}
+              <div class="nav-item">
+                <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <!-- Original website fallback -->
+          <div class="nav-item">
+            <a href="{{ pages.about.url | default: pages['o-byelmarie'].url | default: '/pages/about' }}" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
+          </div>
+          <div class="nav-item has-dropdown mega-dropdown-wrap">
+            <a href="/collections/all" class="nav-link" data-i18n="nav_offer">Nabídka</a>
+            <div class="nav-dropdown mega-dropdown">
+              <div class="mega-dropdown__inner">
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="cat_body_care">Produkty pro tělo</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="/products/banka-fuffu" data-i18n="nav_products_fuffu">Baňky FUFFU</a></li>
+                    <li><a href="/products/oblicejove-banky" data-i18n="nav_products_face">Obličejové baňky</a></li>
+                    <li><a href="/products/serum-na-rasy" data-i18n="nav_products_serum">Sérum na řasy</a></li>
+                    <li><a href="/products/valecky-celslimroll">Válečky CELSLIMROLL</a></li>
+                    <li><a href="/collections/body" class="mega-dropdown__all" data-i18n="products_all">Zobrazit vše →</a></li>
+                  </ul>
+                </div>
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="cat_professional">Pro profesionály</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="/products/skoleni-rollcupping" data-i18n="nav_training_rollcupping">ROLLCUPPING</a></li>
+                    <li><a href="/products/skoleni-rollcupping-online">ROLLCUPPING Online</a></li>
+                    <li><a href="/products/skoleni-vibroslimfit" data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a></li>
+                    <li><a href="/products/ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a></li>
+                    <li><a href="/collections/professional" class="mega-dropdown__all" data-i18n="products_all">Zobrazit vše →</a></li>
+                  </ul>
+                </div>
+                <div class="mega-dropdown__col">
+                  <h4 class="mega-dropdown__title" data-i18n="nav_slimming_brno">Zeštíhlení Brno</h4>
+                  <ul class="mega-dropdown__links">
+                    <li><a href="/pages/contact">Studio Brno</a></li>
+                    <li><a href="/pages/contact#contact-form">Rezervovat ošetření</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}" class="nav-link" data-i18n="nav_find_us">Námi školené salóny</a>
+          </div>
+        {% endif %}
+      </nav>
+
+      <div class="header__logo">
+        <a href="{{ routes.root_url }}">
+          {% if section.settings.logo != blank %}
+            <img src="{{ section.settings.logo | image_url: width: 300 }}" alt="{{ shop.name }}">
+          {% else %}
+            <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            <span style="display:none; font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; font-family:'Cormorant Garamond',serif;">{{ shop.name }}</span>
+          {% endif %}
+        </a>
+      </div>
+
+      <div class="header__actions">
+        <!-- Jazyk -->
+        <div class="nav-item lang-dropdown-wrap" id="lang-wrap">
+          <button id="lang-toggle" class="lang-toggle" aria-label="Jazyk">
+            <span id="lang-label">CS</span>
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor">
+              <path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-opt lang-option" data-lang="cs" id="opt-lang-cs">CS</button>
+            <button class="lang-opt lang-option" data-lang="en" id="opt-lang-en">EN</button>
+          </div>
+        </div>
+
+        <!-- Měna / Lokace -->
+        <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
+          <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
+            <span id="currency-label">{{ cart.currency.iso_code }}</span>
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor">
+              <path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="currency-dropdown" id="currency-dropdown">
+            {% for currency in shop.enabled_currencies %}
+              <button class="currency-opt {% if currency.iso_code == cart.currency.iso_code %}active{% endif %}" data-currency="{{ currency.iso_code }}">{{ currency.iso_code }}</button>
+            {% endfor %}
+          </div>
+        </div>
+
+        <a href="{{ pages.contact.url | default: '/pages/contact' }}" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
+
+        <button id="search-toggle" aria-label="Hledat">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="7.5" cy="7.5" r="5.5" />
+            <line x1="11.5" y1="11.5" x2="16" y2="16" />
+          </svg>
+        </button>
+
+        <a href="{{ routes.cart_url }}" class="cart-icon-wrap" aria-label="Košík">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M1 1h2.5l1.8 9h9.4l1.8-6H5" />
+            <circle cx="7" cy="15.5" r="1" />
+            <circle cx="13" cy="15.5" r="1" />
+          </svg>
+          <span class="cart-count-badge" {% if cart.item_count == 0 %}style="display:none;"{% endif %}>{{ cart.item_count }}</span>
+        </a>
+
+        <button id="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<div id="mobile-menu-overlay"></div>
+
+<nav id="mobile-menu" aria-label="Mobilní menu">
+  <button class="mobile-menu__close" id="mobile-close" aria-label="Zavřít">×</button>
+
+  {% if section.settings.menu.links != blank and section.settings.menu.links.size > 2 %}
+    {% for link in section.settings.menu.links %}
+      {% assign link_title_dc = link.title | downcase %}
+      <div class="mobile-menu-item">
+        {% if link.links != blank or link_title_dc == 'nabídka' or link_title_dc == 'nabidka' or link_title_dc == 'offer' or link_title_dc == 'catalog' or link_title_dc == 'katalog' %}
+          <a href="{{ link.url }}">
+            <span {% if link_title_dc == 'nabídka' or link_title_dc == 'nabidka' or link_title_dc == 'offer' or link_title_dc == 'catalog' or link_title_dc == 'katalog' %}data-i18n="nav_offer"{% endif %}>{{ link.title }}</span>
+          </a>
+          <button class="mobile-submenu-toggle" aria-label="Zobrazit podmenu" style="background:none; border:none; padding:10px; cursor:pointer; font-size:1.1rem; margin-left:auto;">
+            <span class="submenu-arrow">›</span>
+          </button>
+          <div class="mobile-submenu">
+            {% if link.links != blank %}
+              {% for childlink in link.links %}
+                {% if childlink.links != blank %}
+                  <div style="padding-left: 10px;">
+                    <span style="font-weight: 500; display: block; margin-top: 10px; font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text-muted);">{{ childlink.title }}</span>
+                    {% for grandchildlink in childlink.links %}
+                      <a href="{{ grandchildlink.url }}" style="padding-left: 10px;">{{ grandchildlink.title }}</a>
+                    {% endfor %}
+                  </div>
+                {% else %}
+                  <a href="{{ childlink.url }}">{{ childlink.title }}</a>
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              <!-- Fallback mobile submenu -->
+              <a href="/products/banka-fuffu" data-i18n="nav_products_fuffu">Baňky FUFFU</a>
+              <a href="/products/oblicejove-banky" data-i18n="nav_products_face">Obličejové baňky</a>
+              <a href="/products/serum-na-rasy" data-i18n="nav_products_serum">Sérum na řasy</a>
+              <a href="/products/valecky-celslimroll">Válečky CELSLIMROLL</a>
+              <a href="/products/skoleni-rollcupping" data-i18n="nav_training_rollcupping">ROLLCUPPING</a>
+              <a href="/products/skoleni-vibroslimfit" data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a>
+              <a href="/products/ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a>
+            {% endif %}
+          </div>
+        {% else %}
+          <a href="{{ link.url }}">
+            <span>{{ link.title }}</span>
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% else %}
+    <!-- Original website mobile menu fallback -->
+    <div class="mobile-menu-item">
+      <a href="{{ pages.about.url | default: pages['o-byelmarie'].url | default: '/pages/about' }}"><span data-i18n="nav_about">O Byelmarie</span></a>
+    </div>
+    <div class="mobile-menu-item">
+      <a href="/collections/body">
+        <span data-i18n="nav_products">Produkty pro péči o tělo</span>
+      </a>
+      <button class="mobile-submenu-toggle" aria-label="Zobrazit podmenu" style="background:none; border:none; padding:10px; cursor:pointer; font-size:1.1rem; margin-left:auto;">
+        <span class="submenu-arrow">›</span>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/products/banka-fuffu" data-i18n="nav_products_fuffu">Baňky FUFFU</a>
+        <a href="/products/oblicejove-banky" data-i18n="nav_products_face">Obličejové baňky</a>
+        <a href="/products/serum-na-rasy" data-i18n="nav_products_serum">Sérum na řasy</a>
+        <a href="/products/valecky-celslimroll">Válečky CELSLIMROLL</a>
+      </div>
+    </div>
+    <div class="mobile-menu-item">
+      <a href="/collections/professional">
+        <span data-i18n="nav_training">Školení pro profesionály</span>
+      </a>
+      <button class="mobile-submenu-toggle" aria-label="Zobrazit podmenu" style="background:none; border:none; padding:10px; cursor:pointer; font-size:1.1rem; margin-left:auto;">
+        <span class="submenu-arrow">›</span>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/products/skoleni-rollcupping" data-i18n="nav_training_rollcupping">ROLLCUPPING</a>
+        <a href="/products/skoleni-vibroslimfit" data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a>
+        <a href="/products/ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a>
+      </div>
+    </div>
+    <div class="mobile-menu-item">
+      <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}"><span data-i18n="nav_find_us">Kde nás najdete</span></a>
+    </div>
+    <div class="mobile-menu-item">
+      <a href="{{ pages.contact.url | default: pages.kontakt.url | default: '/pages/contact' }}"><span data-i18n="nav_contact">Kontakt</span></a>
+    </div>
+    <div class="mobile-menu-item">
+      <a href="https://www.instagram.com/byelmarie/" target="_blank">Instagram</a>
+    </div>
+  {% endif %}
+
+  <div class="mobile-menu__toggles">
+    <!-- Language options -->
+    <button class="lang-option" data-lang="cs">CS</button>
+    <span class="toggle-divider">/</span>
+    <button class="lang-option" data-lang="en">EN</button>
+    
+    <span class="toggle-divider" style="margin: 0 10px; opacity: 0.3;">|</span>
+    
+    <!-- Currency options -->
+    {% for currency in shop.enabled_currencies %}
+      <button class="currency-option {% if currency.iso_code == cart.currency.iso_code %}active{% endif %}" data-currency="{{ currency.iso_code }}">{{ currency.iso_code }}</button>
+      {% unless forloop.last %}<span class="toggle-divider">/</span>{% endunless %}
+    {% endfor %}
+  </div>
+</nav>
+
+<div id="search-bar" role="search">
+  <div class="search-bar__inner">
+    <form action="{{ routes.search_url }}" method="get" id="search-form">
+      <input type="search" name="q" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Napište, co hledáte..." autocomplete="off">
+    </form>
+    <button id="search-close" aria-label="Zavřít hledání">×</button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header BYELMARIE",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo obrázek"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Hlavní menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}

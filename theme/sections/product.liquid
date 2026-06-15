@@ -1,0 +1,248 @@
+<div class="container" style="padding-top: var(--space-8);">
+
+  <div class="breadcrumb" id="product-breadcrumb">
+    <a href="{{ routes.root_url }}" data-i18n="nav_home">Domů</a>
+    <span class="breadcrumb__sep">/</span>
+    <a href="/collections/all" data-i18n="nav_shop">E-shop</a>
+    <span class="breadcrumb__sep">/</span>
+    <span id="breadcrumb-product">{{ product.title }}</span>
+  </div>
+
+  {%- assign is_sold_out = true -%}
+  {%- if product.available -%}
+    {%- assign is_sold_out = false -%}
+  {%- endif -%}
+
+  {%- assign is_on_request = false -%}
+  {%- if product.tags contains 'on-request' or product.tags contains 'Na dotaz' or product.price == 0 -%}
+    {%- assign is_on_request = true -%}
+  {%- endif -%}
+
+  <div class="product-detail" id="product-detail">
+    
+    <!-- Gallery -->
+    <div class="product-gallery animate-on-scroll">
+      <div class="product-gallery__main" style="position: relative;">
+        {%- if product.featured_image != blank -%}
+          <img src="{{ product.featured_image | image_url: width: 800 }}" alt="{{ product.title | escape }}" id="main-product-image">
+        {%- else -%}
+          <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='500'><rect width='400' height='500' fill='%23EDE8E2'/><text x='50%25' y='50%25' text-anchor='middle' fill='%23CDC1B3' font-size='20' dy='.3em'>BYELMARIE®</text></svg>" alt="{{ product.title | escape }}" id="main-product-image">
+        {%- endif -%}
+
+        {% if product.images.size > 1 %}
+          <button class="gallery-arrow prev" onclick="navigateGallery(-1)" type="button" aria-label="Předchozí obrázek">‹</button>
+          <button class="gallery-arrow next" onclick="navigateGallery(1)" type="button" aria-label="Další obrázek">›</button>
+        {% endif %}
+      </div>
+      
+      {% if product.images.size > 1 %}
+        <div class="product-gallery__thumbs">
+          {% for image in product.images %}
+            <div class="product-gallery__thumb {% if forloop.first %}active{% endif %}" onclick="selectImage('{{ image | image_url: width: 800 }}', this)">
+              <img src="{{ image | image_url: width: 120 }}" alt="{{ product.title | escape }}" loading="lazy">
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Info -->
+    <div class="product-info animate-on-scroll animate-delay-2">
+      {%- if is_sold_out -%}
+        <div class="product-info__badge" data-i18n="sold_out">Vyprodáno</div>
+      {%- elsif is_on_request -%}
+        <div class="product-info__badge" data-i18n="on_request">Na dotaz</div>
+      {%- else -%}
+        {%- for tag in product.tags -%}
+          {%- if tag contains 'badge:' -%}
+            {%- assign badge_text = tag | remove: 'badge:' -%}
+            <div class="product-info__badge">{{ badge_text }}</div>
+            {%- break -%}
+          {%- endif -origin -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      <h1 class="product-info__name">{{ product.title }}</h1>
+
+      <div class="product-info__price" id="detail-price">
+        {%- if is_sold_out -%}
+          <span data-i18n="sold_out">Vyprodáno</span>
+        {%- elsif is_on_request -%}
+          <span data-i18n="on_request">Na dotaz</span>
+        {%- else -%}
+          {{ product.selected_or_first_available_variant.price | money_without_trailing_zeros }}
+        {%- endif -%}
+      </div>
+
+      <!-- Krátký popisek (bullety z metafieldu nebo popisu) -->
+      {% if product.metafields.custom.short_description_bullets != blank %}
+        <ul class="product-info__short-desc">
+          {% for bullet in product.metafields.custom.short_description_bullets.value %}
+            <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <!-- Výběr variant (velikosti/typy) -->
+      {%- if product.variants.size > 1 and is_on_request == false and is_sold_out == false -%}
+        <div class="product-info__variant-label" data-i18n="size">Velikost / Varianta</div>
+        <div class="variant-buttons" id="variant-buttons">
+          {% for variant in product.variants %}
+            <button class="variant-btn {% if variant.id == product.selected_or_first_available_variant.id %}active{% endif %} {% unless variant.available %}disabled{% endunless %}" 
+                    data-variant-id="{{ variant.id }}" 
+                    data-price="{{ variant.price | money_without_trailing_zeros }}" 
+                    type="button">
+              {{ variant.title }}
+            </button>
+          {% endfor %}
+        </div>
+      {%- endif -%}
+
+      <!-- Přidání do košíku -->
+      <div class="product-info__add">
+        {%- if is_sold_out -%}
+          <button class="btn btn-primary" disabled style="opacity:0.5;cursor:not-allowed;" data-i18n="sold_out">Vyprodáno</button>
+        {%- elsif is_on_request -%}
+          <a href="{{ pages.contact.url | default: '/pages/contact' }}" class="btn btn-primary" data-i18n="on_request">Na dotaz</a>
+        {%- else -%}
+          {%- form 'product', product, class: 'product-form-main', id: 'product-form-main' -%}
+            <input type="hidden" name="id" id="selected-variant-id" value="{{ product.selected_or_first_available_variant.id }}" />
+            <button class="btn btn-primary" type="submit" id="add-to-cart-btn-detail" data-i18n="add_to_cart">Do košíku</button>
+          {%- endform -%}
+        {%- endif -%}
+      </div>
+
+      <!-- Accordion -->
+      <div class="accordion">
+        <div class="accordion-item open">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span data-i18n="prod_description">Popis</span>
+            <span class="accordion-icon"></span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">{{ product.description }}</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" onclick="toggleAccordion(this)">
+            <span data-i18n="prod_shipping">Doprava a vrácení</span>
+            <span class="accordion-icon"></span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p data-i18n="prod_shipping_text">{{ section.settings.shipping_text }}</p>
+              <ul>
+                <li data-i18n="shipping_option_post">Česká pošta — 1–3 pracovní dny</li>
+                <li data-i18n="shipping_option_packeta">Zásilkovna — 1–2 pracovní dny</li>
+                <li data-i18n="shipping_option_pickup">Osobní odběr — Brno, Královo Pole</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Související produkty -->
+  {%- assign related_collection = product.collections.first -%}
+  {%- if related_collection != blank and related_collection.products_count > 1 -%}
+    <section class="section section--sm" style="border-top: 1px solid var(--color-border); margin-top: var(--space-12);">
+      <div class="section-header">
+        <span class="section-header__label" data-i18n="prod_related_label">Mohlo by vás zajímat</span>
+        <h2 class="section-header__title" style="font-size: 2rem;" data-i18n="prod_related_title">Další produkty</h2>
+      </div>
+      <div class="product-grid" id="related-products">
+        {%- assign current_id = product.id -%}
+        {%- assign counter = 0 -%}
+        {%- for related_prod in related_collection.products -%}
+          {%- if related_prod.id != current_id and counter < 4 -%}
+            {%- render 'product-card', product: related_prod -%}
+            {%- assign counter = counter | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </section>
+  {%- endif -%}
+
+</div>
+
+<script>
+  let currentImageIndex = 0;
+  const productImages = [
+    {% for image in product.images %}
+      "{{ image | image_url: width: 800 }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  window.selectImage = function (src, thumbEl) {
+    const mainImg = document.getElementById('main-product-image');
+    if (mainImg) mainImg.src = src;
+    
+    document.querySelectorAll('.product-gallery__thumb').forEach(t => t.classList.remove('active'));
+    if (thumbEl) {
+      thumbEl.classList.add('active');
+      const thumbs = Array.from(document.querySelectorAll('.product-gallery__thumb'));
+      currentImageIndex = thumbs.indexOf(thumbEl);
+    }
+  };
+
+  window.navigateGallery = function (direction) {
+    if (productImages.length <= 1) return;
+    currentImageIndex = (currentImageIndex + direction + productImages.length) % productImages.length;
+    const nextImg = productImages[currentImageIndex];
+    const thumbs = document.querySelectorAll('.product-gallery__thumb');
+    if (thumbs && thumbs[currentImageIndex]) {
+      selectImage(nextImg, thumbs[currentImageIndex]);
+    } else {
+      const mainImg = document.getElementById('main-product-image');
+      if (mainImg) mainImg.src = nextImg;
+    }
+  };
+
+  window.toggleAccordion = function (trigger) {
+    const item = trigger.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  };
+
+  // Variant selection handler
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.variant-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('disabled')) return;
+        
+        document.querySelectorAll('.variant-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const variantId = btn.getAttribute('data-variant-id');
+        const price = btn.getAttribute('data-price');
+        
+        // Update hidden input
+        const input = document.getElementById('selected-variant-id');
+        if (input) input.value = variantId;
+        
+        // Update price display
+        const priceEl = document.getElementById('detail-price');
+        if (priceEl) priceEl.textContent = price;
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Detail produktu BYELMARIE",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "shipping_text",
+      "label": "Text o dopravě",
+      "default": "Doprava zdarma od 2 500 Kč. Vrácení do 14 dní."
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,120 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "subtitle": "Inovace v péči o tělo",
+        "title": "Profesionální péče\\npro každý den",
+        "text": "Profesionální pomůcky a přístroje pro salónní i domácí péči, vybrané s důrazem na kvalitu, funkčnost a výsledky.",
+        "btn1_label": "Nakupovat",
+        "btn1_url": "/collections/all",
+        "btn2_label": "O značce",
+        "btn2_url": "/pages/about"
+      }
+    },
+    "marquee": {
+      "type": "marquee",
+      "settings": {},
+      "blocks": {
+        "b1": { "type": "text_item", "settings": { "text": "BYELMARIE®" } },
+        "b2": { "type": "text_item", "settings": { "text": "Formování postavy" } },
+        "b3": { "type": "text_item", "settings": { "text": "Baňky FUFFU" } },
+        "b4": { "type": "text_item", "settings": { "text": "Neinvazivní zeštíhlení" } },
+        "b5": { "type": "text_item", "settings": { "text": "VIBROSLIMFIT" } },
+        "b6": { "type": "text_item", "settings": { "text": "EMS PROSuit" } },
+        "b7": { "type": "text_item", "settings": { "text": "ROLLCUPPING" } },
+        "b8": { "type": "text_item", "settings": { "text": "Sérum na řasy" } },
+        "b9": { "type": "text_item", "settings": { "text": "Brno · Královo Pole" } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9"]
+    },
+    "categories": {
+      "type": "categories",
+      "settings": {
+        "label": "Naše kategorie",
+        "title": "Péče o tělo & Profesionální řešení"
+      },
+      "blocks": {
+        "c1": {
+          "type": "category_card",
+          "settings": {
+            "title": "Produkty pro tělo",
+            "desc": "Baňky, válečky a séra pro péči o tělo",
+            "btn_label": "Zobrazit",
+            "url": "/collections/body-care"
+          }
+        },
+        "c2": {
+          "type": "category_card",
+          "settings": {
+            "title": "Pro profesionály",
+            "desc": "Školení, pomůcky a přístroje pro salony",
+            "btn_label": "Zobrazit",
+            "url": "/collections/professional"
+          }
+        },
+        "c3": {
+          "type": "category_card",
+          "settings": {
+            "title": "Zeštíhlení Brno",
+            "desc": "Navštivte nás osobně v Brně, Královo Pole",
+            "btn_label": "Rezervovat",
+            "url": "/pages/contact"
+          }
+        }
+      },
+      "block_order": ["c1", "c2", "c3"]
+    },
+    "featured_products_body": {
+      "type": "featured-products",
+      "settings": {
+        "label": "E-shop",
+        "title": "Nejprodávanější produkty",
+        "collection": "body-care",
+        "limit": 4,
+        "show_view_all": true,
+        "view_all_label": "Zobrazit vše"
+      }
+    },
+    "about_section": {
+      "type": "about-section",
+      "settings": {
+        "label": "BYELMARIE®",
+        "title": "Inovace a odbornost\\nv péči o tělo",
+        "text": "<p>BYELMARIE® je inovativní značka masážních pomůcek a přístroje VIBROSLIMFIT. Za její vizí stojí Šárka Kloudová, specialistka na vysoce efektivní péči o tělo a formování postavy.</p><p>Pro profesionály v oboru nabízí BYELMARIE® certifikovaná školení a prodej specializovaného masážního zařízení.</p>",
+        "btn_label": "Více o BYELMARIE®",
+        "btn_url": "/pages/about"
+      }
+    },
+    "features": {
+      "type": "features",
+      "settings": {},
+      "blocks": {
+        "f1": { "type": "feature_item", "settings": { "icon": "check", "title": "Odbornost", "text": "Autorské techniky Šárky Kloudové, ověřené na stovkách klientek" } },
+        "f2": { "type": "feature_item", "settings": { "icon": "star", "title": "Kvalita", "text": "Profesionální pomůcky vyvinuté pro maximální efektivitu" } },
+        "f3": { "type": "feature_item", "settings": { "icon": "refresh", "title": "Výsledky", "text": "Skutečné výsledky formování postavy a neinvazivního zeštíhlení" } }
+      },
+      "block_order": ["f1", "f2", "f3"]
+    },
+    "featured_products_pro": {
+      "type": "featured-products",
+      "settings": {
+        "label": "Školení pro profesionály",
+        "title": "Profesionální řešení pro salony",
+        "collection": "professional",
+        "limit": 3,
+        "show_view_all": true,
+        "view_all_label": "Zobrazit vše"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "marquee",
+    "categories",
+    "featured_products_body",
+    "about_section",
+    "features",
+    "featured_products_pro"
+  ]
+}

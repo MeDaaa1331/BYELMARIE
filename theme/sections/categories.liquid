@@ -1,0 +1,116 @@
+<section class="section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="section-header__label" data-i18n="cat_heading">{{ section.settings.label }}</span>
+      <h2 class="section-header__title">{{ section.settings.title }}</h2>
+    </div>
+
+    <div class="category-grid">
+      {% for block in section.blocks %}
+        {% assign anim_delay = forloop.index %}
+        <a href="{{ block.settings.url }}" class="category-card animate-on-scroll animate-delay-{{ anim_delay }}" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <img class="category-card__image" src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}" loading="lazy">
+          {% else %}
+            {% capture fallback_svg %}
+              data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='500'><rect width='400' height='500' fill='%23EDE8E2'/></svg>
+            {% endcapture %}
+            <img class="category-card__image" src="{{ fallback_svg | strip }}" alt="{{ block.settings.title | escape }}" loading="lazy">
+          {% endif %}
+          <div class="category-card__overlay"></div>
+          <div class="category-card__content">
+            <span class="category-card__name">{{ block.settings.title }}</span>
+            <p class="category-card__desc">{{ block.settings.desc }}</p>
+            <span class="category-card__arrow">
+              {{ block.settings.btn_label }} →
+            </span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kategorie BYELMARIE",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Označení sekce",
+      "default": "Naše kategorie"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Nadpis sekce",
+      "default": "Péče o tělo & Profesionální řešení"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_card",
+      "name": "Karta kategorie",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Obrázek karty"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Název kategorie",
+          "default": "Produkty pro tělo"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Popisek",
+          "default": "Baňky, válečky a séra pro péči o tělo"
+        },
+        {
+          "type": "text",
+          "id": "btn_label",
+          "label": "Text tlačítka",
+          "default": "Zobrazit"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Odkaz"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kategorie BYELMARIE",
+      "blocks": [
+        {
+          "type": "category_card",
+          "settings": {
+            "title": "Produkty pro tělo",
+            "desc": "Baňky, válečky a séra pro péči o tělo"
+          }
+        },
+        {
+          "type": "category_card",
+          "settings": {
+            "title": "Pro profesionály",
+            "desc": "Školení, pomůcky a přístroje pro salony"
+          }
+        },
+        {
+          "type": "category_card",
+          "settings": {
+            "title": "Zeštíhlení Brno",
+            "desc": "Navštivte nás osobně v Brně, Královo Pole"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

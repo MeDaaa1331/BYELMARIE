@@ -1,0 +1,203 @@
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="{{ routes.root_url }}" data-i18n="nav_home">Domů</a>
+      <span class="breadcrumb__sep">/</span>
+      <span data-i18n="nav_contact">Kontakt</span>
+    </div>
+    <h1 class="page-hero__title" data-i18n="contact_title">{{ page.title | default: 'Kontaktujte nás' }}</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="contact-grid">
+
+    <!-- Formular -->
+    <div class="animate-on-scroll">
+      <h2 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: var(--space-8);" data-i18n="contact_form_heading">{{ section.settings.form_title }}</h2>
+
+      {%- form 'contact', id: 'contact-form' -%}
+        {%- if form.posted_successfully? -%}
+          <div class="form-success" style="padding: var(--space-4); background: var(--color-bg-alt); border-left: 3px solid var(--color-success); margin-bottom: var(--space-5); color: var(--color-success); font-size: var(--font-size-sm);" data-i18n="contact_success">
+            ✓ Zpráva byla odeslána. Brzy se ozveme!
+          </div>
+        {%- elsif form.errors -%}
+          <div class="form-error" style="padding: var(--space-4); background: var(--color-bg-alt); border-left: 3px solid var(--color-accent); margin-bottom: var(--space-5); color: var(--color-accent); font-size: var(--font-size-sm);">
+            Chyba při odesílání formuláře. Zkontrolujte pole.
+          </div>
+        {%- endif -%}
+
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="ContactFormName" data-i18n="contact_name">Jméno a příjmení</label>
+          <input type="text" id="ContactFormName" name="contact[name]" class="contact-form__input" required autocomplete="name" value="{{ form.name }}">
+        </div>
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="ContactFormEmail" data-i18n="contact_email">E-mail</label>
+          <input type="email" id="ContactFormEmail" name="contact[email]" class="contact-form__input" required autocomplete="email" value="{{ form.email }}">
+        </div>
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="ContactFormPhone" data-i18n="contact_phone">Telefon</label>
+          <input type="tel" id="ContactFormPhone" name="contact[phone]" class="contact-form__input" autocomplete="tel" value="{{ form.phone }}">
+        </div>
+        <div class="contact-form__group">
+          <label class="contact-form__label" for="ContactFormMessage" data-i18n="contact_message">Zpráva</label>
+          <textarea id="ContactFormMessage" name="contact[body]" class="contact-form__textarea" rows="5" required>{{ form.body }}</textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" data-i18n="contact_send">{{ section.settings.form_btn_label }}</button>
+      {%- endform -%}
+    </div>
+
+    <!-- Kontaktní informace -->
+    <div class="animate-on-scroll animate-delay-2">
+      <h2 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: var(--space-8);" data-i18n="contact_info_heading">{{ section.settings.info_title }}</h2>
+
+      {% if section.settings.email != blank %}
+        <div class="contact-info__item">
+          <svg class="contact-info__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 3h16v14H2z" />
+            <path d="M2 3l8 7 8-7" />
+          </svg>
+          <div>
+            <div class="contact-info__label">E-mail</div>
+            <div class="contact-info__value"><a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if section.settings.phone != blank %}
+        <div class="contact-info__item">
+          <svg class="contact-info__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 3l3.5 1.5L8 8l-2 2s1.5 4 8 8l2-2 3.5 1.5L20 21c-10 2-22-10-17-18z" />
+          </svg>
+          <div>
+            <div class="contact-info__label" data-i18n="contact_phone">Telefon</div>
+            <div class="contact-info__value"><a href="tel:{{ section.settings.phone | replace: ' ', '' }}">{{ section.settings.phone }}</a></div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if section.settings.address != blank %}
+        <div class="contact-info__item">
+          <svg class="contact-info__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M10 2C7.2 2 5 4.2 5 7c0 4.1 5 11 5 11s5-6.9 5-11c0-2.8-2.2-5-5-5z" />
+            <circle cx="10" cy="7" r="2" />
+          </svg>
+          <div>
+            <div class="contact-info__label" data-i18n="contact_address">Adresa</div>
+            <div class="contact-info__value" style="font-size: var(--font-size-sm); line-height: 1.6;">
+              {{ section.settings.address }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if section.settings.hours != blank %}
+        <div class="contact-info__item">
+          <svg class="contact-info__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="3" y="4" width="14" height="13" rx="2" />
+            <path d="M3 8h14" />
+            <path d="M8 4V2m4 2V2" />
+          </svg>
+          <div>
+            <div class="contact-info__label" data-i18n="contact_hours_heading">Otevírací doba</div>
+            <div class="contact-info__value" style="font-size: var(--font-size-sm); line-height:1.8;">
+              {{ section.settings.hours | replace: '\n', '<br>' | replace: '\N', '<br>' }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <!-- Socials -->
+      <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--color-border);">
+        <div class="contact-info__label" style="margin-bottom: var(--space-4);" data-i18n="contact_social_heading">Sociální sítě</div>
+        <div style="display: flex; gap: var(--space-4);">
+          {% if settings.social_instagram_link != blank %}
+            <a href="{{ settings.social_instagram_link }}" target="_blank" rel="noopener" class="btn btn-outline" style="gap: var(--space-3);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              Instagram
+            </a>
+          {% endif %}
+          {% if settings.social_facebook_link != blank %}
+            <a href="{{ settings.social_facebook_link }}" target="_blank" rel="noopener" class="btn btn-outline" style="gap: var(--space-3);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+              Facebook
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Obrázek -->
+      <div style="margin-top: var(--space-8); aspect-ratio: 4/3; overflow: hidden; background: var(--color-bg-alt);">
+        {% if section.settings.image != blank %}
+          <img src="{{ section.settings.image | image_url: width: 600 }}" alt="{{ shop.name }}" style="width:100%; height:100%; object-fit:cover; object-position:top;" loading="lazy">
+        {% else %}
+          <img src="{{ 'sarka_fuffu.jpg' | asset_url }}" alt="{{ shop.name }}" style="width:100%; height:100%; object-fit:cover; object-position:top;" loading="lazy" onerror="this.parentElement.style.display='none'">
+        {% endif %}
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Kontakt BYELMARIE",
+  "settings": [
+    {
+      "type": "text",
+      "id": "form_title",
+      "label": "Nadpis formuláře",
+      "default": "Napište nám"
+    },
+    {
+      "type": "text",
+      "id": "form_btn_label",
+      "label": "Text tlačítka",
+      "default": "Odeslat zprávu"
+    },
+    {
+      "type": "text",
+      "id": "info_title",
+      "label": "Nadpis kontaktních info",
+      "default": "Kontaktní informace"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "sale@byelmarie.com"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Telefon",
+      "default": "+420 731 589 433"
+    },
+    {
+      "type": "richtext",
+      "id": "address",
+      "label": "Adresa",
+      "default": "<p><strong>Be Beauty & Fashion s.r.o.</strong><br>Zaječí hora 130/6, 612 00 Brno-Sadová<br>IČ: 09496360</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "hours",
+      "label": "Otevírací doba (zadejte \\n pro nový řádek)",
+      "default": "Po–Pá: 9:00 – 18:00\nSobota: dle dohody\nNeděle: zavřeno"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Obrázek"
+    }
+  ]
+}
+{% endschema %}

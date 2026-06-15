@@ -1,0 +1,78 @@
+<section class="features-section">
+  <div class="container">
+    <div class="features-grid">
+      {% for block in section.blocks %}
+        {% assign anim_delay = forloop.index %}
+        <div class="feature-item animate-on-scroll {% if anim_delay > 1 %}animate-delay-{{ anim_delay }}{% endif %}" {{ block.shopify_attributes }}>
+          <div class="feature-item__icon">
+            {% if block.settings.icon == 'check' %}
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="24" cy="24" r="20" />
+                <path d="M16 24l6 6 10-12" />
+              </svg>
+            {% elsif block.settings.icon == 'star' %}
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M24 4l4 12h12l-10 7 4 13-10-7-10 7 4-13-10-7h12z" />
+              </svg>
+            {% else %}
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M24 6C14 6 6 14 6 24s8 18 18 18 18-8 18-18" />
+                <path d="M32 6l8 8-8 8" />
+              </svg>
+            {% endif %}
+          </div>
+          <h3 class="feature-item__title">{{ block.settings.title }}</h3>
+          <p class="feature-item__text">{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Přednosti / Pilíře",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "feature_item",
+      "name": "Přednost",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Ikona",
+          "options": [
+            { "value": "check", "label": "Zaškrtnutí (Odbornost)" },
+            { "value": "star", "label": "Hvězda (Kvalita)" },
+            { "value": "refresh", "label": "Kruh s šipkou (Výsledky)" }
+          ],
+          "default": "check"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Název",
+          "default": "Odbornost"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Autorské techniky Šárky Kloudové, ověřené na stovkách klientek"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Přednosti / Pilíře",
+      "blocks": [
+        { "type": "feature_item", "settings": { "icon": "check", "title": "Odbornost", "text": "Autorské techniky Šárky Kloudové, ověřené na stovkách klientek" } },
+        { "type": "feature_item", "settings": { "icon": "star", "title": "Kvalita", "text": "Profesionální pomůcky vyvinuté pro maximální efektivitu" } },
+        { "type": "feature_item", "settings": { "icon": "refresh", "title": "Výsledky", "text": "Skutečné výsledky formování postavy a neinvazivního zeštíhlení" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

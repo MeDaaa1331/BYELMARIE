@@ -1,0 +1,40 @@
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="{{ routes.root_url }}" data-i18n="nav_home">Domů</a>
+      <span class="breadcrumb__sep">/</span>
+      <span data-i18n="nav_find_us">Kde nás najdete</span>
+    </div>
+    <h1 class="page-hero__title" data-i18n="map_page_title">Mapa salónů v Česku a na Slovensku</h1>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container" style="max-width: 1200px; text-align: center;">
+    <div class="map-wrapper" style="margin: 0 auto;">
+      <img src="{{ 'mapa.png' | asset_url }}" alt="Mapa" class="map-image" loading="lazy">
+      <div class="map-pin" style="left: 35.5%; top: 59.0%;" id="pin-brno"></div>
+      <div class="map-popup" style="left: 35.5%; top: 59.0%;" id="popup-brno">
+        <div class="map-popup-inner">
+          <h4 class="map-popup__title" data-i18n="about_studio">Studio: Brno, Královo Pole</h4>
+          <div class="map-popup__content">
+            <p><strong data-i18n="contact_address">Adresa:</strong> Zaječí hora 130/6, 612 00 Brno-Sadová</p>
+            <p><strong data-i18n="contact_phone">Telefon:</strong> <a href="tel:+420731589433">+420 731 589 433</a></p>
+            <p><strong>E-mail:</strong> <a href="mailto:sale@byelmarie.com">sale@byelmarie.com</a></p>
+            <p><strong data-i18n="contact_hours_heading">Otevírací doba:</strong><br>
+              <span data-i18n="contact_hours_p1">Po–Pá: 9:00 – 18:00</span><br>
+              <span data-i18n="contact_hours_p2">Sobota: dle dohody</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Map Page Content",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,156 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div class="footer__logo-col">
+        <div class="footer__logo">
+          <a href="{{ routes.root_url }}">
+            {% if section.settings.logo != blank %}
+              <img src="{{ section.settings.logo | image_url: width: 200 }}" alt="{{ shop.name }}">
+            {% else %}
+              <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+              <span style="display:none; color:rgba(245,240,235,0.85); font-size:1rem; letter-spacing:0.25em; text-transform:uppercase;">{{ shop.name }}</span>
+            {% endif %}
+          </a>
+        </div>
+        <p class="footer__desc" data-i18n="about_text">BYELMARIE® je inovativní značka masážních pomůcek a přístroje VIBROSLIMFIT.</p>
+        <div class="footer__social">
+          {% if settings.social_instagram_link != blank %}
+            <a href="{{ settings.social_instagram_link }}" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          {% endif %}
+          {% if settings.social_facebook_link != blank %}
+            <a href="{{ settings.social_facebook_link }}" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">{{ section.settings.menu_1_heading }}</h4>
+        <ul class="footer__links">
+          {% for link in section.settings.menu_1.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">{{ section.settings.menu_2_heading }}</h4>
+        <ul class="footer__links">
+          {% for link in section.settings.menu_2.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading" data-i18n="footer_contact">Kontakt</h4>
+        {% if section.settings.contact_email != blank %}
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M1 2h12v10H1z" />
+              <path d="M1 2l6 5 6-5" />
+            </svg>
+            <a href="mailto:{{ section.settings.contact_email }}">{{ section.settings.contact_email }}</a>
+          </div>
+        {% endif %}
+        {% if section.settings.contact_phone != blank %}
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M9 12c-5 0-7-2-7-7l2-2 2 3-1 1c0 0 0 3 3 3l1-1 3 2-2 1z" />
+            </svg>
+            <a href="tel:{{ section.settings.contact_phone | replace: ' ', '' }}">{{ section.settings.contact_phone }}</a>
+          </div>
+        {% endif %}
+        {% if section.settings.contact_address != blank %}
+          <div class="footer__contact-item">
+            <svg class="footer__contact-icon" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M7 1C4.8 1 3 2.8 3 5c0 3.3 4 8 4 8s4-4.7 4-8c0-2.2-1.8-4-4-4z" />
+              <circle cx="7" cy="5" r="1.5" />
+            </svg>
+            <span>{{ section.settings.contact_address }}</span>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span data-i18n="footer_copyright">{{ 'now' | date: '%Y' }} {{ shop.name }}. Všechna práva vyhrazena.</span>
+      <span>Vytvořil {{ section.settings.copyright_creator }} pro {{ shop.name }}</span>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer BYELMARIE",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo obrázek"
+    },
+    {
+      "type": "text",
+      "id": "menu_1_heading",
+      "label": "Nadpis menu 1",
+      "default": "Navigace"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_1",
+      "label": "Menu 1 (Odkazy)",
+      "default": "main-menu"
+    },
+    {
+      "type": "text",
+      "id": "menu_2_heading",
+      "label": "Nadpis menu 2",
+      "default": "Informace"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_2",
+      "label": "Menu 2 (Odkazy)"
+    },
+    {
+      "type": "header",
+      "content": "Kontaktní údaje"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Email",
+      "default": "sale@byelmarie.com"
+    },
+    {
+      "type": "text",
+      "id": "contact_phone",
+      "label": "Telefon",
+      "default": "+420 731 589 433"
+    },
+    {
+      "type": "text",
+      "id": "contact_address",
+      "label": "Adresa",
+      "default": "Brno, Královo Pole"
+    },
+    {
+      "type": "text",
+      "id": "copyright_creator",
+      "label": "Autor webu",
+      "default": "Ronald Bičan"
+    }
+  ]
+}
+{% endschema %}

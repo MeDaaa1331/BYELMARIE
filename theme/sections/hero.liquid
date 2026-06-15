@@ -1,0 +1,95 @@
+<section class="hero">
+  <div class="hero__bg"></div>
+
+  <div class="hero__image-wrap">
+    {% if section.settings.image != blank %}
+      <img src="{{ section.settings.image | image_url: width: 800 }}" alt="{{ section.settings.title | escape }}" onerror="this.style.opacity='0'">
+    {% else %}
+      <img src="{{ 'o_byelmarie.png' | asset_url }}" alt="{{ section.settings.title | escape }}" onerror="this.style.opacity='0'">
+    {% endif %}
+  </div>
+  <div class="hero__overlay"></div>
+
+  <div class="hero__content">
+    {% if section.settings.subtitle != blank %}
+      <p class="hero__subtitle" data-i18n="hero_subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+    {% if section.settings.title != blank %}
+      <h1 class="hero__title" data-i18n="hero_title">{{ section.settings.title | replace: '\n', '<br>' | replace: '\N', '<br>' }}</h1>
+    {% endif %}
+    {% if section.settings.text != blank %}
+      <p class="hero__text" data-i18n="hero_text">{{ section.settings.text }}</p>
+    {% endif %}
+    <div class="hero__actions">
+      {% if section.settings.btn1_label != blank and section.settings.btn1_url != blank %}
+        <a href="{{ section.settings.btn1_url }}" class="btn btn-primary" data-i18n="hero_cta">{{ section.settings.btn1_label }}</a>
+      {% endif %}
+      {% if section.settings.btn2_label != blank and section.settings.btn2_url != blank %}
+        <a href="{{ section.settings.btn2_url }}" class="btn btn-outline" data-i18n="hero_cta2">{{ section.settings.btn2_label }}</a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="hero__scroll-indicator">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero banner BYELMARIE",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Obrázek (vpravo)"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Podnadpis",
+      "default": "Inovace v péči o tělo"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Hlavní nadpis (zadejte \\n pro nový řádek)",
+      "default": "Profesionální péče pro každý den"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Textový odstavec",
+      "default": "Profesionální pomůcky a přístroje pro salónní i domácí péči, vybrané s důrazem na kvalitu, funkčnost a výsledky."
+    },
+    {
+      "type": "text",
+      "id": "btn1_label",
+      "label": "Text tlačítka 1",
+      "default": "Nakupovat"
+    },
+    {
+      "type": "url",
+      "id": "btn1_url",
+      "label": "Odkaz tlačítka 1"
+    },
+    {
+      "type": "text",
+      "id": "btn2_label",
+      "label": "Text tlačítka 2",
+      "default": "O značce"
+    },
+    {
+      "type": "url",
+      "id": "btn2_url",
+      "label": "Odkaz tlačítka 2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero banner BYELMARIE"
+    }
+  ]
+}
+{% endschema %}
