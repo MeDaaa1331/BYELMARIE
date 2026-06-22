@@ -137,6 +137,15 @@ const translations = {
     nav_shipping: 'Doprava a platba',
     nav_terms: 'Obchodní podmínky',
     nav_privacy: 'Ochrana os. údajů',
+    
+    slimming_how_heading: 'Jak to probíhá?',
+    slimming_text_p1: 'Vše vzniká v pokojíčku. Tak se s trochou nadsázky může říkat salonu BYELMARIE® Šárky Kloudové. Žádné vitríny do ulic, žádný ruch okolního velkoměsta. Rodinné útulné studio se nachází v Brně Králově Poli v části Sadová v moderní bytové residenci.',
+    slimming_text_p2: 'A právě zde Šárka kouzlí, proměňuje vaše těla a dá odpočinout vaší mysli. Její unikátní tělová péče kombinuje různé techniky, moderní přístroje a pomůcky vlastní značky. Šárka vyvinula <strong>vlastní autorská ošetření</strong>, která garantují viditelné výsledky a změny. Klienti ji vyhledávají hlavně v rámci <strong>zeštíhlení</strong>, <strong>zpevnění těla</strong> či za účelem <strong>hloubkové svalové regenerace</strong> – a nejedná se pouze o ženy.',
+    slimming_text_p3: 'Při cestě za vaším krásnějším a zdravějším já sahá po přístrojích a pomůckách, jejichž výběr, poměr a posloupnost individuálně kombinuje dle potřeb každého zákazníka. Právě díky jejímu know-how, a také pomůckám vlastní značky se pyšní viditelnými a efektivními výsledky.',
+    slimming_text_p4: 'Poznejte na vlastní kůži efekt péče, která skutečně funguje.',
+    slimming_text_p5: 'Podívejte se na výsledky na',
+    slimming_text_p6: 'Na ošetření se můžete objednat prostřednictvím kontaktního formuláře níže, zprávy na Instagramu či SMS.',
+    contact_form_sub: 'Zodpovíme je. Prosíme o pečlivé vyplnění kontaktních údajů.',
   },
   en: {
 
@@ -276,6 +285,15 @@ const translations = {
     nav_shipping: 'Shipping & Payment',
     nav_terms: 'Terms & Conditions',
     nav_privacy: 'Privacy Policy',
+
+    slimming_how_heading: 'How does it work?',
+    slimming_text_p1: 'Everything is born in a cozy treatment room. That is, with a bit of exaggeration, how one might describe the BYELMARIE® salon of Šárka Kloudové. No shop windows on the street, no hustle of the surrounding city. The family-friendly, cozy studio is located in Brno-Královo Pole in the Sadová district within a modern residential building.',
+    slimming_text_p2: 'And right here Šárka works her magic, transforming your body and letting your mind rest. Her unique body care combines different techniques, modern devices, and massage tools of her own brand. Šárka has developed her <strong>own signature treatments</strong> that guarantee visible results and changes. Clients seek her out mainly for <strong>slimming</strong>, <strong>body firming</strong>, or deep <strong>muscle regeneration</strong> – and this includes both women and men.',
+    slimming_text_p3: 'On the path to your more beautiful and healthier self, she reaches for devices and tools, whose selection, ratio, and sequence she individually combines according to the needs of each customer. Thanks to her expert know-how and custom brand tools, she takes pride in visible and highly effective results.',
+    slimming_text_p4: 'Experience for yourself the effect of care that truly works.',
+    slimming_text_p5: 'See the results on the',
+    slimming_text_p6: 'You can book a treatment using the contact form below, via direct message on Instagram, or by SMS.',
+    contact_form_sub: 'We will answer them. Please fill in your contact details carefully.',
   }
 };
 

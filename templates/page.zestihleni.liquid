@@ -1,0 +1,71 @@
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="{{ routes.root_url }}" data-i18n="nav_home">Domů</a>
+      <span class="breadcrumb__sep">/</span>
+      <span data-i18n="nav_slimming_brno">Zeštíhlení Brno</span>
+    </div>
+    <h1 class="page-hero__title" data-i18n="nav_slimming_brno">Zeštíhlení Brno</h1>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Content grid: Text and Image -->
+  <div class="about-content-grid" style="padding-bottom: var(--space-12); align-items: start;">
+    <!-- Left Column: Text -->
+    <div class="about-content__text animate-on-scroll">
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-family: var(--font-heading); margin-bottom: var(--space-6);" data-i18n="slimming_how_heading">Jak to probíhá?</h2>
+      
+      <div style="font-size: var(--font-size-md); color: var(--color-text-light); line-height: 1.85;">
+        <p data-i18n="slimming_text_p1">Vše vzniká v pokojíčku. Tak se s trochou nadsázky může říkat salonu BYELMARIE® Šárky Kloudové. Žádné vitríny do ulic, žádný ruch okolního velkoměsta. Rodinné útulné studio se nachází v Brně Králově Poli v části Sadová v moderní bytové residenci.</p>
+        <p data-i18n="slimming_text_p2">A právě zde Šárka kouzlí, proměňuje vaše těla a dá odpočinout vaší mysli. Její unikátní tělová péče kombinuje různé techniky, moderní přístroje a pomůcky vlastní značky. Šárka vyvinula <strong>vlastní autorská ošetření</strong>, která garantují viditelné výsledky a změny. Klienti ji vyhledávají hlavně v rámci <strong>zeštíhlení</strong>, <strong>zpevnění těla</strong> či za účelem <strong>hloubkové svalové regenerace</strong> – a nejedná se pouze o ženy.</p>
+        <p data-i18n="slimming_text_p3">Při cestě za vaším krásnějším a zdravějším já sahá po přístrojích a pomůckách, jejichž výběr, poměr a posloupnost individuálně kombinuje dle potřeb každého zákazníka. Právě díky jejímu know-how, a také pomůckám vlastní značky se pyšní viditelnými a efektivními výsledky.</p>
+        <p data-i18n="slimming_text_p4">Poznejte na vlastní kůži efekt péče, která skutečně funguje.</p>
+        <p style="margin-top: var(--space-4);">
+          <span data-i18n="slimming_text_p5">Podívejte se na výsledky na</span> <a href="https://www.instagram.com/byelmarie/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Instagramovém profilu BYELMARIE</a>.
+        </p>
+        <p data-i18n="slimming_text_p6">Na ošetření se můžete objednat prostřednictvím kontaktního formuláře níže, zprávy na Instagramu či SMS.</p>
+      </div>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="about-content__image animate-on-scroll animate-delay-2" style="aspect-ratio: 4/5; overflow: hidden; border-radius: var(--border-radius-sm);">
+      <img src="{{ 'zestihleni.png' | asset_url }}" alt="Zeštíhlení Brno BYELMARIE" style="width:100%; height:100%; object-fit:cover; object-position:center top;" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Contact Form block -->
+  <div class="contact-form-section animate-on-scroll" style="margin-top: var(--space-8); padding: var(--space-12) 0; border-top: 1px solid var(--color-border); max-width: 680px; margin-left: auto; margin-right: auto;">
+    <h2 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: var(--space-4); font-family: var(--font-heading); text-align: center;" id="contact-form-zestihleni" data-i18n="contact_form_heading">Máte nějaké otázky?</h2>
+    <p style="color: var(--color-text-light); text-align: center; margin-bottom: var(--space-8); font-size: var(--font-size-sm);" data-i18n="contact_form_sub">Zodpovíme je. Prosíme o pečlivé vyplnění kontaktních údajů.</p>
+
+    {%- form 'contact', id: 'contact-form-zestihleni-form' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="form-success" style="padding: var(--space-4); background: var(--color-bg-alt); border-left: 3px solid var(--color-success); margin-bottom: var(--space-5); color: var(--color-success); font-size: var(--font-size-sm);" data-i18n="contact_success">
+          ✓ Zpráva byla odeslána. Brzy se ozveme!
+        </div>
+      {%- elsif form.errors -%}
+        <div class="form-error" style="padding: var(--space-4); background: var(--color-bg-alt); border-left: 3px solid var(--color-accent); margin-bottom: var(--space-5); color: var(--color-accent); font-size: var(--font-size-sm);">
+          Chyba při odesílání formuláře. Zkontrolujte pole.
+        </div>
+      {%- endif -%}
+
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="ContactFormName" data-i18n="contact_name">Jméno a příjmení</label>
+        <input type="text" id="ContactFormName" name="contact[name]" class="contact-form__input" required autocomplete="name" value="{{ form.name }}">
+      </div>
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="ContactFormEmail" data-i18n="contact_email">E-mail</label>
+        <input type="email" id="ContactFormEmail" name="contact[email]" class="contact-form__input" required autocomplete="email" value="{{ form.email }}">
+      </div>
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="ContactFormMessage" data-i18n="contact_message">Zpráva</label>
+        <textarea id="ContactFormMessage" name="contact[body]" class="contact-form__textarea" rows="5" required>{{ form.body }}</textarea>
+      </div>
+      
+      <div style="text-align: center; margin-top: var(--space-6);">
+        <button type="submit" class="btn btn-primary" data-i18n="contact_send" style="min-width: 200px;">Odeslat zprávu</button>
+      </div>
+    {%- endform -%}
+  </div>
+</div>
