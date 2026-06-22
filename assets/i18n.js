@@ -15,7 +15,7 @@ const translations = {
     nav_contact: 'Kontakt',
     nav_shop: 'E-shop',
     nav_offer: 'Nabídka',
-    nav_find_us: 'Mapa salónů',
+    nav_find_us: 'Kde nás najdete',
     map_page_title: 'Mapa salónů v Česku a na Slovensku',
 
     announcement: 'STUDIO V BRNĚ · PO - PÁ DLE DOHODY',
@@ -163,7 +163,7 @@ const translations = {
     nav_contact: 'Contact',
     nav_shop: 'Shop',
     nav_offer: 'Offer',
-    nav_find_us: 'Salon Map',
+    nav_find_us: 'Where to find us',
     map_page_title: 'Map of Salons in Czechia and Slovakia',
 
     announcement: 'STUDIO IN BRNO · BY APPOINTMENT',

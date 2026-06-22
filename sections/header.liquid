@@ -4,8 +4,22 @@
 
       <nav class="header__nav" aria-label="Hlavní menu">
         {% if section.settings.menu.links != blank and section.settings.menu.links.size > 2 %}
+          {% assign has_contact = false %}
+          {% assign has_find_us = false %}
           {% for link in section.settings.menu.links %}
             {% assign link_title_dc = link.title | downcase %}
+            {% assign link_url_dc = link.url | downcase %}
+            {% if link_title_dc contains 'kontakt' or link_title_dc contains 'contact' or link_url_dc contains 'contact' or link_url_dc contains 'kontakt' %}
+              {% assign has_contact = true %}
+            {% endif %}
+            {% if link_title_dc contains 'najdete' or link_title_dc contains 'map' or link_title_dc contains 'find us' or link_title_dc contains 'salon' or link_url_dc contains 'kde-nas-najdete' or link_url_dc contains 'map' %}
+              {% assign has_find_us = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% for link in section.settings.menu.links %}
+            {% assign link_title_dc = link.title | downcase %}
+            {% assign link_url_dc = link.url | downcase %}
             {% if link.links != blank or link_title_dc == 'nabídka' or link_title_dc == 'nabidka' or link_title_dc == 'offer' or link_title_dc == 'catalog' or link_title_dc == 'katalog' %}
               <div class="nav-item has-dropdown mega-dropdown-wrap">
                 <a href="{{ link.url }}" class="nav-link" {% if link_title_dc == 'nabídka' or link_title_dc == 'nabidka' or link_title_dc == 'offer' or link_title_dc == 'catalog' or link_title_dc == 'katalog' %}data-i18n="nav_offer"{% endif %}>{{ link.title }}</a>
@@ -56,11 +70,31 @@
                 </div>
               </div>
             {% else %}
+              {% assign is_contact = false %}
+              {% if link_title_dc contains 'kontakt' or link_title_dc contains 'contact' or link_url_dc contains 'contact' or link_url_dc contains 'kontakt' %}
+                {% assign is_contact = true %}
+              {% endif %}
               <div class="nav-item">
-                <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+                <a href="{{ link.url }}" class="nav-link" {% if is_contact %}data-i18n="nav_contact"{% endif %}>{{ link.title }}</a>
               </div>
+              {% if is_contact and has_find_us == false %}
+                <div class="nav-item">
+                  <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}" class="nav-link" data-i18n="nav_find_us">Kde nás najdete</a>
+                </div>
+              {% endif %}
             {% endif %}
           {% endfor %}
+
+          {% if has_contact == false %}
+            <div class="nav-item">
+              <a href="{{ pages.contact.url | default: '/pages/contact' }}" class="nav-link" data-i18n="nav_contact">Kontakt</a>
+            </div>
+            {% if has_find_us == false %}
+              <div class="nav-item">
+                <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}" class="nav-link" data-i18n="nav_find_us">Kde nás najdete</a>
+              </div>
+            {% endif %}
+          {% endif %}
         {% else %}
           <!-- Original website fallback -->
           <div class="nav-item">
@@ -101,7 +135,10 @@
             </div>
           </div>
           <div class="nav-item">
-            <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}" class="nav-link" data-i18n="nav_find_us">Námi školené salóny</a>
+            <a href="{{ pages.contact.url | default: '/pages/contact' }}" class="nav-link" data-i18n="nav_contact">Kontakt</a>
+          </div>
+          <div class="nav-item">
+            <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}" class="nav-link" data-i18n="nav_find_us">Kde nás najdete</a>
           </div>
         {% endif %}
       </nav>
@@ -147,8 +184,7 @@
           </div>
         </div>
 
-        <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}" class="header__map-link nav-link" data-i18n="nav_find_us">Kde nás najdete</a>
-        <a href="{{ pages.contact.url | default: '/pages/contact' }}" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
+
 
         <button id="search-toggle" aria-label="Hledat">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -183,8 +219,27 @@
   <button class="mobile-menu__close" id="mobile-close" aria-label="Zavřít">×</button>
 
   {% if section.settings.menu.links != blank and section.settings.menu.links.size > 2 %}
+    {% assign has_contact = false %}
+    {% assign has_find_us = false %}
     {% for link in section.settings.menu.links %}
       {% assign link_title_dc = link.title | downcase %}
+      {% assign link_url_dc = link.url | downcase %}
+      {% if link_title_dc contains 'kontakt' or link_title_dc contains 'contact' or link_url_dc contains 'contact' or link_url_dc contains 'kontakt' %}
+        {% assign has_contact = true %}
+      {% endif %}
+      {% if link_title_dc contains 'najdete' or link_title_dc contains 'map' or link_title_dc contains 'find us' or link_title_dc contains 'salon' or link_url_dc contains 'kde-nas-najdete' or link_url_dc contains 'map' %}
+        {% assign has_find_us = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% for link in section.settings.menu.links %}
+      {% assign link_title_dc = link.title | downcase %}
+      {% assign link_url_dc = link.url | downcase %}
+      {% assign is_contact = false %}
+      {% if link_title_dc contains 'kontakt' or link_title_dc contains 'contact' or link_url_dc contains 'contact' or link_url_dc contains 'kontakt' %}
+        {% assign is_contact = true %}
+      {% endif %}
+      
       <div class="mobile-menu-item">
         {% if link.links != blank or link_title_dc == 'nabídka' or link_title_dc == 'nabidka' or link_title_dc == 'offer' or link_title_dc == 'catalog' or link_title_dc == 'katalog' %}
           <a href="{{ link.url }}">
@@ -220,11 +275,34 @@
           </div>
         {% else %}
           <a href="{{ link.url }}">
-            <span>{{ link.title }}</span>
+            <span {% if is_contact %}data-i18n="nav_contact"{% endif %}>{{ link.title }}</span>
           </a>
         {% endif %}
       </div>
+      
+      {% if is_contact and has_find_us == false %}
+        <div class="mobile-menu-item">
+          <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}">
+            <span data-i18n="nav_find_us">Kde nás najdete</span>
+          </a>
+        </div>
+      {% endif %}
     {% endfor %}
+    
+    {% if has_contact == false %}
+      <div class="mobile-menu-item">
+        <a href="{{ pages.contact.url | default: '/pages/contact' }}">
+          <span data-i18n="nav_contact">Kontakt</span>
+        </a>
+      </div>
+      {% if has_find_us == false %}
+        <div class="mobile-menu-item">
+          <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}">
+            <span data-i18n="nav_find_us">Kde nás najdete</span>
+          </a>
+        </div>
+      {% endif %}
+    {% endif %}
   {% else %}
     <!-- Original website mobile menu fallback -->
     <div class="mobile-menu-item">
@@ -258,10 +336,10 @@
       </div>
     </div>
     <div class="mobile-menu-item">
-      <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}"><span data-i18n="nav_find_us">Kde nás najdete</span></a>
+      <a href="{{ pages.contact.url | default: pages.kontakt.url | default: '/pages/contact' }}"><span data-i18n="nav_contact">Kontakt</span></a>
     </div>
     <div class="mobile-menu-item">
-      <a href="{{ pages.contact.url | default: pages.kontakt.url | default: '/pages/contact' }}"><span data-i18n="nav_contact">Kontakt</span></a>
+      <a href="{{ pages['kde-nas-najdete'].url | default: pages.map.url | default: '/pages/kde-nas-najdete' }}"><span data-i18n="nav_find_us">Kde nás najdete</span></a>
     </div>
     <div class="mobile-menu-item">
       <a href="https://www.instagram.com/byelmarie/" target="_blank">Instagram</a>
