@@ -449,11 +449,13 @@ p:last-child {
   border-radius: var(--radius-sm);
 }
 
-.currency-dropdown-wrap, .lang-dropdown-wrap {
+.currency-dropdown-wrap,
+.lang-dropdown-wrap {
   position: relative;
 }
 
-.currency-toggle, .lang-toggle {
+.currency-toggle,
+.lang-toggle {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -473,12 +475,14 @@ p:last-child {
   white-space: nowrap;
 }
 
-.currency-toggle:hover, .lang-toggle:hover {
+.currency-toggle:hover,
+.lang-toggle:hover {
   border-color: var(--color-border-dark);
   background: rgba(34, 34, 34, 0.04);
 }
 
-.currency-toggle svg, .lang-toggle svg {
+.currency-toggle svg,
+.lang-toggle svg {
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
 }
@@ -494,7 +498,8 @@ p:last-child {
   margin-right: 2px;
 }
 
-.currency-dropdown, .lang-dropdown {
+.currency-dropdown,
+.lang-dropdown {
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
@@ -522,7 +527,8 @@ p:last-child {
   transform: translateY(0) scale(1);
 }
 
-.currency-opt, .lang-opt {
+.currency-opt,
+.lang-opt {
   display: block;
   width: 100%;
   padding: 8px 14px;
@@ -541,11 +547,13 @@ p:last-child {
   text-align: center;
 }
 
-.currency-opt:hover, .lang-opt:hover {
+.currency-opt:hover,
+.lang-opt:hover {
   background: rgba(34, 34, 34, 0.06);
 }
 
-.currency-opt.active, .lang-opt.active {
+.currency-opt.active,
+.lang-opt.active {
   background: rgba(34, 34, 34, 0.08);
   font-weight: 700;
 }

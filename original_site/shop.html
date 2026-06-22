@@ -81,6 +81,20 @@
 
         <div class="header__actions">
 
+          <!-- Jazyk -->
+          <div class="nav-item lang-dropdown-wrap" id="lang-wrap">
+            <button id="lang-toggle" class="lang-toggle" aria-label="Jazyk">
+              <span id="lang-label">CS</span>
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor">
+                <path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown">
+              <button class="lang-opt lang-option active" data-lang="cs" id="opt-lang-cs">CS</button>
+              <button class="lang-opt lang-option" data-lang="en" id="opt-lang-en">EN</button>
+            </div>
+          </div>
+
           <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
             <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
               <span id="currency-label">CZK</span>
@@ -89,7 +103,7 @@
               </svg>
             </button>
             <div class="currency-dropdown" id="currency-dropdown">
-              <button class="currency-opt" data-currency="CZK" id="opt-czk">CZK</button>
+              <button class="currency-opt active" data-currency="CZK" id="opt-czk">CZK</button>
               <button class="currency-opt" data-currency="EUR" id="opt-eur">EUR</button>
             </div>
           </div>
@@ -138,9 +152,17 @@
     <div class="mobile-menu-item"><a href="map.html"><span data-i18n="nav_find_us">Kde nás najdete</span></a></div>
     <div class="mobile-menu-item"><a href="contact.html"><span data-i18n="nav_contact">Kontakt</span></a></div>
     <div class="mobile-menu__toggles">
-      <button class="currency-option" data-currency="CZK">CZK — Kč</button>
-      <span class="toggle-divider">/</span>
-      <button class="currency-option" data-currency="EUR">EUR — €</button>
+      <!-- Language options -->
+      <div class="toggle-group">
+        <button class="lang-option" data-lang="cs">CS</button>
+        <button class="lang-option" data-lang="en">EN</button>
+      </div>
+      
+      <!-- Currency options -->
+      <div class="toggle-group">
+        <button class="currency-option" data-currency="CZK">CZK</button>
+        <button class="currency-option" data-currency="EUR">EUR</button>
+      </div>
     </div>
   </nav>
 

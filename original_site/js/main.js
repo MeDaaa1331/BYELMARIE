@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initAnnouncementClose();
   initCurrencyDropdown();
+  initLangDropdown();
   initMapPin();
 });
 
@@ -318,6 +319,32 @@ function initCurrencyDropdown() {
   }
 
   setTimeout(refreshCurrencyToggle, 50);
+}
+
+function initLangDropdown() {
+  const wrap = document.getElementById('lang-wrap');
+  const toggle = document.getElementById('lang-toggle');
+  if (!wrap || !toggle) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    wrap.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!wrap.contains(e.target)) wrap.classList.remove('open');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') wrap.classList.remove('open');
+  });
+
+  document.querySelectorAll('.lang-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (typeof setLang === 'function') setLang(btn.dataset.lang);
+      setTimeout(() => wrap.classList.remove('open'), 180);
+    });
+  });
 }
 
 function initMapPin() {
