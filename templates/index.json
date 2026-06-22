@@ -195,7 +195,7 @@
         "label": "Školení pro profesionály",
         "title": "Profesionální řešení pro salony",
         "collection": "professional",
-        "limit": 3,
+        "limit": 4,
         "show_view_all": true,
         "view_all_label": "Zobrazit vše"
       }
