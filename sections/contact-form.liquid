@@ -102,7 +102,9 @@
           <div>
             <div class="contact-info__label" data-i18n="contact_hours_heading">Otevírací doba</div>
             <div class="contact-info__value" style="font-size: var(--font-size-sm); line-height:1.8;">
-              {{ section.settings.hours | replace: '\n', '<br>' | replace: '\N', '<br>' }}
+              <span data-i18n="contact_hours_p1">Po–Pá: 9:00 – 18:00</span><br>
+              <span data-i18n="contact_hours_p2">Sobota: dle dohody</span><br>
+              <span data-i18n="contact_hours_p3">Neděle: zavřeno</span>
             </div>
           </div>
         </div>

@@ -1,8 +1,22 @@
 <section class="section" style="background: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
   <div class="container">
+    {%- assign label_dc = section.settings.label | downcase -%}
+    {%- assign title_dc = section.settings.title | downcase -%}
+    {%- assign i18n_label = "" -%}
+    {%- assign i18n_title = "" -%}
+    {%- if label_dc contains 'e-shop' or label_dc contains 'eshop' or label_dc contains 'shop' -%}
+      {%- assign i18n_label = "nav_shop" -%}
+    {%- elsif label_dc contains 'školení' or label_dc contains 'skoleni' or label_dc contains 'training' -%}
+      {%- assign i18n_label = "pro_label" -%}
+    {%- endif -%}
+    {%- if title_dc contains 'nejprodávanější' or title_dc contains 'nejprodavanejsi' or title_dc contains 'best' -%}
+      {%- assign i18n_title = "products_heading" -%}
+    {%- elsif title_dc contains 'profesionální' or title_dc contains 'profesionalni' or title_dc contains 'professional' -%}
+      {%- assign i18n_title = "pro_title" -%}
+    {%- endif -%}
     <div class="section-header animate-on-scroll">
-      <span class="section-header__label">{{ section.settings.label }}</span>
-      <h2 class="section-header__title">{{ section.settings.title }}</h2>
+      <span class="section-header__label" {% if i18n_label != "" %}data-i18n="{{ i18n_label }}"{% endif %}>{{ section.settings.label }}</span>
+      <h2 class="section-header__title" {% if i18n_title != "" %}data-i18n="{{ i18n_title }}"{% endif %}>{{ section.settings.title }}</h2>
     </div>
 
     {%- assign collection = collections[section.settings.collection] -%}

@@ -7,11 +7,17 @@ const translations = {
     nav_products_fuffu: 'Baňky FUFFU',
     nav_products_face: 'Obličejové baňky',
     nav_products_serum: 'Sérum na řasy',
+    nav_products_rollers: 'Válečky CELSLIMROLL',
+    nav_products_body_care: 'Produkty pro péči o tělo',
     nav_training: 'Školení',
     nav_training_rollcupping: 'Školení a pomůcky ROLLCUPPING',
+    nav_training_rollcupping_online: 'ROLLCUPPING Online',
     nav_training_vibroslimfit: 'Školení a přístroj VIBROSLIMFIT',
     nav_training_ems: 'EMS PROSuit',
+    nav_training_pro: 'Školení pro profesionály',
     nav_slimming_brno: 'Zeštíhlení Brno',
+    nav_studio_brno: 'Studio Brno',
+    nav_book_treatment: 'Rezervovat ošetření',
     nav_contact: 'Kontakt',
     nav_shop: 'E-shop',
     nav_offer: 'Nabídka',
@@ -137,7 +143,7 @@ const translations = {
     nav_shipping: 'Doprava a platba',
     nav_terms: 'Obchodní podmínky',
     nav_privacy: 'Ochrana os. údajů',
-    
+
     slimming_how_heading: 'Jak to probíhá?',
     slimming_text_p1: 'Vše vzniká v pokojíčku. Tak se s trochou nadsázky může říkat salonu BYELMARIE® Šárky Kloudové. Žádné vitríny do ulic, žádný ruch okolního velkoměsta. Rodinné útulné studio se nachází v Brně Králově Poli v části Sadová v moderní bytové residenci.',
     slimming_text_p2: 'A právě zde Šárka kouzlí, proměňuje vaše těla a dá odpočinout vaší mysli. Její unikátní tělová péče kombinuje různé techniky, moderní přístroje a pomůcky vlastní značky. Šárka vyvinula <strong>vlastní autorská ošetření</strong>, která garantují viditelné výsledky a změny. Klienti ji vyhledávají hlavně v rámci <strong>zeštíhlení</strong>, <strong>zpevnění těla</strong> či za účelem <strong>hloubkové svalové regenerace</strong> – a nejedná se pouze o ženy.',
@@ -155,11 +161,17 @@ const translations = {
     nav_products_fuffu: 'FUFFU Cups',
     nav_products_face: 'Face Cups',
     nav_products_serum: 'Lash Serum',
+    nav_products_rollers: 'CELSLIMROLL Rollers',
+    nav_products_body_care: 'Body Care Products',
     nav_training: 'Training',
     nav_training_rollcupping: 'ROLLCUPPING Training & Tools',
+    nav_training_rollcupping_online: 'ROLLCUPPING Online',
     nav_training_vibroslimfit: 'VIBROSLIMFIT Training & Device',
     nav_training_ems: 'EMS PROSuit',
+    nav_training_pro: 'Training for Professionals',
     nav_slimming_brno: 'Slimming Brno',
+    nav_studio_brno: 'Brno Studio',
+    nav_book_treatment: 'Book Treatment',
     nav_contact: 'Contact',
     nav_shop: 'Shop',
     nav_offer: 'Offer',
@@ -292,14 +304,29 @@ const translations = {
     slimming_text_p3: 'On the path to your more beautiful and healthier self, she reaches for devices and tools, whose selection, ratio, and sequence she individually combines according to the needs of each customer. Thanks to her expert know-how and custom brand tools, she takes pride in visible and highly effective results.',
     slimming_text_p4: 'Experience for yourself the effect of care that truly works.',
     slimming_text_p5: 'See the results on the',
+    slimming_instagram_link: 'BYELMARIE Instagram profile',
     slimming_text_p6: 'You can book a treatment using the contact form below, via direct message on Instagram, or by SMS.',
     contact_form_sub: 'We will answer them. Please fill in your contact details carefully.',
+
+    cat_title: 'Body Care & Professional Solutions',
+    btn_show: 'View',
+    btn_book: 'Book Now',
+    pro_label: 'Training for Professionals',
+    pro_title: 'Professional Solutions for Salons',
+    footer_navigation: 'Navigation',
+    footer_created_by: 'Created by',
+    footer_created_for: 'for',
+    marquee_shaping: 'Body Shaping',
+    marquee_slimming: 'Non-invasive Slimming',
+    marquee_location: 'Brno · Královo Pole',
+    marquee_fuffu: 'FUFFU Cups',
+    marquee_lashes: 'Lash Serum',
   }
 };
 
 const EUR_RATE = 25;
 
-let currentLang = localStorage.getItem('byelmarie_lang') || 'cs';
+let currentLang = localStorage.getItem('byelmarie_lang') || window.ShopifyLocale || 'cs';
 if (currentLang !== 'cs' && currentLang !== 'en') {
   currentLang = 'cs';
 }
@@ -348,7 +375,52 @@ function setCurrency(currency) {
   }
 }
 
+function tagDynamicNavLinks() {
+  const selectors = [
+    '.header__nav .nav-link',
+    '#mobile-menu a',
+    '#mobile-menu .mobile-menu-item > a > span',
+    '.footer__links a'
+  ];
+  const navLinks = document.querySelectorAll(selectors.join(', '));
+  
+  navLinks.forEach(el => {
+    if (el.hasAttribute('data-i18n')) return;
+    
+    const text = el.textContent.trim().toLowerCase();
+    
+    if (text === 'domů' || text === 'domu' || text === 'home') {
+      el.setAttribute('data-i18n', 'nav_home');
+    } else if (text === 'o byelmarie' || text === 'about byelmarie' || text === 'o nás' || text === 'about us' || text === 'about') {
+      el.setAttribute('data-i18n', 'nav_about');
+    } else if (text === 'nabídka' || text === 'nabidka' || text === 'offer' || text === 'katalog' || text === 'catalog') {
+      el.setAttribute('data-i18n', 'nav_offer');
+    } else if (text === 'produkty' || text === 'products') {
+      el.setAttribute('data-i18n', 'nav_products');
+    } else if (text === 'školení' || text === 'skoleni' || text === 'training') {
+      el.setAttribute('data-i18n', 'nav_training');
+    } else if (text === 'zeštíhlení brno' || text === 'zestihleni brno' || text === 'slimming brno' || text === 'studio brno') {
+      el.setAttribute('data-i18n', 'nav_slimming_brno');
+    } else if (text === 'kontakt' || text === 'contact') {
+      el.setAttribute('data-i18n', 'nav_contact');
+    } else if (text === 'kde nás najdete' || text === 'kde nas najdete' || text === 'where to find us' || text === 'mapa salónů' || text === 'mapa salonu' || text === 'salon map') {
+      el.setAttribute('data-i18n', 'nav_find_us');
+    } else if (text === 'onlinekurzy' || text === 'online kurzy' || text === 'online courses') {
+      el.setAttribute('data-i18n', 'nav_online_courses');
+    } else if (text === 'e-shop' || text === 'shop') {
+      el.setAttribute('data-i18n', 'nav_shop');
+    } else if (text === 'obchodní podmínky' || text === 'obchodni podminky' || text === 'terms & conditions' || text === 'terms') {
+      el.setAttribute('data-i18n', 'footer_terms');
+    } else if (text === 'podmínky ochrany osobních údajů' || text === 'podminky ochrany osobnich udaju' || text === 'ochrana os. údajů' || text === 'ochrana os. udaju' || text === 'privacy policy') {
+      el.setAttribute('data-i18n', 'footer_privacy');
+    } else if (text === 'doprava a platba' || text === 'shipping & payment' || text === 'shipping') {
+      el.setAttribute('data-i18n', 'footer_shipping');
+    }
+  });
+}
+
 function applyTranslations() {
+  tagDynamicNavLinks();
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[currentLang][key]) {

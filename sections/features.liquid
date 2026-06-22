@@ -21,8 +21,10 @@
               </svg>
             {% endif %}
           </div>
-          <h3 class="feature-item__title">{{ block.settings.title }}</h3>
-          <p class="feature-item__text">{{ block.settings.text }}</p>
+          {% assign feat_i18n_title = "feat" | append: forloop.index | append: "_title" %}
+          {% assign feat_i18n_text = "feat" | append: forloop.index | append: "_text" %}
+          <h3 class="feature-item__title" data-i18n="{{ feat_i18n_title }}">{{ block.settings.title }}</h3>
+          <p class="feature-item__text" data-i18n="{{ feat_i18n_text }}">{{ block.settings.text }}</p>
         </div>
       {% endfor %}
     </div>

@@ -35,7 +35,7 @@
       </div>
 
       <div>
-        <h4 class="footer__heading">{{ section.settings.menu_1_heading }}</h4>
+        <h4 class="footer__heading" data-i18n="footer_navigation">{{ section.settings.menu_1_heading }}</h4>
         <ul class="footer__links">
           {% for link in section.settings.menu_1.links %}
             <li><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -44,7 +44,7 @@
       </div>
 
       <div>
-        <h4 class="footer__heading">{{ section.settings.menu_2_heading }}</h4>
+        <h4 class="footer__heading" data-i18n="footer_info">{{ section.settings.menu_2_heading }}</h4>
         <ul class="footer__links">
           {% for link in section.settings.menu_2.links %}
             <li><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -86,7 +86,7 @@
 
     <div class="footer__bottom">
       <span data-i18n="footer_copyright">{{ 'now' | date: '%Y' }} {{ shop.name }}. Všechna práva vyhrazena.</span>
-      <span>Vytvořil {{ section.settings.copyright_creator }} pro {{ shop.name }}</span>
+      <span><span data-i18n="footer_created_by">Vytvořil</span> {{ section.settings.copyright_creator }} <span data-i18n="footer_created_for">pro</span> {{ shop.name }}</span>
     </div>
   </div>
 </footer>

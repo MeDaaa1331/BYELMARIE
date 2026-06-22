@@ -2,12 +2,33 @@
   <div class="container">
     <div class="section-header animate-on-scroll">
       <span class="section-header__label" data-i18n="cat_heading">{{ section.settings.label }}</span>
-      <h2 class="section-header__title">{{ section.settings.title }}</h2>
+      <h2 class="section-header__title" data-i18n="cat_title">{{ section.settings.title }}</h2>
     </div>
 
     <div class="category-grid">
       {% for block in section.blocks %}
         {% assign anim_delay = forloop.index %}
+        {% assign cat_title_dc = block.settings.title | downcase %}
+        {% assign cat_i18n_title = "" %}
+        {% assign cat_i18n_desc = "" %}
+        {% if cat_title_dc contains 'tělo' or cat_title_dc contains 'telo' or cat_title_dc contains 'body' %}
+          {% assign cat_i18n_title = "cat_body_care" %}
+          {% assign cat_i18n_desc = "cat_body_care_desc" %}
+        {% elsif cat_title_dc contains 'profesionál' or cat_title_dc contains 'profesional' or cat_title_dc contains 'professional' %}
+          {% assign cat_i18n_title = "cat_professional" %}
+          {% assign cat_i18n_desc = "cat_professional_desc" %}
+        {% elsif cat_title_dc contains 'zeštíhlení' or cat_title_dc contains 'zestihleni' or cat_title_dc contains 'slimming' %}
+          {% assign cat_i18n_title = "cat_slimming" %}
+          {% assign cat_i18n_desc = "cat_slimming_desc" %}
+        {% endif %}
+        
+        {% assign cat_btn_label_dc = block.settings.btn_label | downcase %}
+        {% assign cat_i18n_btn = "" %}
+        {% if cat_btn_label_dc contains 'zobrazit' or cat_btn_label_dc contains 'show' or cat_btn_label_dc contains 'view' %}
+          {% assign cat_i18n_btn = "btn_show" %}
+        {% elsif cat_btn_label_dc contains 'rezervovat' or cat_btn_label_dc contains 'book' %}
+          {% assign cat_i18n_btn = "btn_book" %}
+        {% endif %}
         <a href="{{ block.settings.url }}" class="category-card animate-on-scroll animate-delay-{{ anim_delay }}" {{ block.shopify_attributes }}>
           {% if block.settings.image != blank %}
             <img class="category-card__image" src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title | escape }}" loading="lazy">
@@ -19,10 +40,10 @@
           {% endif %}
           <div class="category-card__overlay"></div>
           <div class="category-card__content">
-            <span class="category-card__name">{{ block.settings.title }}</span>
-            <p class="category-card__desc">{{ block.settings.desc }}</p>
+            <span class="category-card__name" {% if cat_i18n_title != "" %}data-i18n="{{ cat_i18n_title }}"{% endif %}>{{ block.settings.title }}</span>
+            <p class="category-card__desc" {% if cat_i18n_desc != "" %}data-i18n="{{ cat_i18n_desc }}"{% endif %}>{{ block.settings.desc }}</p>
             <span class="category-card__arrow">
-              {{ block.settings.btn_label }} →
+              <span {% if cat_i18n_btn != "" %}data-i18n="{{ cat_i18n_btn }}"{% endif %}>{{ block.settings.btn_label }}</span> →
             </span>
           </div>
         </a>

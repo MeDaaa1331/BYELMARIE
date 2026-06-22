@@ -1,11 +1,37 @@
 <div class="marquee-section" aria-hidden="true">
   <div class="marquee-track" id="marquee-track">
     {% for block in section.blocks %}
-      <span class="marquee-item">{{ block.settings.text }}</span>
+      {% assign text_dc = block.settings.text | downcase %}
+      {% assign marquee_i18n = "" %}
+      {% if text_dc contains 'formování' or text_dc contains 'formovani' or text_dc contains 'shaping' %}
+        {% assign marquee_i18n = "marquee_shaping" %}
+      {% elsif text_dc contains 'zeštíhlení' or text_dc contains 'zestihleni' or text_dc contains 'slimming' %}
+        {% assign marquee_i18n = "marquee_slimming" %}
+      {% elsif text_dc contains 'brno' %}
+        {% assign marquee_i18n = "marquee_location" %}
+      {% elsif text_dc contains 'baňky' or text_dc contains 'banky' or text_dc contains 'cups' or text_dc contains 'fuffu' %}
+        {% assign marquee_i18n = "marquee_fuffu" %}
+      {% elsif text_dc contains 'sérum' or text_dc contains 'serum' or text_dc contains 'lashes' or text_dc contains 'řasy' or text_dc contains 'rasy' %}
+        {% assign marquee_i18n = "marquee_lashes" %}
+      {% endif %}
+      <span class="marquee-item" {% if marquee_i18n != "" %}data-i18n="{{ marquee_i18n }}"{% endif %}>{{ block.settings.text }}</span>
     {% endfor %}
     <!-- Zopakování pro plynulý nekonečný efekt -->
     {% for block in section.blocks %}
-      <span class="marquee-item">{{ block.settings.text }}</span>
+      {% assign text_dc = block.settings.text | downcase %}
+      {% assign marquee_i18n = "" %}
+      {% if text_dc contains 'formování' or text_dc contains 'formovani' or text_dc contains 'shaping' %}
+        {% assign marquee_i18n = "marquee_shaping" %}
+      {% elsif text_dc contains 'zeštíhlení' or text_dc contains 'zestihleni' or text_dc contains 'slimming' %}
+        {% assign marquee_i18n = "marquee_slimming" %}
+      {% elsif text_dc contains 'brno' %}
+        {% assign marquee_i18n = "marquee_location" %}
+      {% elsif text_dc contains 'baňky' or text_dc contains 'banky' or text_dc contains 'cups' or text_dc contains 'fuffu' %}
+        {% assign marquee_i18n = "marquee_fuffu" %}
+      {% elsif text_dc contains 'sérum' or text_dc contains 'serum' or text_dc contains 'lashes' or text_dc contains 'řasy' or text_dc contains 'rasy' %}
+        {% assign marquee_i18n = "marquee_lashes" %}
+      {% endif %}
+      <span class="marquee-item" {% if marquee_i18n != "" %}data-i18n="{{ marquee_i18n }}"{% endif %}>{{ block.settings.text }}</span>
     {% endfor %}
   </div>
 </div>

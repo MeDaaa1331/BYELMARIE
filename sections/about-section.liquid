@@ -12,7 +12,8 @@
         <span class="about-split__label">{{ section.settings.label }}</span>
         <h2 class="about-split__title" data-i18n="about_heading">{{ section.settings.title | replace: '\n', '<br>' | replace: '\N', '<br>' }}</h2>
         <div class="about-split__text-content">
-          {{ section.settings.text }}
+          <p data-i18n="about_text">BYELMARIE® je inovativní značka masážních pomůcek a přístroje VIBROSLIMFIT. Za její vizí stojí Šárka Kloudová, specialistka na vysoce efektivní péči o tělo a formování postavy.</p>
+          <p data-i18n="about_professional">Pro profesionály v oboru nabízí BYELMARIE® certifikovaná školení a prodej specializovaného masážního zařízení.</p>
         </div>
         {% if section.settings.btn_label != blank and section.settings.btn_url != blank %}
           <a href="{{ section.settings.btn_url }}" class="btn btn-primary" data-i18n="about_cta">{{ section.settings.btn_label }}</a>
