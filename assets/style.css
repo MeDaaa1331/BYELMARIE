@@ -567,7 +567,7 @@ p:last-child {
 }
 
 .header__actions button,
-.header__actions a:not(.header__contact-link) {
+.header__actions a:not(.header__contact-link):not(.header__map-link) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -599,7 +599,7 @@ p:last-child {
 }
 
 .header__actions button:hover,
-.header__actions a:not(.header__contact-link):hover {
+.header__actions a:not(.header__contact-link):not(.header__map-link):hover {
   background: var(--color-bg-alt);
 }
 
@@ -2432,7 +2432,8 @@ p:last-child {
     padding: var(--space-3) var(--space-2);
   }
 
-  .header__contact-link {
+  .header__contact-link,
+  .header__map-link {
     padding: 0 var(--space-2);
   }
 
@@ -2485,7 +2486,8 @@ p:last-child {
     z-index: 10;
   }
 
-  .header__contact-link {
+  .header__contact-link,
+  .header__map-link {
     display: none !important;
   }
 
