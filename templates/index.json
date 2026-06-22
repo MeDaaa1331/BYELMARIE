@@ -98,6 +98,7 @@
         "c1": {
           "type": "category_card",
           "settings": {
+            "image": "shopify://shop_images/Svicen_1.4.1.jpg",
             "title": "Produkty pro tělo",
             "desc": "Baňky, válečky a séra pro péči o tělo",
             "btn_label": "Zobrazit",
@@ -107,6 +108,7 @@
         "c2": {
           "type": "category_card",
           "settings": {
+            "image": "shopify://shop_images/IMG_7455.jpg",
             "title": "Pro profesionály",
             "desc": "Školení, pomůcky a přístroje pro salony",
             "btn_label": "Zobrazit",
@@ -116,6 +118,7 @@
         "c3": {
           "type": "category_card",
           "settings": {
+            "image": "shopify://shop_images/zestihleni.png",
             "title": "Zeštíhlení Brno",
             "desc": "Navštivte nás osobně v Brně, Královo Pole",
             "btn_label": "Rezervovat",
