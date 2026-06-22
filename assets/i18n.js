@@ -15,7 +15,7 @@ const translations = {
     nav_contact: 'Kontakt',
     nav_shop: 'E-shop',
     nav_offer: 'Nabídka',
-    nav_find_us: 'Kde nás najdete',
+    nav_find_us: 'Mapa salónů',
     map_page_title: 'Mapa salónů v Česku a na Slovensku',
 
     announcement: 'STUDIO V BRNĚ · PO - PÁ DLE DOHODY',
@@ -163,7 +163,7 @@ const translations = {
     nav_contact: 'Contact',
     nav_shop: 'Shop',
     nav_offer: 'Offer',
-    nav_find_us: 'Where to find us',
+    nav_find_us: 'Salon Map',
     map_page_title: 'Map of Salons in Czechia and Slovakia',
 
     announcement: 'STUDIO IN BRNO · BY APPOINTMENT',
@@ -299,7 +299,7 @@ const translations = {
 
 const EUR_RATE = 25;
 
-let currentLang = localStorage.getItem('byelmarie_lang') || window.ShopifyLocale || 'cs';
+let currentLang = localStorage.getItem('byelmarie_lang') || 'cs';
 if (currentLang !== 'cs' && currentLang !== 'en') {
   currentLang = 'cs';
 }
