@@ -22,7 +22,7 @@ const translations = {
     nav_shop: 'E-shop',
     nav_offer: 'Nabídka',
     nav_find_us: 'Kde nás najdete',
-    map_page_title: 'Mapa salónů v Česku a na Slovensku',
+    map_page_title: 'Mapa salonů v Česku a na Slovensku',
 
     announcement: 'STUDIO V BRNĚ · PO - PÁ DLE DOHODY',
     loc_lang: 'Jazyk',
@@ -30,7 +30,7 @@ const translations = {
 
     hero_subtitle: 'Inovace v péči o tělo',
     hero_title: 'Profesionální péče pro každý den',
-    hero_text: 'Profesionální pomůcky a přístroje pro salónní i domácí péči, vybrané s důrazem na kvalitu, funkčnost a výsledky.',
+    hero_text: 'Profesionální pomůcky a přístroje pro salonní i domácí péči, vybrané s důrazem na kvalitu, funkčnost a výsledky.',
     hero_cta: 'Nakupovat',
     hero_cta2: 'O značce',
 
@@ -403,7 +403,7 @@ function tagDynamicNavLinks() {
       el.setAttribute('data-i18n', 'nav_slimming_brno');
     } else if (text === 'kontakt' || text === 'contact') {
       el.setAttribute('data-i18n', 'nav_contact');
-    } else if (text === 'kde nás najdete' || text === 'kde nas najdete' || text === 'where to find us' || text === 'mapa salónů' || text === 'mapa salonu' || text === 'salon map') {
+    } else if (text === 'kde nás najdete' || text === 'kde nas najdete' || text === 'where to find us' || text === 'mapa salonů' || text === 'salon map') {
       el.setAttribute('data-i18n', 'nav_find_us');
     } else if (text === 'onlinekurzy' || text === 'online kurzy' || text === 'online courses') {
       el.setAttribute('data-i18n', 'nav_online_courses');
