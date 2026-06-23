@@ -86,7 +86,7 @@ const translations = {
     prod_benefits: 'Benefity',
     prod_description: 'Popis',
     prod_shipping: 'Doprava a vrácení',
-    prod_shipping_text: 'Doprava zdarma od 2 500 Kč. Vrácení do 14 dní.',
+    prod_shipping_text: 'Objednávky expedujeme do 1–3 pracovních dnů. Nabízíme doručení na výdejní místa i domů a osobní odběr v Brně. Doprava je zdarma při nákupu nad 2 500 Kč.',
     prod_shipping_link: 'Podrobné informace o dopravě a platbě naleznete zde →',
 
     shop_title: 'Všechny produkty',
@@ -241,7 +241,7 @@ const translations = {
     prod_benefits: 'Benefits',
     prod_description: 'Description',
     prod_shipping: 'Shipping & Returns',
-    prod_shipping_text: 'Free shipping from 100 €. Returns within 14 days.',
+    prod_shipping_text: 'Orders are processed within 1–3 business days. We offer pickup point and home delivery options, and store pickup in Brno. Free shipping for orders over 100 €.',
     prod_shipping_link: 'Detailed information about shipping and payment can be found here →',
 
     shop_title: 'All Products',
