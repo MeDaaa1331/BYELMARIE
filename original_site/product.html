@@ -81,32 +81,27 @@
 
         <div class="header__actions">
 
-          <!-- Jazyk -->
-          <div class="nav-item lang-dropdown-wrap" id="lang-wrap">
-            <button id="lang-toggle" class="lang-toggle" aria-label="Jazyk">
-              <span id="lang-label">CS</span>
-              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor">
+          <!-- Unified Localization Selector -->
+          <div class="nav-item loc-dropdown-wrap" id="loc-wrap">
+            <button id="loc-toggle" class="loc-toggle" aria-label="Výběr jazyka a měny">
+              <span class="loc-toggle__flag"></span>
+              <span class="loc-toggle__currency">CZK</span>
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor" class="loc-arrow">
                 <path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
-            <div class="lang-dropdown" id="lang-dropdown">
-              <button class="lang-opt lang-option active" data-lang="cs" id="opt-lang-cs">CS</button>
-              <button class="lang-opt lang-option" data-lang="en" id="opt-lang-en">EN</button>
+            <div class="loc-dropdown" id="loc-dropdown">
+              <button class="loc-opt" data-lang="cs" data-currency="CZK" aria-label="Čeština / CZK">
+                <span class="loc-opt__flag"></span>
+                <span class="loc-opt__text">Čeština (CZK)</span>
+              </button>
+              <button class="loc-opt" data-lang="en" data-currency="EUR" aria-label="English / EUR">
+                <span class="loc-opt__flag"></span>
+                <span class="loc-opt__text">English (EUR)</span>
+              </button>
             </div>
           </div>
 
-          <div class="nav-item currency-dropdown-wrap" id="currency-wrap">
-            <button id="currency-toggle" class="currency-toggle" aria-label="Měna">
-              <span id="currency-label">CZK</span>
-              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" stroke="currentColor">
-                <path d="M1 1l3 3 3-3" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-            <div class="currency-dropdown" id="currency-dropdown">
-              <button class="currency-opt active" data-currency="CZK" id="opt-czk">CZK</button>
-              <button class="currency-opt" data-currency="EUR" id="opt-eur">EUR</button>
-            </div>
-          </div>
 
           <a href="contact.html" class="header__contact-link nav-link" data-i18n="nav_contact">Kontakt</a>
 
