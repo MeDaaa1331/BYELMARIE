@@ -84,13 +84,16 @@
   name="twitter:description"
   content="{{ og_description | escape }}"
 >
-
 <title>
-  {{ page_title }}
-  {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-  {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-  {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+  {%- if request.page_type == 'index' -%}
+    E-Shop BYELMARIE
+  {%- else -%}
+    BYELMARIE | {{ page_title }}
+  {%- endif -%}
 </title>
+
+<link rel="icon" type="image/x-icon" href="{{ 'favicon.ico' | asset_url }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.ico' | asset_url }}">
 
 <link
   rel="canonical"
