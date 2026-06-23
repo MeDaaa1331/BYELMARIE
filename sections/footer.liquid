@@ -46,9 +46,15 @@
       <div>
         <h4 class="footer__heading" data-i18n="footer_info">{{ section.settings.menu_2_heading }}</h4>
         <ul class="footer__links">
-          {% for link in section.settings.menu_2.links %}
-            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
+          {% if section.settings.menu_2 != blank and section.settings.menu_2.links.size > 0 %}
+            {% for link in section.settings.menu_2.links %}
+              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          {% else %}
+            <li><a href="/pages/doprava-a-platba" data-i18n="footer_shipping">Doprava a platba</a></li>
+            <li><a href="/pages/obchodni-podminky" data-i18n="footer_terms">Obchodní podmínky</a></li>
+            <li><a href="/pages/podminky-ochrany-osobnich-udaju" data-i18n="footer_privacy">Podmínky ochrany osobních údajů</a></li>
+          {% endif %}
         </ul>
       </div>
 
