@@ -1,3 +1,4 @@
+{% assign about_page_url = pages['o-byelmarie-2'].url | default: pages['o-byelmarie'].url | default: pages.about.url | default: '/pages/about' %}
 <header id="site-header">
   <div class="container">
     <div class="header__inner">
@@ -33,6 +34,10 @@
                             {% for grandchildlink in childlink.links %}
                               <li><a href="{{ grandchildlink.url }}">{{ grandchildlink.title }}</a></li>
                             {% endfor %}
+                            {% assign childlink_title_dc = childlink.title | downcase %}
+                            {% if childlink_title_dc contains 'zeštíhlení' or childlink_title_dc contains 'zestihleni' or childlink_title_dc contains 'slimming' %}
+                              <li><a href="{{ about_page_url }}" data-i18n="nav_about">O Byelmarie</a></li>
+                            {% endif %}
                           </ul>
                         </div>
                       {% endfor %}
@@ -62,6 +67,7 @@
                         <h4 class="mega-dropdown__title" data-i18n="nav_slimming_brno">Zeštíhlení Brno</h4>
                         <ul class="mega-dropdown__links">
                           <li><a href="/pages/zestihleni-brno" data-i18n="nav_studio_brno">Studio Brno</a></li>
+                          <li><a href="{{ about_page_url }}" data-i18n="nav_about">O Byelmarie</a></li>
                           <li><a href="/pages/zestihleni-brno#contact-form-zestihleni" data-i18n="nav_book_treatment">Rezervovat ošetření</a></li>
                         </ul>
                       </div>
@@ -98,7 +104,7 @@
         {% else %}
           <!-- Original website fallback -->
           <div class="nav-item">
-            <a href="{{ pages.about.url | default: pages['o-byelmarie'].url | default: '/pages/about' }}" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
+            <a href="{{ about_page_url }}" class="nav-link" data-i18n="nav_about">O Byelmarie</a>
           </div>
           <div class="nav-item has-dropdown mega-dropdown-wrap">
             <a href="/collections/all" class="nav-link" data-i18n="nav_offer">Nabídka</a>
@@ -128,6 +134,7 @@
                   <h4 class="mega-dropdown__title" data-i18n="nav_slimming_brno">Zeštíhlení Brno</h4>
                   <ul class="mega-dropdown__links">
                     <li><a href="/pages/zestihleni-brno" data-i18n="nav_studio_brno">Studio Brno</a></li>
+                    <li><a href="{{ about_page_url }}" data-i18n="nav_about">O Byelmarie</a></li>
                     <li><a href="/pages/zestihleni-brno#contact-form-zestihleni" data-i18n="nav_book_treatment">Rezervovat ošetření</a></li>
                   </ul>
                 </div>
@@ -306,7 +313,7 @@
   {% else %}
     <!-- Original website mobile menu fallback -->
     <div class="mobile-menu-item">
-      <a href="{{ pages.about.url | default: pages['o-byelmarie'].url | default: '/pages/about' }}"><span data-i18n="nav_about">O Byelmarie</span></a>
+      <a href="{{ about_page_url }}"><span data-i18n="nav_about">O Byelmarie</span></a>
     </div>
     <div class="mobile-menu-item">
       <a href="/collections/body">
@@ -333,6 +340,19 @@
         <a href="/products/skoleni-rollcupping" data-i18n="nav_training_rollcupping">ROLLCUPPING</a>
         <a href="/products/skoleni-vibroslimfit" data-i18n="nav_training_vibroslimfit">VIBROSLIMFIT</a>
         <a href="/products/ems-prosuit" data-i18n="nav_training_ems">EMS PROSuit</a>
+      </div>
+    </div>
+    <div class="mobile-menu-item">
+      <a href="/pages/zestihleni-brno">
+        <span data-i18n="nav_slimming_brno">Zeštíhlení Brno</span>
+      </a>
+      <button class="mobile-submenu-toggle" aria-label="Zobrazit podmenu" style="background:none; border:none; padding:10px; cursor:pointer; font-size:1.1rem; margin-left:auto;">
+        <span class="submenu-arrow">›</span>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/pages/zestihleni-brno" data-i18n="nav_studio_brno">Studio Brno</a>
+        <a href="{{ about_page_url }}" data-i18n="nav_about">O Byelmarie</a>
+        <a href="/pages/zestihleni-brno#contact-form-zestihleni" data-i18n="nav_book_treatment">Rezervovat ošetření</a>
       </div>
     </div>
     <div class="mobile-menu-item">

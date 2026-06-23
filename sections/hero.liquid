@@ -25,7 +25,11 @@
         <a href="{{ section.settings.btn1_url }}" class="btn btn-primary" data-i18n="hero_cta">{{ section.settings.btn1_label }}</a>
       {% endif %}
       {% if section.settings.btn2_label != blank and section.settings.btn2_url != blank %}
-        <a href="{{ section.settings.btn2_url }}" class="btn btn-outline" data-i18n="hero_cta2">{{ section.settings.btn2_label }}</a>
+        {% assign btn2_url = section.settings.btn2_url %}
+        {% if btn2_url == '/pages/about' or btn2_url == '/pages/o-byelmarie' or btn2_url == '/pages/o-byelmarie-2' %}
+          {% assign btn2_url = pages['o-byelmarie-2'].url | default: pages['o-byelmarie'].url | default: pages.about.url | default: btn2_url %}
+        {% endif %}
+        <a href="{{ btn2_url }}" class="btn btn-outline" data-i18n="hero_cta2">{{ section.settings.btn2_label }}</a>
       {% endif %}
     </div>
   </div>

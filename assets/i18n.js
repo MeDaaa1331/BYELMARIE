@@ -155,7 +155,7 @@ const translations = {
   },
   en: {
 
-    nav_about: 'About',
+    nav_about: 'About Byelmarie',
     nav_online_courses: 'Online Courses',
     nav_products: 'Products',
     nav_products_fuffu: 'FUFFU Cups',

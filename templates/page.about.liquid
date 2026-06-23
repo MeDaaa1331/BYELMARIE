@@ -1,0 +1,96 @@
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="{{ routes.root_url }}" data-i18n="nav_home">Domů</a>
+      <span class="breadcrumb__sep">/</span>
+      <span data-i18n="nav_about">O Byelmarie</span>
+    </div>
+    <h1 class="page-hero__title" data-i18n="nav_about">O Byelmarie</h1>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Content grid: Text and Image -->
+  <div class="about-content-grid" style="padding-bottom: var(--space-12); align-items: start;">
+    <!-- Left Column: Text -->
+    <div class="about-content__text animate-on-scroll">
+      <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem); font-family: var(--font-heading); margin-bottom: var(--space-6);" data-i18n="about_who">Kdo za značkou stojí?</h2>
+      
+      <div style="font-size: var(--font-size-md); color: var(--color-text-light); line-height: 1.85;">
+        <p data-i18n="about_p1">Jmenuji se <strong>Šárka</strong> a stojím za vlastní značkou <strong>BYELMARIE®</strong>, která se specializuje na <strong>formování postavy</strong>.</p>
+        <p data-i18n="about_p2">V životě mě dělá šťastnou, když vidím, že mé úsilí a energie výrazně přispívají k celkové spokojenosti a sebevědomí mých zákaznic.</p>
+        <p data-i18n="about_p3">Rukama mi prošly stovky žen, díky kterým jsem vyzkoušela množství technik, postupů a přístrojů v oblasti <strong>tvarování postavy a neinvazivního zeštíhlení</strong>.</p>
+        <p data-i18n="about_p4">Měla jsem sen být pro vás nejlepší a dávala do toho maximum. Hodiny strávené studiem těla mě přivedlo k unikátní kombinaci ručního a přístrojového ošetření. Vytvořila jsem vlastní autorskou metodu, za kterou si pevně stojím.</p>
+        <p data-i18n="about_p5">Chci své zkušenosti a znalosti sdílet, a proto od roku 2024 nabízím přístroj a pomůcky vlastní značky BYELMARIE® společně se školením profesionálů, kteří se chtějí rozvíjet v oblasti ženského zdraví a krásy.</p>
+        <p data-i18n="about_p6">Mé studio je v <strong>Brně Králově Poli</strong>, v rámci školení však jezdím i na místa klientů.</p>
+        
+        <h3 style="font-size: var(--font-size-xl); margin: var(--space-8) 0 var(--space-4); color: var(--color-accent-dark); font-family: var(--font-heading);" data-i18n="about_results">BYELMARIE® — to jsou skutečné výsledky</h3>
+        
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap; margin-top: var(--space-6);">
+          <a href="{{ routes.all_products_collection_url | default: '/collections/all' }}" class="btn btn-primary" data-i18n="nav_shop">E-shop</a>
+          <a href="{{ pages.contact.url | default: '/pages/contact' }}" class="btn btn-outline" data-i18n="nav_contact">Kontakt</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Image -->
+    <div class="about-content__image animate-on-scroll animate-delay-2" style="aspect-ratio: 4/5; overflow: hidden; border-radius: var(--border-radius-sm);">
+      <img src="{{ 'o_byelmarie.png' | asset_url }}" alt="Šárka Kloudová — BYELMARIE®" style="width:100%; height:100%; object-fit:cover; object-position:center top;" loading="lazy" onerror="this.src='{{ 'sarka_fuffu.jpg' | asset_url }}'">
+    </div>
+  </div>
+</div>
+
+<section class="features-section" style="margin-top: var(--space-8); padding-bottom: var(--space-16);">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item animate-on-scroll">
+        <div class="feature-item__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="24" cy="24" r="20" />
+            <path d="M16 24l6 6 10-12" />
+          </svg>
+        </div>
+        <h3 class="feature-item__title" data-i18n="feat1_title">Odbornost</h3>
+        <p class="feature-item__text" data-i18n="feat1_text">Autorské techniky Šárky Kloudové, ověřené na stovkách klientek</p>
+      </div>
+      <div class="feature-item animate-on-scroll animate-delay-2">
+        <div class="feature-item__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M24 4l4 12h12l-10 7 4 13-10-7-10 7 4-13-10-7h12z" />
+          </svg>
+        </div>
+        <h3 class="feature-item__title" data-i18n="feat2_title">Kvalita</h3>
+        <p class="feature-item__text" data-i18n="feat2_text">Profesionální pomůcky vyvinuté pro maximální efektivitu</p>
+      </div>
+      <div class="feature-item animate-on-scroll animate-delay-3">
+        <div class="feature-item__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 36l8-8 8 8 8-16 8 8" />
+          </svg>
+        </div>
+        <h3 class="feature-item__title" data-i18n="feat3_title">Výsledky</h3>
+        <p class="feature-item__text" data-i18n="feat3_text">Skutečné výsledky formování postavy a neinvazivního zeštíhlení</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--color-bg-alt); border-top: 1px solid var(--color-border); padding: var(--space-12) 0;">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center;" class="about-content-grid">
+      <div class="animate-on-scroll">
+        <img src="{{ 'sarka_fuffu.jpg' | asset_url }}" alt="Šárka Kloudová" loading="lazy" style="width:100%; aspect-ratio:4/5; object-fit:cover; object-position:top; border-radius: var(--border-radius-sm);">
+      </div>
+      <div class="animate-on-scroll animate-delay-2">
+        <span style="display:block; font-size:var(--font-size-xs); letter-spacing:0.25em; text-transform:uppercase; color:var(--color-accent-dark); margin-bottom:var(--space-5);" data-i18n="about_founder">Zakladatelka</span>
+        <h2 style="font-size: clamp(1.75rem, 3vw, 2.75rem); margin-bottom: var(--space-5); line-height:1.15; font-family: var(--font-heading);">Šárka Kloudová</h2>
+        <p style="font-size:var(--font-size-md); color:var(--color-text-light); line-height:1.8; margin-bottom:var(--space-4);" data-i18n="about_founder_desc">Specialistka na vysoce efektivní péči o tělo a formování postavy. Autorka unikátních technik pro neinvazivní zeštíhlení, které vycházejí z mnohaletých zkušeností a neustálého vzdělávání.</p>
+        <p style="font-size:var(--font-size-md); color:var(--color-text-light); line-height:1.8; margin-bottom:var(--space-8);" data-i18n="about_studio">Studio: Brno, Královo Pole</p>
+        <div style="display:flex; gap:var(--space-4); flex-wrap:wrap;">
+          <a href="https://www.instagram.com/byelmarie/" target="_blank" class="btn btn-outline">Instagram</a>
+          <a href="{{ pages.contact.url | default: '/pages/contact' }}" class="btn btn-primary" data-i18n="nav_contact">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

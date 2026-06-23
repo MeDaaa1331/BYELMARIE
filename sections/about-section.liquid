@@ -16,7 +16,11 @@
           <p data-i18n="about_professional">Pro profesionály v oboru nabízí BYELMARIE® certifikovaná školení a prodej specializovaného masážního zařízení.</p>
         </div>
         {% if section.settings.btn_label != blank and section.settings.btn_url != blank %}
-          <a href="{{ section.settings.btn_url }}" class="btn btn-primary" data-i18n="about_cta">{{ section.settings.btn_label }}</a>
+          {% assign btn_url = section.settings.btn_url %}
+          {% if btn_url == '/pages/about' or btn_url == '/pages/o-byelmarie' or btn_url == '/pages/o-byelmarie-2' %}
+            {% assign btn_url = pages['o-byelmarie-2'].url | default: pages['o-byelmarie'].url | default: pages.about.url | default: btn_url %}
+          {% endif %}
+          <a href="{{ btn_url }}" class="btn btn-primary" data-i18n="about_cta">{{ section.settings.btn_label }}</a>
         {% endif %}
       </div>
     </div>
