@@ -87,6 +87,7 @@ const translations = {
     prod_description: 'Popis',
     prod_shipping: 'Doprava a vrácení',
     prod_shipping_text: 'Doprava zdarma od 2 500 Kč. Vrácení do 14 dní.',
+    prod_shipping_link: 'Podrobné informace o dopravě a platbě naleznete zde →',
 
     shop_title: 'Všechny produkty',
     shop_filter_all: 'Vše',
@@ -241,6 +242,7 @@ const translations = {
     prod_description: 'Description',
     prod_shipping: 'Shipping & Returns',
     prod_shipping_text: 'Free shipping from 100 €. Returns within 14 days.',
+    prod_shipping_link: 'Detailed information about shipping and payment can be found here →',
 
     shop_title: 'All Products',
     shop_filter_all: 'All',
