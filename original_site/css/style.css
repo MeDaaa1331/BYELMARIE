@@ -559,11 +559,13 @@ p:last-child {
   color: var(--color-white);
 }
 
-.loc-dropdown-wrap {
+.lang-dropdown-wrap,
+.currency-dropdown-wrap {
   position: relative;
 }
 
-.loc-toggle {
+.lang-toggle,
+.currency-toggle {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -583,25 +585,28 @@ p:last-child {
   white-space: nowrap;
 }
 
-.loc-toggle:hover {
+.lang-toggle:hover,
+.currency-toggle:hover {
   border-color: var(--color-border-dark);
   background: rgba(34, 34, 34, 0.04);
 }
 
-.loc-toggle svg.loc-arrow {
+.lang-toggle svg.dropdown-arrow,
+.currency-toggle svg.dropdown-arrow {
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   margin-left: 2px;
 }
 
-.loc-dropdown-wrap.open .loc-toggle svg.loc-arrow {
+.lang-dropdown-wrap.open .lang-toggle svg.dropdown-arrow,
+.currency-dropdown-wrap.open .currency-toggle svg.dropdown-arrow {
   transform: rotate(180deg);
 }
 
-.loc-dropdown {
+.lang-dropdown,
+.currency-dropdown {
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  min-width: 170px;
   background: rgba(252, 250, 247, 0.98);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -618,13 +623,23 @@ p:last-child {
   z-index: 1000;
 }
 
-.loc-dropdown-wrap.open .loc-dropdown {
+.lang-dropdown {
+  min-width: 145px;
+}
+
+.currency-dropdown {
+  min-width: 125px;
+}
+
+.lang-dropdown-wrap.open .lang-dropdown,
+.currency-dropdown-wrap.open .currency-dropdown {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0) scale(1);
 }
 
-.loc-opt {
+.lang-opt,
+.currency-opt {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -644,23 +659,29 @@ p:last-child {
   white-space: nowrap;
 }
 
-.loc-opt:hover {
+.lang-opt:hover,
+.currency-opt:hover {
   background: rgba(34, 34, 34, 0.05);
 }
 
-.loc-opt.active {
+.lang-opt.active,
+.currency-opt.active {
   background: rgba(34, 34, 34, 0.08);
   font-weight: 600;
 }
 
-.loc-opt__flag {
+.lang-toggle__flag,
+.lang-opt__flag {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
 
-.loc-opt__text {
-  flex-grow: 1;
+.currency-toggle__symbol,
+.currency-opt__symbol {
+  font-size: 13px;
+  font-weight: 400;
+  margin-right: 2px;
 }
 
 .header__actions {

@@ -460,6 +460,10 @@ function updateLangToggle() {
   });
   const lbl = document.getElementById('lang-label');
   if (lbl) lbl.textContent = currentLang.toUpperCase();
+  const flagEl = document.querySelector('.lang-toggle__flag');
+  if (flagEl && flags[currentLang]) {
+    flagEl.innerHTML = flags[currentLang];
+  }
 }
 
 function updateCurrencyToggle() {
@@ -516,7 +520,18 @@ function updateLocDropdownHighlight() {
   });
 }
 
+function initLangFlags() {
+  document.querySelectorAll('.lang-opt').forEach(btn => {
+    const flagEl = btn.querySelector('.lang-opt__flag');
+    const lang = btn.dataset.lang;
+    if (flagEl && !flagEl.innerHTML && flags[lang]) {
+      flagEl.innerHTML = flags[lang];
+    }
+  });
+}
+
 function initI18n() {
+  initLangFlags();
   applyTranslations();
   updatePrices();
   updateLangToggle();
