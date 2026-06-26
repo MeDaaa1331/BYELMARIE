@@ -495,7 +495,7 @@ const PRODUCTS = [
   <div class="ems-grid">
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">🔥</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Spalování & zpevnění</span>
       </div>
       <p class="ems-card__text">Intenzivní spalování tuků a zpevnění postavy v rekordním čase.</p>
@@ -503,7 +503,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">🍑</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 15.6l2.8-2.8M15.6 5.6l2.8-2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Celulitida & lifting</span>
       </div>
       <p class="ems-card__text">Účinná redukce celulitidy a lifting hýždí pro dokonale tvarované křivky.</p>
@@ -511,7 +511,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">🦴</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Šetrnost ke kloubům</span>
       </div>
       <p class="ems-card__text">Nedochází k nárazům ani přetížení kloubů. Ideální pro lidi s bolestmi zad nebo po zranění.</p>
@@ -519,7 +519,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">💧</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Lymfatický systém</span>
       </div>
       <p class="ems-card__text">Podpora lymfy – odplavuje přebytečnou vodu z těla a působí silně detoxikačně.</p>
@@ -527,7 +527,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">⚡</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Vnitřní stehna</span>
       </div>
       <p class="ems-card__text">Unikátní stimulační zóny pro vnitřní stehna, které běžné EMS systémy postrádají.</p>
@@ -538,7 +538,7 @@ const PRODUCTS = [
   <div class="ems-grid">
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">👤</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>SINGLE Set</span>
       </div>
       <p class="ems-card__text">1x EMS PROSuit oblek (velikost dle výběru XS–XL), tablet pro bezdrátové ovládání, řídicí jednotka, 6 ks speciálního spodního prádla.</p>
@@ -547,7 +547,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">👥</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>DOUBLE Set</span>
       </div>
       <p class="ems-card__text">2x EMS PROSuit obleky (volba velikostí), tablet, řídicí jednotka, 12 ks spodního prádla. Vyšší flexibilita ošetření.</p>
@@ -556,7 +556,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">👑</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>PROFI Set</span>
       </div>
       <p class="ems-card__text">3x EMS PROSuit obleky (doporučené velikosti XS, M, XL), tablet, řídicí jednotka, 20 ks spodního prádla.</p>
@@ -572,7 +572,7 @@ const PRODUCTS = [
   <div class="ems-grid">
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">📱</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Bezdrátové ovládání</span>
       </div>
       <p class="ems-card__text">Snadné ovládání přes dodaný tablet, bezdrátový přenos impulzů.</p>
@@ -580,7 +580,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">👥</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Až 4 klienti</span>
       </div>
       <p class="ems-card__text">Možnost ošetřovat až 4 klienty najednou s jedním systémem.</p>
@@ -588,7 +588,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">📈</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Rychlá návratnost</span>
       </div>
       <p class="ems-card__text">Vysoká ziskovost při ceně ošetření od 1 000 Kč za 25 minut.</p>
@@ -596,7 +596,7 @@ const PRODUCTS = [
 
     <div class="ems-card">
       <div class="ems-card__title">
-        <span class="ems-card__icon">📦</span>
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <span>Kompletní balíček</span>
       </div>
       <p class="ems-card__text">Dodací lhůta 30 dní. Zaškolení, certifikát a marketingové materiály jsou součástí balení.</p>
@@ -605,6 +605,129 @@ const PRODUCTS = [
 
   <div class="ems-warning-box">
     <p><strong>⚠️ Kontraindikace:</strong> Kardiostimulátor, těhotenství, epilepsie, závažná akutní onemocnění.</p>
+  </div>
+</div>`,
+    descEn: `
+<div class="ems-description">
+  <div class="ems-intro">
+    <p>Step ahead with the new <strong>EMS PROSuit BYELMARIE®</strong> – wireless neuromuscular stimulation technology that works for your clients! Inspired by professional aesthetic and sports technologies.</p>
+    <p>EMS PROSuit sends safe electrical impulses directly into muscles, triggering thousands of muscle contractions. <strong>25 minutes of passive training</strong> with EMS PROSuit equals the effect of a much longer and more strenuous conventional workout.</p>
+  </div>
+
+  <h3 class="ems-section-title">Key Benefits of EMS PROSuit</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 3z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Fat Burn & Toning</span>
+      </div>
+      <p class="ems-card__text">Intensive fat burning and body toning in record time.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 15.6l2.8-2.8M15.6 5.6l2.8-2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Cellulite & Lifting</span>
+      </div>
+      <p class="ems-card__text">Effective cellulite reduction and buttocks lifting for perfectly sculpted curves.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Gentle on Joints</span>
+      </div>
+      <p class="ems-card__text">No high impact or joint overload. Ideal for people with back pain or recovering from injuries.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Lymphatic Support</span>
+      </div>
+      <p class="ems-card__text">Stimulates lymph flow – flushes out excess water and promotes deep body detoxification.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Inner Thighs</span>
+      </div>
+      <p class="ems-card__text">Unique stimulation zones for inner thighs that conventional EMS systems lack.</p>
+    </div>
+  </div>
+
+  <h3 class="ems-section-title">Configurations Available</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>SINGLE Set</span>
+      </div>
+      <p class="ems-card__text">1x EMS PROSuit (size of choice XS–XL), wireless tablet control, receiver unit, 6x special cotton underwear.</p>
+      <div class="ems-card__meta">Price on Request</div>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>DOUBLE Set</span>
+      </div>
+      <p class="ems-card__text">2x EMS PROSuit suits (choice of sizes), wireless tablet control, receiver unit, 12x special cotton underwear. Higher treatment flexibility.</p>
+      <div class="ems-card__meta">Price on Request</div>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 20h18" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>PROFI Set</span>
+      </div>
+      <p class="ems-card__text">3x EMS PROSuit suits (recommended sizes XS, M, XL covering all body types), wireless tablet control, receiver unit, 20x cotton underwear.</p>
+      <div class="ems-card__meta">Price on Request</div>
+    </div>
+  </div>
+
+  <div class="ems-info-box">
+    <p><strong>Suit Size Flexibility:</strong> The elastic material adapts to the body shape (XS covers XXS to S, S covers XS to M, M covers S to L, etc.).</p>
+  </div>
+
+  <h3 class="ems-section-title">Operational Benefits</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Tablet & Wireless</span>
+      </div>
+      <p class="ems-card__text">Controlled via provided tablet, wireless impulse transmission.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Up to 4 Clients</span>
+      </div>
+      <p class="ems-card__text">Treat up to 4 clients simultaneously with a single system.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" stroke-linecap="round" stroke-linejoin="round"/><polyline points="17 6 23 6 23 12" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Fast ROI</span>
+      </div>
+      <p class="ems-card__text">High profitability with a recommended treatment price from 1,000 CZK / 25 min.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span>Complete Package</span>
+      </div>
+      <p class="ems-card__text">30-day delivery time. Professional training, certification, and marketing materials are included.</p>
+    </div>
+  </div>
+
+  <div class="ems-warning-box">
+    <p><strong>⚠️ Contraindications:</strong> Pacemaker, pregnancy, epilepsy, severe acute illness.</p>
   </div>
 </div>`,
     descEn: `
