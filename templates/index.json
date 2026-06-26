@@ -98,7 +98,7 @@
         "c1": {
           "type": "category_card",
           "settings": {
-            "image": "shopify://shop_images/Svicen_1.4.1.jpg",
+            "image": "shopify://shop_images/427B4AED-D690-4AAD-8488-570B734C04E6.png",
             "title": "Produkty pro tělo",
             "desc": "Baňky, válečky a séra pro péči o tělo",
             "btn_label": "Zobrazit",
@@ -120,7 +120,7 @@
           "settings": {
             "image": "shopify://shop_images/zestihleni.png",
             "title": "Zeštíhlení Brno",
-            "desc": "Navštivte nás osobně v Brně, Královo Pole",
+            "desc": "Navštivte nás osobně v Brně, Králově Poli",
             "btn_label": "Rezervovat",
             "url": "/pages/zestihleni-brno"
           }
