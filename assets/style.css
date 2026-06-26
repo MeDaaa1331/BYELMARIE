@@ -3844,3 +3844,402 @@ select:focus-visible {
 .map-popup__content strong {
   color: var(--color-text);
 }
+
+/* =========================================================
+   MOBILE FIX PATCH — Fotky, texty, buttony, gridy
+   ========================================================= */
+
+/* --- Accordion body content — typografie nadpisů --- */
+.accordion-body h1,
+.accordion-body h2,
+.accordion-body h3,
+.accordion-body h4,
+.accordion-body h5,
+.accordion-body h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+  line-height: 1.25;
+}
+
+.accordion-body h4 {
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.accordion-body p {
+  margin-bottom: var(--space-4);
+  line-height: 1.8;
+}
+
+.accordion-body ul,
+.accordion-body ol {
+  list-style: disc;
+  padding-left: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.accordion-body ol {
+  list-style: decimal;
+}
+
+.accordion-body li {
+  margin-bottom: var(--space-2);
+  line-height: 1.7;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+.accordion-body li > ul,
+.accordion-body li > ol {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.accordion-body strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* --- Variant buttons — wrap pro dlouhé texty --- */
+.variant-buttons {
+  flex-wrap: wrap;
+}
+
+.variant-btn {
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* --- Product card price row — prevent overflow --- */
+.product-card__price-row {
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* --- Product gallery main — správný poměr pro různé produkty --- */
+.product-gallery__main img {
+  object-fit: contain;
+  background: var(--color-bg-alt);
+}
+
+/* =========================================================
+   MOBILE FIXES @media — Všechny obrazovky pod 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* --- Galerie produktu — správná výška, žádné ořezávání --- */
+  .product-gallery__main {
+    aspect-ratio: 1 / 1;
+    background: var(--color-bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product-gallery__main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: var(--space-4);
+    box-sizing: border-box;
+  }
+
+  /* --- Gallery arrows na mobilu --- */
+  .gallery-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+    background: rgba(255,255,255,0.85);
+  }
+
+  /* --- Accordion body nadpisy na mobilu --- */
+  .accordion-body h4 {
+    font-size: 1rem;
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-2);
+  }
+
+  .accordion-body p,
+  .accordion-body li {
+    font-size: var(--font-size-sm);
+    line-height: 1.75;
+  }
+
+  /* --- Variant buttons — wrap na mobilu --- */
+  .variant-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .variant-btn {
+    flex: 1 1 calc(50% - var(--space-2));
+    min-width: 120px;
+    max-width: 100%;
+    padding: var(--space-3) var(--space-3);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+    hyphens: auto;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+  }
+
+  /* Pro 3 varianty (SINGLE/DOUBLE/PROFI) — vždy 1 na řádek */
+  .variant-buttons:has(.variant-btn:nth-child(3)) .variant-btn {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* --- product-info short desc — kratší bullet pointy --- */
+  .product-info__short-desc li {
+    font-size: 13px;
+    padding: var(--space-2) 0;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .product-info__short-desc li::before {
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  /* --- product-info__add buttons --- */
+  .product-info__add {
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+  }
+
+  .product-info__add .btn,
+  .product-info__add .btn-primary,
+  .product-info__add a.btn-primary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-4) var(--space-6);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    min-height: 52px;
+  }
+
+  /* --- Product name --- */
+  .product-info__name {
+    font-size: clamp(1.5rem, 7vw, 2.2rem);
+    line-height: 1.15;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* --- Product price --- */
+  .product-info__price {
+    font-size: clamp(1.2rem, 5vw, 1.75rem);
+    margin-bottom: var(--space-5);
+  }
+
+  /* --- Product card — cena a tlačítko --- */
+  .product-card__price-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .product-card__price-row .btn-add-to-cart,
+  .product-card__price-row a.btn-add-to-cart {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    min-height: 36px;
+    font-size: 9px;
+  }
+
+  /* --- Product card image — správný poměr na mobilu --- */
+  .product-card__image-link {
+    aspect-ratio: 1 / 1;
+    background: var(--color-bg-alt);
+  }
+
+  .product-card__image {
+    object-fit: contain;
+    padding: var(--space-2);
+  }
+
+  /* --- Product card text --- */
+  .product-card__name {
+    font-size: 12px;
+    line-height: 1.4;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* --- Category cards — text vždy viditelný --- */
+  .category-card__name {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .category-card__content {
+    padding: var(--space-3) var(--space-3);
+  }
+
+  /* --- Section header na mobilu --- */
+  .section-header {
+    text-align: left;
+    margin-bottom: var(--space-8);
+  }
+
+  /* --- About split — obrázek první --- */
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about-split__image {
+    order: -1;
+    aspect-ratio: 4 / 3;
+  }
+
+  .about-split__image img {
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  /* --- Breadcrumb na mobilní product page --- */
+  .product-info__breadcrumb {
+    flex-wrap: wrap;
+    font-size: 11px;
+    gap: 4px;
+    margin-bottom: var(--space-3);
+  }
+
+  /* --- Shop header na mobilu --- */
+  .shop-header h1,
+  .shop-header .page-hero__title {
+    font-size: clamp(1.6rem, 7vw, 2.5rem);
+  }
+
+  /* --- Accordion trigger --- */
+  .accordion-trigger {
+    min-height: 52px;
+    padding: var(--space-4) 0;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-align: left;
+  }
+
+  /* --- Product detail padding --- */
+  .product-detail {
+    padding: var(--space-4) 0 var(--space-12);
+    gap: var(--space-6);
+  }
+
+  /* --- Related products header --- */
+  .section-header__title[style] {
+    font-size: clamp(1.4rem, 5vw, 2rem) !important;
+  }
+
+  /* --- Footer social icons --- */
+  .footer__social a {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* --- Announcement bar wrap --- */
+  #announcement-bar .container {
+    gap: var(--space-1);
+  }
+
+  /* --- Cart item fix na mobilu --- */
+  .cart-item__image {
+    width: 80px;
+    height: 80px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+  }
+
+  /* --- Page hero --- */
+  .page-hero {
+    padding: var(--space-10) 0 var(--space-8);
+  }
+
+  /* --- Horizontal rule spacing --- */
+  hr {
+    margin: var(--space-6) 0;
+  }
+}
+
+/* --- Extra small phones (360px and below) --- */
+@media (max-width: 380px) {
+  .product-info__name {
+    font-size: 1.4rem;
+  }
+
+  .product-info__price {
+    font-size: 1.2rem;
+  }
+
+  .variant-btn {
+    flex: 1 1 100%;
+    font-size: 10px;
+  }
+
+  .product-card__name {
+    font-size: 11px;
+  }
+
+  .accordion-trigger {
+    font-size: 10px;
+  }
+
+  .container,
+  .container--narrow {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .product-gallery__main {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* --- Swipe hint pro galerii na touch zařízeních --- */
+@media (hover: none) and (pointer: coarse) {
+  /* Mobilní/touch zařízení - kategorie vždy zobrazí info */
+  .category-card__desc,
+  .category-card__arrow {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Product card hover efekty nahradit statickým zobrazením */
+  .product-card__image {
+    transform: none !important;
+  }
+
+  /* Výraznější tap highlight */
+  .variant-btn:active,
+  .filter-tab:active,
+  .btn:active,
+  .btn-primary:active {
+    opacity: 0.75;
+    transform: scale(0.98);
+  }
+
+  /* Gallery arrows vždy viditelné na touch */
+  .gallery-arrow {
+    opacity: 0.85;
+  }
+}
