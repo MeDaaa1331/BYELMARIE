@@ -4067,15 +4067,15 @@ select:focus-visible {
     font-size: 9px;
   }
 
-  /* --- Product card image — správný poměr na mobilu --- */
+  /* --- Product card image — původní cover zobrazení --- */
   .product-card__image-link {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 4;
     background: var(--color-bg-alt);
   }
 
   .product-card__image {
-    object-fit: contain;
-    padding: var(--space-2);
+    object-fit: cover;
+    padding: 0;
   }
 
   /* --- Product card text --- */
