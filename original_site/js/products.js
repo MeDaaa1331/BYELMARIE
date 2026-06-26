@@ -485,40 +485,251 @@ const PRODUCTS = [
       'Perfect for trainers, beauty salons, and physiotherapists',
     ],
     descCs: `
-<p>Získejte náskok s novinkou <strong>EMS PROSuit BYELMARIE®</strong> – bezdrátovou technologií neuromuskulární stimulace celého těla, která pracuje za vaše klienty! Inspirováno profesionálními estetickými a sportovními technologiemi.</p>
-<p>EMS PROSuit vysílá bezpečné elektrické impulzy přímo do svalů, čímž vyvolává tisíce svalových kontrakcí. <strong>25 minut pasivního tréninku</strong> s EMS PROSuit odpovídá efektu několikanásobně delšího a namáhavějšího klasického cvičení.</p>
-<h4>Hlavní benefity EMS PROSuit:</h4>
-<ul>
-  <li><strong>Intenzivní spalování tuků a zpevnění postavy</strong>.</li>
-  <li><strong>Redukce celulitidy a lifting hýždí</strong>.</li>
-  <li><strong>Šetrnost ke kloubům</strong> – nedochází k nárazům ani přetížení, ideální pro lidi s bolestmi zad nebo po zranění.</li>
-  <li><strong>Podpora lymfatického systému</strong> – odplavuje přebytečnou vodu, působí detoxikačně.</li>
-  <li><strong>Zacílení na vnitřní stehna</strong> – obsahuje unikátní stimulační zóny pro vnitřní stehna, které běžné EMS systémy postrádají.</li>
-</ul>
-<h4>Dostupné konfigurace setů (Cena na dotaz):</h4>
-<ul>
-  <li><strong>SINGLE:</strong> 1x EMS PROSuit oblek (velikost dle výběru XS–XL), tablet pro bezdrátové ovládání, řídicí jednotka, 6 ks speciálního bavlněného spodního prádla.</li>
-  <li><strong>DOUBLE:</strong> 2x EMS PROSuit obleky, tablet, řídicí jednotka, 12 ks spodního prádla (vyšší flexibilita ošetření).</li>
-  <li><strong>PROFI:</strong> 3x EMS PROSuit obleky (doporučené velikosti XS, M, XL pokrývající celou škálu postav), tablet, řídicí jednotka, 20 ks spodního prádla.</li>
-</ul>
-<p><strong>Variabilita velikostí obleku:</strong> Elastický materiál obleku se přizpůsobí postavě (XS pokrývá XXS až S, S pokrývá XS až M, M pokrývá S až L atd.).</p>
-<p><strong>Provozní výhody:</strong> Ovládání přes dodaný tablet, bezdrátový přenos, možnost ošetřovat až 4 klienty najednou. Rychlá návratnost investice (při ceně ošetření od 1 000 Kč / 25 min). Dodací lhůta: 30 dní. Školení, certifikát a marketingové materiály jsou součástí.</p>
-<p><em>Kontraindikace: Kardiostimulátor, těhotenství, epilepsie, závažná akutní onemocnění.</em></p>`,
+<div class="ems-description">
+  <div class="ems-intro">
+    <p>Získejte náskok s novinkou <strong>EMS PROSuit BYELMARIE®</strong> – bezdrátovou technologií neuromuskulární stimulace celého těla, která pracuje za vaše klienty! Inspirováno profesionálními estetickými a sportovními technologiemi.</p>
+    <p>EMS PROSuit vysílá bezpečné elektrické impulzy přímo do svalů, čímž vyvolává tisíce svalových kontrakcí. <strong>25 minut pasivního tréninku</strong> s EMS PROSuit odpovídá efektu několikanásobně delšího a namáhavějšího klasického cvičení.</p>
+  </div>
+
+  <h3 class="ems-section-title">Hlavní benefity EMS PROSuit</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">🔥</span>
+        <span>Spalování & zpevnění</span>
+      </div>
+      <p class="ems-card__text">Intenzivní spalování tuků a zpevnění postavy v rekordním čase.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">🍑</span>
+        <span>Celulitida & lifting</span>
+      </div>
+      <p class="ems-card__text">Účinná redukce celulitidy a lifting hýždí pro dokonale tvarované křivky.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">🦴</span>
+        <span>Šetrnost ke kloubům</span>
+      </div>
+      <p class="ems-card__text">Nedochází k nárazům ani přetížení kloubů. Ideální pro lidi s bolestmi zad nebo po zranění.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">💧</span>
+        <span>Lymfatický systém</span>
+      </div>
+      <p class="ems-card__text">Podpora lymfy – odplavuje přebytečnou vodu z těla a působí silně detoxikačně.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">⚡</span>
+        <span>Vnitřní stehna</span>
+      </div>
+      <p class="ems-card__text">Unikátní stimulační zóny pro vnitřní stehna, které běžné EMS systémy postrádají.</p>
+    </div>
+  </div>
+
+  <h3 class="ems-section-title">Dostupné konfigurace setů</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👤</span>
+        <span>SINGLE Set</span>
+      </div>
+      <p class="ems-card__text">1x EMS PROSuit oblek (velikost dle výběru XS–XL), tablet pro bezdrátové ovládání, řídicí jednotka, 6 ks speciálního spodního prádla.</p>
+      <div class="ems-card__meta">Cena na dotaz</div>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👥</span>
+        <span>DOUBLE Set</span>
+      </div>
+      <p class="ems-card__text">2x EMS PROSuit obleky (volba velikostí), tablet, řídicí jednotka, 12 ks spodního prádla. Vyšší flexibilita ošetření.</p>
+      <div class="ems-card__meta">Cena na dotaz</div>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👑</span>
+        <span>PROFI Set</span>
+      </div>
+      <p class="ems-card__text">3x EMS PROSuit obleky (doporučené velikosti XS, M, XL), tablet, řídicí jednotka, 20 ks spodního prádla.</p>
+      <div class="ems-card__meta">Cena na dotaz</div>
+    </div>
+  </div>
+
+  <div class="ems-info-box">
+    <p><strong>Variabilita velikostí obleku:</strong> Elastický materiál obleku se přizpůsobí postavě (XS pokrývá XXS až S, S pokrývá XS až M, M pokrývá S až L atd.).</p>
+  </div>
+
+  <h3 class="ems-section-title">Provozní výhody</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">📱</span>
+        <span>Bezdrátové ovládání</span>
+      </div>
+      <p class="ems-card__text">Snadné ovládání přes dodaný tablet, bezdrátový přenos impulzů.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👥</span>
+        <span>Až 4 klienti</span>
+      </div>
+      <p class="ems-card__text">Možnost ošetřovat až 4 klienty najednou s jedním systémem.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">📈</span>
+        <span>Rychlá návratnost</span>
+      </div>
+      <p class="ems-card__text">Vysoká ziskovost při ceně ošetření od 1 000 Kč za 25 minut.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">📦</span>
+        <span>Kompletní balíček</span>
+      </div>
+      <p class="ems-card__text">Dodací lhůta 30 dní. Zaškolení, certifikát a marketingové materiály jsou součástí balení.</p>
+    </div>
+  </div>
+
+  <div class="ems-warning-box">
+    <p><strong>⚠️ Kontraindikace:</strong> Kardiostimulátor, těhotenství, epilepsie, závažná akutní onemocnění.</p>
+  </div>
+</div>`,
     descEn: `
-<p>Step ahead with the new <strong>EMS PROSuit BYELMARIE®</strong> – wireless neuromuscular stimulation technology that works for your clients. Using low-frequency impulses, it activates 90–95% of muscle fibres in a single 25-minute passive workout.</p>
-<h4>Key Benefits:</h4>
-<ul>
-  <li>Burns fat and tones the entire body.</li>
-  <li>No joint stress, safe for rehabilitation or back pain sufferers.</li>
-  <li>Includes unique stimulation zones for inner thighs.</li>
-  <li>High return on investment for salons and fitness coaches.</li>
-</ul>
-<h4>Configurations Available (Price on Request):</h4>
-<ul>
-  <li><strong>SINGLE:</strong> 1x suit, tablet control, receiver unit, 6x underwear.</li>
-  <li><strong>DOUBLE:</strong> 2x suits, tablet control, receiver unit, 12x underwear.</li>
-  <li><strong>PROFI:</strong> 3x suits (XS, M, XL covers all shapes), tablet control, receiver unit, 20x underwear.</li>
-</ul>`,
+<div class="ems-description">
+  <div class="ems-intro">
+    <p>Step ahead with the new <strong>EMS PROSuit BYELMARIE®</strong> – wireless neuromuscular stimulation technology that works for your clients! Inspired by professional aesthetic and sports technologies.</p>
+    <p>EMS PROSuit sends safe electrical impulses directly into muscles, triggering thousands of muscle contractions. <strong>25 minutes of passive training</strong> with EMS PROSuit equals the effect of a much longer and more strenuous conventional workout.</p>
+  </div>
+
+  <h3 class="ems-section-title">Key Benefits of EMS PROSuit</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">🔥</span>
+        <span>Fat Burn & Toning</span>
+      </div>
+      <p class="ems-card__text">Intensive fat burning and body toning in record time.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">🍑</span>
+        <span>Cellulite & Lifting</span>
+      </div>
+      <p class="ems-card__text">Effective cellulite reduction and buttocks lifting for perfectly sculpted curves.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">🦴</span>
+        <span>Gentle on Joints</span>
+      </div>
+      <p class="ems-card__text">No high impact or joint overload. Ideal for people with back pain or recovering from injuries.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">💧</span>
+        <span>Lymphatic Support</span>
+      </div>
+      <p class="ems-card__text">Stimulates lymph flow – flushes out excess water and promotes deep body detoxification.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">⚡</span>
+        <span>Inner Thighs</span>
+      </div>
+      <p class="ems-card__text">Unique stimulation zones for inner thighs that conventional EMS systems lack.</p>
+    </div>
+  </div>
+
+  <h3 class="ems-section-title">Configurations Available</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👤</span>
+        <span>SINGLE Set</span>
+      </div>
+      <p class="ems-card__text">1x EMS PROSuit (size of choice XS–XL), wireless tablet control, receiver unit, 6x special cotton underwear.</p>
+      <div class="ems-card__meta">Price on Request</div>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👥</span>
+        <span>DOUBLE Set</span>
+      </div>
+      <p class="ems-card__text">2x EMS PROSuit suits (choice of sizes), wireless tablet control, receiver unit, 12x special cotton underwear. Higher treatment flexibility.</p>
+      <div class="ems-card__meta">Price on Request</div>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👑</span>
+        <span>PROFI Set</span>
+      </div>
+      <p class="ems-card__text">3x EMS PROSuit suits (recommended sizes XS, M, XL covering all body types), wireless tablet control, receiver unit, 20x cotton underwear.</p>
+      <div class="ems-card__meta">Price on Request</div>
+    </div>
+  </div>
+
+  <div class="ems-info-box">
+    <p><strong>Suit Size Flexibility:</strong> The elastic material adapts to the body shape (XS covers XXS to S, S covers XS to M, M covers S to L, etc.).</p>
+  </div>
+
+  <h3 class="ems-section-title">Operational Benefits</h3>
+  <div class="ems-grid">
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">📱</span>
+        <span>Tablet & Wireless</span>
+      </div>
+      <p class="ems-card__text">Controlled via provided tablet, wireless impulse transmission.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">👥</span>
+        <span>Up to 4 Clients</span>
+      </div>
+      <p class="ems-card__text">Treat up to 4 clients simultaneously with a single system.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">📈</span>
+        <span>Fast ROI</span>
+      </div>
+      <p class="ems-card__text">High profitability with a recommended treatment price from 1,000 CZK / 25 min.</p>
+    </div>
+
+    <div class="ems-card">
+      <div class="ems-card__title">
+        <span class="ems-card__icon">📦</span>
+        <span>Complete Package</span>
+      </div>
+      <p class="ems-card__text">30-day delivery time. Professional training, certification, and marketing materials are included.</p>
+    </div>
+  </div>
+
+  <div class="ems-warning-box">
+    <p><strong>⚠️ Contraindications:</strong> Pacemaker, pregnancy, epilepsy, severe acute illness.</p>
+  </div>
+</div>`,
   },
 ];
 

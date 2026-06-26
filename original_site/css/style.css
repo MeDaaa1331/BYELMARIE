@@ -4249,3 +4249,137 @@ select:focus-visible {
     opacity: 0.85;
   }
 }
+
+/* =========================================================
+   EMS PROSuit Product Description Cards Custom Visuals
+   ========================================================= */
+
+.ems-description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-2);
+}
+
+.ems-intro {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+.ems-section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.ems-card {
+  background: var(--color-bg-alt);
+  padding: var(--space-5);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-accent-dark);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ems-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-white);
+}
+
+.ems-card__title {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.ems-card__icon {
+  color: var(--color-accent-dark);
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(168, 150, 136, 0.1);
+  border-radius: 50%;
+}
+
+.ems-card__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.ems-card__meta {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-2);
+}
+
+.ems-info-box {
+  background: var(--color-bg-alt);
+  border: 1px dashed var(--color-border-dark);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.ems-info-box strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.ems-warning-box {
+  background: #FFF5F5;
+  border-left: 3px solid var(--color-error);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.ems-warning-box strong {
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .ems-grid {
+    grid-template-columns: 1fr;
+  }
+}
