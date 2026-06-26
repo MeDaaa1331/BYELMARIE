@@ -4261,6 +4261,27 @@ select:focus-visible {
   margin-top: var(--space-2);
 }
 
+.ems-lang-en {
+  display: none !important;
+}
+.ems-lang-cs {
+  display: flex !important;
+}
+
+html[lang="cs"] .ems-lang-cs {
+  display: flex !important;
+}
+html[lang="cs"] .ems-lang-en {
+  display: none !important;
+}
+
+html[lang="en"] .ems-lang-en {
+  display: flex !important;
+}
+html[lang="en"] .ems-lang-cs {
+  display: none !important;
+}
+
 .ems-intro {
   font-size: var(--font-size-md);
   line-height: 1.6;
