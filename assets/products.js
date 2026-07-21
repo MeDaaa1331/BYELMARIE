@@ -205,7 +205,7 @@ const PRODUCTS = [
   },
   {
     id: 4,
-    slug: 'valecky-celslimroll',
+    slug: 'valecky-cellslimroll',
     category: 'body',
     nameCs: 'CELLSLIMROLL® BYELMARIE®',
     nameEn: 'CELLSLIMROLL® BYELMARIE®',
@@ -526,7 +526,7 @@ function getProductBySlug(slug) {
   const slugMap = {
     'banky-fuffu-byelmarie': 'banka-fuffu',
     'banky-na-oblicej-face-cupping': 'oblicejove-banky',
-    'valecek-celslim-byelmarie': 'valecky-celslimroll',
+    'valecek-cellslim-byelmarie': 'valecky-cellslimroll',
     'skoleni-a-pomucky-rollcupping': 'skoleni-rollcupping',
     'skoleni-a-pomucky-rollcupping-online': 'skoleni-rollcupping-online'
   };
