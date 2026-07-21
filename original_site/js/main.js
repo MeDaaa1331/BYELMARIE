@@ -10,6 +10,7 @@ let lenisInstance = null;
     wheelMultiplier: 1.0,
     touchMultiplier: 1.8,
   });
+  window.lenis = lenisInstance;
 
   function raf(time) {
     lenisInstance.raf(time);
@@ -97,16 +98,27 @@ function initMobileMenu() {
   function openMenu() {
     menu.classList.add('open');
     toggle.classList.add('active');
+    toggle.setAttribute('aria-expanded', 'true');
     overlay?.classList.add('show');
+    document.body.classList.add('menu-open');
     document.body.style.overflow = 'hidden';
   }
 
   function closeMenu() {
     menu.classList.remove('open');
     toggle.classList.remove('active');
+    toggle.setAttribute('aria-expanded', 'false');
     overlay?.classList.remove('show');
+    document.body.classList.remove('menu-open');
     document.body.style.overflow = '';
   }
+
+  // Close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      closeMenu();
+    }
+  });
 
   menu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', closeMenu);

@@ -374,20 +374,6 @@
             </div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion-trigger" onclick="toggleAccordion(this)">
-            <span data-i18n="prod_shipping">Doprava a vrácení</span>
-            <span class="accordion-icon"></span>
-          </button>
-          <div class="accordion-content">
-            <div class="accordion-body">
-              <p data-i18n="prod_shipping_text">{{ section.settings.shipping_text }}</p>
-              <div style="margin-top: var(--space-4); border-top: 1px solid var(--color-border); padding-top: var(--space-4);">
-                <a href="/pages/doprava-a-platba" style="color: var(--color-accent-dark); font-weight: 500; text-decoration: underline;" data-i18n="prod_shipping_link">Podrobné informace o dopravě a platbě naleznete zde →</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -455,6 +441,12 @@
 
     document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
     if (!isOpen) item.classList.add('open');
+
+    if (window.lenis) {
+      setTimeout(() => {
+        window.lenis.resize();
+      }, 400);
+    }
   };
 
   // Variant selection handler

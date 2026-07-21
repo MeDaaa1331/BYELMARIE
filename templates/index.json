@@ -13,7 +13,7 @@
       "type": "hero",
       "settings": {
         "subtitle": "Inovace v péči o tělo",
-        "title": "Profesionální péče\\npro každý den",
+        "title": "Moderní technologie pro hubnutí, fitness a estetiku",
         "text": "Profesionální pomůcky a přístroje pro salonní i domácí péči, vybrané s důrazem na kvalitu, funkčnost a výsledky.",
         "btn1_label": "Nakupovat",
         "btn1_url": "/collections/all",
@@ -99,7 +99,7 @@
           "type": "category_card",
           "settings": {
             "image": "shopify://shop_images/427B4AED-D690-4AAD-8488-570B734C04E6.png",
-            "title": "Produkty pro tělo",
+            "title": "Produkty pro domácí i profesionální použití",
             "desc": "Baňky, válečky a séra pro péči o tělo",
             "btn_label": "Zobrazit",
             "url": "shopify://collections/body"
@@ -109,7 +109,7 @@
           "type": "category_card",
           "settings": {
             "image": "shopify://shop_images/IMG_7455.jpg",
-            "title": "Pro profesionály",
+            "title": "Produkty pro Vaše podnikání",
             "desc": "Školení, pomůcky a přístroje pro salony",
             "btn_label": "Zobrazit",
             "url": "shopify://collections/professional"
@@ -119,7 +119,7 @@
           "type": "category_card",
           "settings": {
             "image": "shopify://shop_images/zestihleni.png",
-            "title": "Zeštíhlení Brno",
+            "title": "Salon BYELMARIE® Brno",
             "desc": "Navštivte nás osobně v Brně, Králově Poli",
             "btn_label": "Rezervovat",
             "url": "/pages/zestihleni-brno"

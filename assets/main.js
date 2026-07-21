@@ -10,6 +10,7 @@ let lenisInstance = null;
     wheelMultiplier: 1.0,
     touchMultiplier: 1.8,
   });
+  window.lenis = lenisInstance;
 
   function raf(time) {
     lenisInstance.raf(time);
