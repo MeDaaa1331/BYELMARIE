@@ -11,7 +11,7 @@
         {% assign cat_title_dc = block.settings.title | downcase %}
         {% assign cat_i18n_title = "" %}
         {% assign cat_i18n_desc = "" %}
-        {% if cat_title_dc contains 'tělo' or cat_title_dc contains 'telo' or cat_title_dc contains 'body' %}
+        {% if cat_title_dc contains 'tělo' or cat_title_dc contains 'telo' or cat_title_dc contains 'body' or cat_title_dc contains 'domácí' or cat_title_dc contains 'domaci' %}
           {% assign cat_i18n_title = "cat_body_care" %}
           {% assign cat_i18n_desc = "cat_body_care_desc" %}
         {% elsif cat_title_dc contains 'profesionál' or cat_title_dc contains 'profesional' or cat_title_dc contains 'professional' %}
