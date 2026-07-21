@@ -56,7 +56,7 @@ const PRODUCTS = [
   <li><strong>L (1 390 Kč)</strong> – velká baňka pro rozsáhlé partie (stehna, hýždě, záda).</li>
   <li><strong>SET S+M+L (3 490 Kč)</strong> – kompletní sada za výhodnou cenu pro komplexní péči.</li>
 </ul>
-<p><strong>Jak na domácí baňkování:</strong> Před ošetřením je důležité otevřít lymfu. Doporučujeme kombinovat s válečky CELLSLIMROLL pro maximální synergický efekt při formování a zpevnění těla.</p>`,
+<p><strong>Jak na domácí baňkování:</strong> Před ošetřením je důležité otevřít lymfu. Doporučujeme kombinovat s válečky CELLSLIMROLL® pro maximální synergický efekt při formování a zpevnění těla.</p>`,
     descEn: `
 <p><strong>GLASS MASSAGE CUP WITH VACUUM CONTROL</strong></p>
 <p>The specially designed FUFFU cup consists of a silicone bulb (pump) that regulates suction via two valves, and a glass cup made of certified Czech glass. Its specific shape ensures excellent adhesion and effective suction.</p>
@@ -207,8 +207,8 @@ const PRODUCTS = [
     id: 4,
     slug: 'valecky-celslimroll',
     category: 'body',
-    nameCs: 'Válečky CELLSLIMROLL BYELMARIE®',
-    nameEn: 'CELLSLIMROLL Rollers BYELMARIE®',
+    nameCs: 'CELLSLIMROLL® BYELMARIE®',
+    nameEn: 'CELLSLIMROLL® BYELMARIE®',
     priceCZK: 2800,
     hasVariants: false,
     variants: [],
@@ -221,22 +221,22 @@ const PRODUCTS = [
     badgeCs: null,
     badgeEn: null,
     shortDescCs: [
-      'SET 2 masážních válečků CELLSLIMROLL!',
+      'SET 2 masážních válečků CELLSLIMROLL®!',
       'Redukce celulitidy a tukových zásob',
       'Zlepšení krevního a lymfatického oběhu',
       'Ergonomický design pro snadné ovládání',
       'Vhodné pro partie celého těla',
     ],
     shortDescEn: [
-      'SET of 2 CELLSLIMROLL massage rollers!',
+      'SET of 2 CELLSLIMROLL® massage rollers!',
       'Reduce cellulite and fat deposits',
       'Improve blood and lymphatic circulation',
       'Ergonomic design for easy control',
       'Suitable for all body areas',
     ],
     descCs: `
-<p><strong>CELLSLIMROLL BYELMARIE®</strong> je inovativní masážní váleček s přísavkami a výstupky, který vám pomůže efektivně bojovat proti celulitidě, lokalizovaným tukům a podpoří tvarování těla. Tento výjimečný pomocník kombinuje výhody vakuoterapie a redukční masáže, čímž přináší viditelné výsledky bez bolesti a invazivních procedur.</p>
-<p>Při použití masážního válečku CELLSLIMROLL aktivujete krevní oběh, zlepšujete okysličení buněk a podporujete lymfatický systém. Masáž přispívá ke snížení otoků (způsobených zadržováním tekutin), regeneraci svalů a zlepšení textury pokožky. Jeho funkce <strong>„sání a hnětení"</strong> pokožky působí hluboko do tkání, kde pomáhá redukovat tukové zásoby a zpevňovat kůži.</p>
+<p><strong>CELLSLIMROLL® BYELMARIE®</strong> je inovativní masážní váleček s přísavkami a výstupky, který vám pomůže efektivně bojovat proti celulitidě, lokalizovaným tukům a podpoří tvarování těla. Tento výjimečný pomocník kombinuje výhody vakuoterapie a redukční masáže, čímž přináší viditelné výsledky bez bolesti a invazivních procedur.</p>
+<p>Při použití masážního válečku CELLSLIMROLL® aktivujete krevní oběh, zlepšujete okysličení buněk a podporujete lymfatický systém. Masáž přispívá ke snížení otoků (způsobených zadržováním tekutin), regeneraci svalů a zlepšení textury pokožky. Jeho funkce <strong>„sání a hnětení"</strong> pokožky působí hluboko do tkání, kde pomáhá redukovat tukové zásoby a zpevňovat kůži.</p>
 <h4>Hlavní benefity:</h4>
 <ul>
   <li><strong>Redukce celulitidy a tukových zásob</strong> – cílené působení na lokalizované a problematické partie.</li>
@@ -245,10 +245,10 @@ const PRODUCTS = [
   <li><strong>Viditelné výsledky</strong> – pravidelné užívání napomáhá hladší, pevnější pokožce a přispívá ke snížení otoků.</li>
   <li><strong>Skvělá regenerace</strong> – ideální také pro uvolnění svalového napětí po fyzické aktivitě.</li>
 </ul>
-<p><strong>Zázračné kombo: FUFFU & CELLSLIMROLL</strong><br>Zapojte do své pečující rutiny i vakuovou baňku <strong>FUFFU</strong>, která tvoří společně se CELLSLIMROLL silnou dvojku pro formování postavy, zpevnění kůže a detoxikaci organismu.</p>`,
+<p><strong>Zázračné kombo: FUFFU & CELLSLIMROLL®</strong><br>Zapojte do své pečující rutiny i vakuovou baňku <strong>FUFFU</strong>, která tvoří společně se CELLSLIMROLL® silnou dvojku pro formování postavy, zpevnění kůže a detoxikaci organismu.</p>`,
     descEn: `
-<p><strong>CELLSLIMROLL BYELMARIE®</strong> is an innovative massage roller with suction cups and nodules designed to effectively combat cellulite, localized fat, and support body shaping. It combines the benefits of vacuum therapy and reduction massage, delivering visible results without pain.</p>
-<p>By using the CELLSLIMROLL roller, you activate blood circulation, improve cell oxygenation, and support the lymphatic system. Its unique <strong>"suction and kneading"</strong> action works deep into tissues to reduce fat deposits and firm the skin.</p>
+<p><strong>CELLSLIMROLL® BYELMARIE®</strong> is an innovative massage roller with suction cups and nodules designed to effectively combat cellulite, localized fat, and support body shaping. It combines the benefits of vacuum therapy and reduction massage, delivering visible results without pain.</p>
+<p>By using the CELLSLIMROLL® roller, you activate blood circulation, improve cell oxygenation, and support the lymphatic system. Its unique <strong>"suction and kneading"</strong> action works deep into tissues to reduce fat deposits and firm the skin.</p>
 <h4>Key Benefits:</h4>
 <ul>
   <li><strong>Reduces Cellulite & Fat Deposits</strong> – targeted action on stubborn areas.</li>
@@ -256,7 +256,7 @@ const PRODUCTS = [
   <li><strong>Ergonomic Design</strong> – side grips allow easy control of pressure and intensity.</li>
   <li><strong>Visible Results</strong> – regular use promotes smoother, firmer skin and reduces swelling.</li>
 </ul>
-<p><strong>Synergy Duo: FUFFU & CELLSLIMROLL</strong><br>Combine the rollers with the <strong>FUFFU vacuum cup</strong> for a powerful combination to sculpt the body and detoxify.</p>`,
+<p><strong>Synergy Duo: FUFFU & CELLSLIMROLL®</strong><br>Combine the rollers with the <strong>FUFFU vacuum cup</strong> for a powerful combination to sculpt the body and detoxify.</p>`,
   },
 
   {
@@ -292,28 +292,28 @@ const PRODUCTS = [
       'Complete set of tools (3x cup, 2x roller) included',
     ],
     descCs: `
-<p>Přidejte do své nabídky revoluční masážní techniku <strong>Rollcupping</strong>, která kombinuje funkčnost vakuových baněk FUFFU a masážního válečku CELLSLIMROLL značky BYELMARIE®. Tato certifikovaná metoda, navržená specialistkou Šárkou Kloudovou, naučí vaše ruce, jak efektivně a s minimálním úsilím dosáhnout viditelných výsledků při formování těla a redukci celulitidy.</p>
+<p>Přidejte do své nabídky revoluční masážní techniku <strong>Rollcupping</strong>, která kombinuje funkčnost vakuových baněk FUFFU a masážního válečku CELLSLIMROLL® značky BYELMARIE®. Tato certifikovaná metoda, navržená specialistkou Šárkou Kloudovou, naučí vaše ruce, jak efektivně a s minimálním úsilím dosáhnout viditelných výsledků při formování těla a redukci celulitidy.</p>
 <h4>Co vám školení Rollcupping přinese?</h4>
 <ul>
-  <li><strong>Exkluzivní know-how</strong> – naučíte se profesionální techniky práce s pomůckami BYELMARIE® (válečky CELLSLIMROLL a baňky FUFFU), které přinášejí viditelné výsledky již po prvním ošetření.</li>
+  <li><strong>Exkluzivní know-how</strong> – naučíte se profesionální techniky práce s pomůckami BYELMARIE® (válečky CELLSLIMROLL® a baňky FUFFU), které přinášejí viditelné výsledky již po prvním ošetření.</li>
   <li><strong>Rozšíření služeb salonu</strong> – nabídněte klientům kúru Rollcupping (doporučená série min. 5 ošetření) s vysokou návratností a zvyšte zájem o své služby.</li>
   <li><strong>Šetrnost k vašim rukám</strong> – technika je navržena tak, aby minimalizovala zátěž kloubů a prstů maséra.</li>
 </ul>
 <h4>Co je zahrnuto v ceně školení (16 900 Kč)?</h4>
 <ul>
   <li>Individuální školení (v Brně nebo po dohodě přímo ve vašem studiu po celé ČR a SR)</li>
-  <li><strong>Kompletní sada pomůcek</strong>: 3x vakuová baňka FUFFU (velikosti S, M, L) a 2x váleček CELLSLIMROLL (dvě velikosti pro všechny partičky těla) v hodnotě několika tisíc korun.</li>
+  <li><strong>Kompletní sada pomůcek</strong>: 3x vakuová baňka FUFFU (velikosti S, M, L) a 2x váleček CELLSLIMROLL® (dvě velikosti pro všechny partičky těla) v hodnotě několika tisíc korun.</li>
   <li>Certifikát o úspěšném absolvování opravňující k oficiálnímu provádění metody.</li>
   <li>Detailní studijní materiály a skripta s postupy.</li>
   <li>Následná konzultační podpora i po ukončení kurzu.</li>
 </ul>
 <p><em>Chcete zakoupit jak Vibroslimfit, tak Rollcupping? Pak se můžete těšit na výhodnější cenu! Více na osobní dotaz.</em></p>`,
     descEn: `
-<p>Expand your beauty or massage salon portfolio with the certified <strong>Rollcupping</strong> technique, combining the action of FUFFU vacuum cups and CELLSLIMROLL rollers. This course teaches how to achieve visible results in body contouring and cellulite reduction with minimal effort.</p>
+<p>Expand your beauty or massage salon portfolio with the certified <strong>Rollcupping</strong> technique, combining the action of FUFFU vacuum cups and CELLSLIMROLL® rollers. This course teaches how to achieve visible results in body contouring and cellulite reduction with minimal effort.</p>
 <h4>What the training (16,900 CZK) includes:</h4>
 <ul>
   <li>Individual training (in Brno or at your location in CZ/SK)</li>
-  <li><strong>Complete set of professional tools</strong>: 3x FUFFU cup (S, M, L) and 2x CELLSLIMROLL rollers</li>
+  <li><strong>Complete set of professional tools</strong>: 3x FUFFU cup (S, M, L) and 2x CELLSLIMROLL® rollers</li>
   <li>Official certificate of completion</li>
   <li>Comprehensive study manuals and templates</li>
   <li>Ongoing support and consulting</li>
@@ -361,7 +361,7 @@ const PRODUCTS = [
   <li>Obsáhlá PDF skripta a studijní materiály ke stažení.</li>
   <li>Certifikát o úspěšném absolvování (bude vystaven na jméno uvedené v poznámce objednávky).</li>
 </ul>
-<p>⚠️ <strong>DŮLEŽITÉ UPOZORNĚNÍ:</strong> Pomůcky (vakuové baňky FUFFU a válečky CELLSLIMROLL) nejsou součástí tohoto online kurzu. Pro plnohodnotné využití metody v praxi je nutné tyto pomůcky dokoupit samostatně v našem e-shopu.</p>
+<p>⚠️ <strong>DŮLEŽITÉ UPOZORNĚNÍ:</strong> Pomůcky (vakuové baňky FUFFU a válečky CELLSLIMROLL®) nejsou součástí tohoto online kurzu. Pro plnohodnotné využití metody v praxi je nutné tyto pomůcky dokoupit samostatně v našem e-shopu.</p>
 <p><em>Autorská technika je chráněna ochrannou známkou a je výhradním duševním vlastnictvím Šárky Kloudové – BYELMARIE®. Zakoupením kurzu získáváte právo metodu oficiálně nabízet a prezentovat se jako certifikovaný specialista.</em></p>`,
     descEn: `
 <p>The certified <strong>ROLLCUPPING® Online Course</strong> is designed for professionals who want to master this proprietary vacuum therapy and roller massage technique at their own pace.</p>
@@ -371,7 +371,7 @@ const PRODUCTS = [
   <li>Comprehensive PDF manuals and study guide.</li>
   <li>Certificate of completion.</li>
 </ul>
-<p>⚠️ <strong>PLEASE NOTE:</strong> Massage tools (FUFFU cups and CELLSLIMROLL rollers) are NOT included in this online package and must be purchased separately from the shop.</p>`,
+<p>⚠️ <strong>PLEASE NOTE:</strong> Massage tools (FUFFU cups and CELLSLIMROLL® rollers) are NOT included in this online package and must be purchased separately from the shop.</p>`,
   },
   {
     id: 7,
