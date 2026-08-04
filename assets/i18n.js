@@ -22,7 +22,7 @@ const translations = {
     nav_shop: 'E-shop',
     nav_offer: 'Nabídka',
     nav_find_us: 'Kde nás najdete',
-    map_page_title: 'Profesionálně proškolené salony BYELMARIE®',
+    map_page_title: 'Námi proškolené salony',
 
     announcement: 'STUDIO V BRNĚ · PO - PÁ DLE DOHODY',
     loc_lang: 'Jazyk',
