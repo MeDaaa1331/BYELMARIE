@@ -99,7 +99,7 @@
           "type": "category_card",
           "settings": {
             "image": "shopify://shop_images/427B4AED-D690-4AAD-8488-570B734C04E6.png",
-            "title": "Produkty pro domácí i profesionální použití",
+            "title": "Pro domácí & profesionální použití",
             "desc": "Baňky, válečky a séra pro péči o tělo",
             "btn_label": "Zobrazit",
             "url": "shopify://collections/body"
@@ -109,31 +109,20 @@
           "type": "category_card",
           "settings": {
             "image": "shopify://shop_images/IMG_7455.jpg",
-            "title": "Produkty pro Vaše podnikání",
+            "title": "Pro podnikání",
             "desc": "Školení, pomůcky a přístroje pro salony",
             "btn_label": "Zobrazit",
             "url": "shopify://collections/professional"
-          }
-        },
-        "c3": {
-          "type": "category_card",
-          "settings": {
-            "image": "shopify://shop_images/zestihleni.png",
-            "title": "Salon BYELMARIE® Brno",
-            "desc": "Navštivte nás osobně v Brně, Králově Poli",
-            "btn_label": "Rezervovat",
-            "url": "/pages/zestihleni-brno"
           }
         }
       },
       "block_order": [
         "c1",
-        "c2",
-        "c3"
+        "c2"
       ],
       "settings": {
         "label": "Naše kategorie",
-        "title": "Péče o tělo & Profesionální řešení"
+        "title": "Pro podnikání & Domácí použití"
       }
     },
     "featured_products_body": {
