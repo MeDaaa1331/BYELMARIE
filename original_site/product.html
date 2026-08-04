@@ -356,7 +356,7 @@
 
       document.getElementById('product-detail').innerHTML = `
         <!-- Gallery -->
-        <div class="product-gallery animate-on-scroll">
+        <div class="product-gallery">
           <div class="product-gallery__main" style="position: relative;">
             <img src="${mainImg}" alt="${name}" id="main-product-image"
                  onerror="this.src='data:image/svg+xml,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'400\\' height=\\'500\\'><rect width=\\'400\\' height=\\'500\\' fill=\\'%23EDE8E2\\'/><text x=\\'50%25\\' y=\\'50%25\\' text-anchor=\\'middle\\' fill=\\'%23CDC1B3\\' font-size=\\'20\\'dy=\\'.3em\\'>BYELMARIE®</text></svg>'">
@@ -369,7 +369,7 @@
         </div>
 
         <!-- Info -->
-        <div class="product-info animate-on-scroll animate-delay-2">
+        <div class="product-info">
           ${product.badgeCs ? `<div class="product-info__badge">${getProductBadge(product)}</div>` : ''}
 
           <h1 class="product-info__name">${name}</h1>
