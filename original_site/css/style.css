@@ -1653,21 +1653,17 @@ p:last-child {
   align-items: start;
   padding: var(--space-12) 0 var(--space-16);
   position: relative;
-  z-index: 1;
   background-color: var(--color-bg);
 }
 
 .product-gallery {
-  position: sticky;
-  top: calc(var(--header-h) + var(--space-6));
-  z-index: 1;
-  transform: none !important;
+  position: relative;
+  width: 100%;
 }
 
 .product-info {
   position: relative;
-  z-index: 1;
-  transform: none !important;
+  width: 100%;
 }
 
 /* Related products section containment */
@@ -1676,7 +1672,6 @@ p:last-child {
 #related-products,
 .section--sm {
   position: relative;
-  z-index: 10;
   background-color: var(--color-bg);
   clear: both;
 }
