@@ -1055,7 +1055,7 @@ p:last-child {
 .category-card {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/5;
   background: var(--color-bg-alt);
   cursor: pointer;
   group: true;
